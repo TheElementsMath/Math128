@@ -1,0 +1,109 @@
+# Glossary {-}
+
+```{=latex}
+\markboth{Glossary}{Glossary}
+```
+
+**Absolute value.** The distance of a real number from zero on the number line.
+
+**Average rate of change.** The ratio of net output change to input change over an interval.
+
+**Completing the square.** Rewriting a quadratic by adding and subtracting the value needed to form a perfect-square trinomial.
+
+**Composite function.** The function $(f\circ g)(x)=f(g(x))$, formed by using the output of $g$ as the input of $f$.
+
+**Data matrix.** A rectangular arrangement in which rows represent cases and columns represent variables.
+
+**Domain.** The set of inputs for which a function is defined.
+
+**End behaviour.** The behaviour of a function as $x\to\infty$ and as $x\to-\infty$.
+
+**Equation.** A statement that two expressions have equal values.
+
+**Equivalent formula.** A rearranged equation that expresses the same relationship while isolating a different variable.
+
+**Exponent.** A number that indicates the power to which a base is raised.
+
+**Exponential function.** A function $f(x)=ab^x$, where $a\ne0$, $b>0$, and $b\ne1$.
+
+**Factor.** An expression multiplied by another expression to produce a given product.
+
+**Fraction.** A quotient $a/b$ in which $a$ is the numerator, $b$ is the denominator, and $b\ne0$.
+
+**Fractional expression.** A quotient of two algebraic expressions, with all values that make the denominator zero excluded.
+
+**Function.** A rule that assigns exactly one output to every input in its domain.
+
+**Hole.** A removable discontinuity created when a common factor cancels but its zero remains excluded from the original domain.
+
+**Horizontal asymptote.** A line $y=L$ approached by a function as $x\to\infty$ or $x\to-\infty$.
+
+**Increasing function.** A function whose outputs rise as inputs increase on a specified interval.
+
+**Inequality.** A comparison between quantities using $<$, $\le$, $>$, or $\ge$.
+
+**Interquartile range.** The spread of the middle half of the data, $IQR=Q_3-Q_1$.
+
+**Interval.** A continuous set of real numbers between specified endpoints.
+
+**Inverse function.** A function $f^{-1}$ that reverses a one-to-one function, so $f^{-1}(f(x))=x$ on the domain of $f$.
+
+**Inverse sine.** The function $\arcsin:[-1,1]\to[-\pi/2,\pi/2]$ satisfying $\sin(\arcsin x)=x$.
+
+**Local extremum.** A local maximum or minimum value compared with nearby function values.
+
+**Logarithm.** For $b>0$ and $b\ne1$, $\log_b(y)=x$ exactly when $b^x=y$.
+
+**Logistic model.** A growth model that approaches a limiting carrying capacity, commonly written $P(t)=d/(1+ke^{-ct})$ for positive constants $c$, $d$, and $k$.
+
+**Log-log graph.** A graph with logarithmic scales on both axes.
+
+**Multiplicity.** The number of times a factor corresponding to a zero occurs in a polynomial.
+
+**Observational study.** A study that records naturally occurring variables without assigning treatments.
+
+**One-to-one function.** A function in which distinct inputs always produce distinct outputs.
+
+**Onto function.** A function whose range equals its stated codomain.
+
+**Parent function.** A basic function whose graph provides a starting shape for a family of related functions.
+
+**Polynomial.** A finite sum of terms whose variable exponents are nonnegative integers.
+
+**Population.** The complete collection of cases about which a study seeks information.
+
+**Quadratic function.** A polynomial function $f(x)=ax^2+bx+c$ with $a\ne0$.
+
+**Radian.** The central angle that intercepts an arc equal in length to the circle's radius.
+
+**Range.** The set of outputs a function actually produces.
+
+**Rational expression.** A fractional expression whose numerator and denominator are polynomials.
+
+**Rational number.** A number that can be written as $a/b$, where $a$ and $b$ are integers and $b\ne0$.
+
+**Real number.** A number represented by a point on the real number line. The set of all real numbers is denoted by $\mathbb{R}$.
+
+**Root.** A value that produces a given number when raised to a specified power.
+
+**Sample.** The subset of the population from which data are collected.
+
+**Sample mean.** The arithmetic average $\bar x=(\sum_{i=1}^n x_i)/n$.
+
+**Sample standard deviation.** The square root of sample variance, $s=\sqrt{\sum_{i=1}^n(x_i-\bar x)^2/(n-1)}$.
+
+**Sampling bias.** A systematic tendency for a sampling method to overrepresent or underrepresent parts of the population.
+
+**Semi-log graph.** A graph with one logarithmic axis and one linear axis.
+
+**Set.** A collection of distinct objects called elements.
+
+**Skewed distribution.** A distribution with a longer tail on one side than the other.
+
+**Slope.** The vertical change divided by the horizontal change between two points on a nonvertical line.
+
+**Variable.** A recorded characteristic that can differ from one case to another.
+
+**Vertical asymptote.** A line $x=a$ approached by a function whose magnitude grows without bound as $x$ approaches $a$ from at least one side.
+
+**Zero of a polynomial.** A value $c$ for which $P(c)=0$.

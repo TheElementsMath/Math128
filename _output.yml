@@ -1,0 +1,30 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: section
+  split_bib: false
+  config:
+    toc:
+      before: |
+          <li class="toc-title"><a href="./">Foundational Math for Water Engineering</a></li>
+      after: |
+        <li class="toc-footer">
+          <a href="https://github.com/USERNAME/REPOSITORY">
+            Foundational Mathematics for Water Engineering
+          </a><br>
+          <span>Fall 2026 Edition</span><br>
+          <span>Joya Danyluk and Joe Hobart</span>
+        </li>
+      collapse: section
+      scroll_highlight: true
+    search: true
+    sharing: null
+    edit: null
+bookdown::pdf_book:
+  keep_tex: true
+  latex_engine: xelatex
+  toc: true
+  number_sections: true
+  includes:
+    in_header: latex-preamble.tex
+  pandoc_args:
+    - "--lua-filter=book-boxes.lua"

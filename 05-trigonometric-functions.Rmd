@@ -1,0 +1,426 @@
+# Trigonometric Functions {#trigonometric-functions}
+
+Trigonometry connects angles, lengths, coordinates, and periodic change. Water Engineering Technology applications include surveying, pipe slopes, tank geometry, channel measurements, rotating equipment, and seasonal or cyclic signals. This chapter follows the MATH 128 notes from angle measure and right triangles through special angles, reference angles, the unit circle, trigonometric graphs, transformations, inverse functions, and identities. Exact values are retained when they clarify structure, while decimal approximations are used when a measured length or angle is required.
+
+::: {.learning-outcomes}
+**Learning outcomes.** By the end of this chapter, you should be able to:
+
+- convert angles between degrees and radians and identify coterminal angles;
+- solve right triangles using trigonometric ratios;
+- evaluate trigonometric functions using reference angles and the unit circle;
+- state domains and graph sine, cosine, and tangent functions;
+- model periodic behaviour with transformed sine and cosine functions;
+- use inverse trigonometric functions to determine angles; and
+- verify identities and apply fundamental angle formulas.
+:::
+
+## Angles, radians, and right triangles {#angles-radians-right-triangles}
+
+Angles in standard position begin on the positive $x$-axis. Positive rotation is counterclockwise and negative rotation is clockwise. Coterminal angles differ by whole revolutions.
+
+### Degree and radian measure
+
+::: {.definition-box}
+**Radian.** The central angle that intercepts an arc equal in length to the circle's radius.
+:::
+
+One revolution is $360^\circ=2\pi$ radians. Convert degrees to radians by multiplying by $\pi/180^\circ$, and radians to degrees by multiplying by $180^\circ/\pi$.
+
+::: {.worked-example}
+[**Worked Example: Converting an angle**]{.worked-example-title}
+
+$$225^\circ\left(\frac{\pi}{180^\circ}\right)=\frac{5\pi}{4}.$$
+:::
+
+::: {.try-it}
+**Try It.** Convert $150^\circ$ to radians.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$5\pi/6$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a coterminal angle**]{.worked-example-title}
+
+$-116^\circ+360^\circ=244^\circ$, so $244^\circ$ is a positive coterminal angle.
+:::
+
+::: {.try-it}
+**Try It.** Find a positive coterminal angle for $-5\pi/6$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-5\pi/6+2\pi=7\pi/6$.</details>
+:::
+
+### Right-triangle ratios
+
+For an acute angle $\theta$, $\sin\theta=$ opposite/hypotenuse, $\cos\theta=$ adjacent/hypotenuse, and $\tan\theta=$ opposite/adjacent. Their reciprocals are cosecant, secant, and cotangent.
+
+::: {.worked-example}
+[**Worked Example: Recovering all six ratios**]{.worked-example-title}
+
+If $\sin\theta=2/5$, take opposite side 2 and hypotenuse 5. The adjacent side is $\sqrt{21}$. Thus $\cos\theta=\sqrt{21}/5$, $\tan\theta=2/\sqrt{21}$, and the reciprocal ratios follow.
+:::
+
+::: {.try-it}
+**Try It.** If $\cos\theta=3/5$, find $\sin\theta$ and $\tan\theta$ for acute $\theta$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The triangle is 3-4-5, so $\sin\theta=4/5$ and $\tan\theta=4/3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a pipe rise**]{.worked-example-title}
+
+A 14 m pipe is inclined at $8^\circ$. Its vertical rise is
+
+$$14\sin8^\circ\approx1.95\ \text{m}.$$
+:::
+
+::: {.try-it}
+**Try It.** Find the rise of a 20 m pipe inclined at $5^\circ$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$20\sin5^\circ\approx1.74$ m.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Surveying a tank.** From a point 32 m from a tank, the angle of elevation to its top is $28^\circ$. The instrument is 1.6 m above ground. Find the tank height.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The rise above the instrument is $32\tan28^\circ\approx17.0$ m. Adding 1.6 m gives approximately 18.6 m.</details>
+:::
+
+### Practice Problems
+
+1. Convert $300^\circ$ to radians. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$5\pi/3$.</details>
+2. Convert $7\pi/12$ to degrees. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$105^\circ$.</details>
+3. Find a positive coterminal angle for $-70^\circ$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$290^\circ$.</details>
+4. In a right triangle, opposite $=6$ and adjacent $=8$. Find $\tan\theta$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3/4$.</details>
+5. Find the hypotenuse when the legs are 5 and 12. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>13.</details>
+6. A channel bank rises 2.4 m over a horizontal run of 7.0 m. Find its angle. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\theta=\arctan(2.4/7.0)\approx18.9^\circ$.</details>
+7. A 9 m ladder reaches a tank platform at $65^\circ$. Find the vertical reach. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$9\sin65^\circ\approx8.16$ m.</details>
+8. A pipe falls 0.8 m over 24 m horizontally. Find the downward angle. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\arctan(0.8/24)\approx1.91^\circ$.</details>
+
+## Special angles, reference angles, and the unit circle {#special-reference-unit-circle}
+
+Special triangles and the unit circle provide exact trigonometric values without calculator approximations.
+
+### Special triangles and reference angles
+
+The $45^\circ$-$45^\circ$-$90^\circ$ triangle has side ratio $1:1:\sqrt2$. The $30^\circ$-$60^\circ$-$90^\circ$ triangle has ratio $1:\sqrt3:2$. A reference angle is the acute angle between a terminal side and the $x$-axis.
+
+::: {.worked-example}
+[**Worked Example: Evaluating a special angle**]{.worked-example-title}
+
+From the $30^\circ$-$60^\circ$-$90^\circ$ triangle, $\sin60^\circ=\sqrt3/2$, $\cos60^\circ=1/2$, and $\tan60^\circ=\sqrt3$.
+:::
+
+::: {.try-it}
+**Try It.** Give the exact values of sine and cosine at $45^\circ$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both equal $\sqrt2/2$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a reference angle**]{.worked-example-title}
+
+The angle $240^\circ$ lies in quadrant III, so its reference angle is $240^\circ-180^\circ=60^\circ$.
+:::
+
+::: {.try-it}
+**Try It.** Find the reference angle for $11\pi/6$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2\pi-11\pi/6=\pi/6$.</details>
+:::
+
+### Trigonometric functions of any angle
+
+For a point $(x,y)$ on a terminal side with $r=\sqrt{x^2+y^2}$, $\sin\theta=y/r$, $\cos\theta=x/r$, and $\tan\theta=y/x$. On the unit circle, the point is $(\cos\theta,\sin\theta)$. Signs follow the quadrant.
+
+::: {.worked-example}
+[**Worked Example: Evaluating with a reference angle**]{.worked-example-title}
+
+$315^\circ$ has reference angle $45^\circ$ in quadrant IV. Therefore, $\cot315^\circ=-1$.
+:::
+
+::: {.try-it}
+**Try It.** Evaluate $\tan(11\pi/6)$ exactly.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-1/\sqrt3=-\sqrt3/3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Using a quadrant condition**]{.worked-example-title}
+
+If $\sin\theta=-1/3$ and $\cos\theta<0$, then $\theta$ is in quadrant III. Using $\cos^2\theta=1-1/9=8/9$ gives $\cos\theta=-2\sqrt2/3$ and $\tan\theta=\sqrt2/4$.
+:::
+
+::: {.try-it}
+**Try It.** If $\cos\theta=-3/5$ in quadrant II, find sine and tangent.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin\theta=4/5$ and $\tan\theta=-4/3$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Resolving a force direction.** A 250 N force acts at $135^\circ$ from the positive horizontal direction. Find its horizontal and vertical components.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$F_x=250\cos135^\circ=-125\sqrt2\approx-176.8$ N and $F_y=250\sin135^\circ=125\sqrt2\approx176.8$ N.</details>
+:::
+
+### Practice Problems
+
+1. Evaluate $\sin30^\circ$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$1/2$.</details>
+2. Evaluate $\cos(3\pi/4)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-\sqrt2/2$.</details>
+3. Find the reference angle for $7\pi/6$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\pi/6$.</details>
+4. Evaluate $\sec240^\circ$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-2$.</details>
+5. If $(x,y)=(-5,12)$, find $\sin\theta$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$12/13$.</details>
+6. A pipe thrust is 80 N at $30^\circ$. Find its horizontal component. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$80\cos30^\circ=40\sqrt3\approx69.3$ N.</details>
+7. A sloped channel side has direction $210^\circ$. State the signs of its horizontal and vertical components. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both are negative.</details>
+8. A survey ray lies in quadrant IV with cosine $5/13$. Find its sine. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-12/13$.</details>
+
+## Trigonometric graphs and transformations {#trigonometric-graphs-transformations}
+
+Sine and cosine model smooth periodic change, while tangent models ratios with regularly spaced vertical asymptotes.
+
+### Parent graphs and domains
+
+Sine and cosine have domain $\mathbb R$, range $[-1,1]$, and period $2\pi$. Tangent has period $\pi$, zeros at $k\pi$, and is undefined at $\pi/2+k\pi$. Cosecant, secant, and cotangent inherit exclusions from their reciprocal definitions.
+
+::: {.worked-example}
+[**Worked Example: Reading the sine graph**]{.worked-example-title}
+
+Over $[0,2\pi]$, sine passes through 0 at $0,\pi,2\pi$, reaches 1 at $\pi/2$, and reaches $-1$ at $3\pi/2$.
+:::
+
+::: {.try-it}
+**Try It.** List the corresponding five key values for cosine.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$1,0,-1,0,1$ at $0,\pi/2,\pi,3\pi/2,2\pi$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding tangent exclusions**]{.worked-example-title}
+
+$\tan x=\sin x/\cos x$ is undefined wherever $\cos x=0$, so $x=\pi/2+k\pi$ is excluded.
+:::
+
+::: {.try-it}
+**Try It.** Where is $\sec x$ undefined?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>At $x=\pi/2+k\pi$.</details>
+:::
+
+### Amplitude, period, and phase shift
+
+For $y=a\sin(kx-b)+d$ or $a\cos(kx-b)+d$, amplitude is $|a|$, period is $2\pi/|k|$, phase shift is $b/k$, and midline is $y=d$. Apply horizontal changes before vertical changes.
+
+::: {.worked-example}
+[**Worked Example: Analyzing a transformed sine curve**]{.worked-example-title}
+
+For $y=3\sin[2(x-\pi/4)]$, amplitude is 3, period is $\pi$, phase shift is $\pi/4$ right, and midline is 0.
+:::
+
+::: {.try-it}
+**Try It.** Analyze $y=2\cos(4x)+1$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Amplitude 2, period $\pi/2$, no phase shift, midline $y=1$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Modelling periodic tank depth**]{.worked-example-title}
+
+A depth varying between 2 m and 6 m has midline 4 and amplitude 2. If its period is 12 h and it begins at a maximum,
+
+$$d(t)=4+2\cos(\pi t/6).$$
+:::
+
+::: {.try-it}
+**Try It.** Write a cosine model with minimum 1, maximum 5, period 8, beginning at a maximum.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=3+2\cos(\pi t/4)$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Modelling daily reservoir depth.** Reservoir depth ranges from 7.2 m to 9.8 m with a 24 h period and is highest at midnight. Write a cosine model and find the predicted depth 6 h later.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Midline $8.5$, amplitude $1.3$, and angular frequency $2\pi/24=\pi/12$. Thus $d(t)=8.5+1.3\cos(\pi t/12)$. At 6 h, $d=8.5$ m.</details>
+:::
+
+### Practice Problems
+
+1. State the period and range of sine. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Period $2\pi$; range $[-1,1]$.</details>
+2. State the period of tangent. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\pi$.</details>
+3. Find the amplitude and period of $4\sin(3x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Amplitude 4; period $2\pi/3$.</details>
+4. Find the midline of $-2\cos x+5$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=5$.</details>
+5. Find the phase shift of $\sin[2(x-1)]$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>1 unit right.</details>
+6. Water level ranges from 3 m to 11 m. Find amplitude and midline. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Amplitude 4 m; midline 7 m.</details>
+7. A backwash pressure cycle has period 10 min. Find its angular frequency $k$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$k=2\pi/10=\pi/5$ rad/min.</details>
+8. A depth model is $d(t)=5+1.5\sin(\pi t/6)$. Find its maximum, minimum, and period. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Maximum 6.5 m, minimum 3.5 m, period 12 h.</details>
+
+## Inverse trigonometric functions {#inverse-trigonometric-functions}
+
+Sine, cosine, and tangent are restricted to intervals on which they are one-to-one before inverse functions are defined.
+
+### Principal values and solving angles
+
+::: {.definition-box}
+**Inverse sine.** The function $\arcsin:[-1,1]\to[-\pi/2,\pi/2]$ satisfying $\sin(\arcsin x)=x$.
+:::
+
+Inverse cosine has range $[0,\pi]$, while inverse tangent has range $(-\pi/2,\pi/2)$. A calculator returns only a principal value. When solving over a larger interval, use reference angles and quadrant signs to find all solutions.
+
+::: {.worked-example}
+[**Worked Example: Evaluating an inverse function**]{.worked-example-title}
+
+$\arcsin(1/2)=\pi/6$, while $\arcsin(-1/2)=-\pi/6$, because both lie in the principal range.
+:::
+
+::: {.try-it}
+**Try It.** Evaluate $\arccos(-\sqrt2/2)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3\pi/4$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding all angles in one revolution**]{.worked-example-title}
+
+If $\cos\theta=-0.2250$ for $0\le\theta<360^\circ$, the reference angle is approximately $77.0^\circ$. Cosine is negative in quadrants II and III, so $\theta\approx103.0^\circ$ or $257.0^\circ$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $\sin\theta=0.6$ for $0\le\theta<360^\circ$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\theta\approx36.87^\circ$ or $143.13^\circ$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Evaluating a composition exactly**]{.worked-example-title}
+
+If $\alpha=\arcsin(9/11)$, then a right triangle gives adjacent side $\sqrt{40}$ and hypotenuse 11. Therefore,
+
+$$\cos(\arcsin(9/11))=\frac{2\sqrt{10}}{11}.$$
+:::
+
+::: {.try-it}
+**Try It.** Evaluate $\tan[\arccos(3/5)]$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$4/3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a channel angle**]{.worked-example-title}
+
+A channel rises 1.2 m over 18 m horizontally. Its inclination is
+
+$$\theta=\arctan(1.2/18)\approx3.81^\circ.$$
+:::
+
+::: {.try-it}
+**Try It.** Find the inclination for a 0.9 m rise over 25 m.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\arctan(0.9/25)\approx2.06^\circ$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Locating two possible pipe directions.** A pipe direction satisfies $\sin\theta=-0.35$ for $0\le\theta<360^\circ$. Find both directions to the nearest tenth of a degree.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The reference angle is $\arcsin(0.35)\approx20.5^\circ$. Sine is negative in quadrants III and IV, giving $200.5^\circ$ and $339.5^\circ$.</details>
+:::
+
+### Practice Problems
+
+1. Evaluate $\arcsin(0)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>0.</details>
+2. Evaluate $\arccos(1/2)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\pi/3$.</details>
+3. Evaluate $\arctan(1)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\pi/4$.</details>
+4. Solve $\cos\theta=0.4$ on $0\le\theta<360^\circ$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\theta\approx66.4^\circ,293.6^\circ$.</details>
+5. Evaluate $\sin(\arccos(5/13))$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$12/13$.</details>
+6. A 2.5 m rise occurs over 40 m. Find the slope angle. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\arctan(2.5/40)\approx3.58^\circ$.</details>
+7. A tank roof rises 3 m over a half-span of 8 m. Find its angle. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\arctan(3/8)\approx20.6^\circ$.</details>
+8. A force has vertical component 45 N and magnitude 120 N. Find possible directions in one revolution. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin\theta=0.375$, giving approximately $22.0^\circ$ and $158.0^\circ$.</details>
+
+## Trigonometric identities and angle formulas {#trigonometric-identities-formulas}
+
+Identities are equations true for every input in their common domain. They allow expressions to be rewritten and exact values to be calculated.
+
+### Fundamental identities
+
+::: {.theorem-box}
+**Pythagorean Identities.** Wherever defined,
+$$\sin^2\theta+\cos^2\theta=1,\quad \tan^2\theta+1=\sec^2\theta,\quad1+\cot^2\theta=\csc^2\theta.$$
+:::
+
+Quotient identities are $\tan\theta=\sin\theta/\cos\theta$ and $\cot\theta=\cos\theta/\sin\theta$. To verify an identity, transform one side into the other using valid algebra rather than manipulating both sides toward an unknown middle.
+
+::: {.worked-example}
+[**Worked Example: Rewriting tangent**]{.worked-example-title}
+
+If $\theta$ is in quadrant III and $\cos\theta=c<0$, then $\sin\theta=-\sqrt{1-c^2}$ and
+$$\tan\theta=\frac{\sqrt{1-c^2}}{-c}.$$
+:::
+
+::: {.try-it}
+**Try It.** Express $\sin\theta$ in terms of positive $\cos\theta=c$ in quadrant IV.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin\theta=-\sqrt{1-c^2}$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Verifying an identity**]{.worked-example-title}
+
+$$\frac{\cos\theta}{1-\sin\theta}\cdot\frac{1+\sin\theta}{1+\sin\theta}=\frac{1+\sin\theta}{\cos\theta}=\sec\theta+\tan\theta.$$
+:::
+
+::: {.try-it}
+**Try It.** Verify $\cos\theta(\sec\theta-\cos\theta)=\sin^2\theta$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The left side is $1-\cos^2\theta=\sin^2\theta$.</details>
+:::
+
+### Even, odd, addition, and subtraction formulas
+
+Sine and tangent are odd, while cosine is even. The addition formulas include
+$$\sin(s+t)=\sin s\cos t+\cos s\sin t,$$
+$$\cos(s+t)=\cos s\cos t-\sin s\sin t.$$
+Replace $t$ by $-t$ for subtraction formulas.
+
+::: {.worked-example}
+[**Worked Example: Finding an exact compound angle**]{.worked-example-title}
+
+Using $75^\circ=45^\circ+30^\circ$,
+$$\sin75^\circ=\frac{\sqrt2}{2}\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\frac12=\frac{\sqrt6+\sqrt2}{4}.$$
+:::
+
+::: {.try-it}
+**Try It.** Find $\cos75^\circ$ exactly.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(\sqrt6-\sqrt2)/4$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Using odd symmetry**]{.worked-example-title}
+
+$\sin(-40^\circ)=-\sin40^\circ$, while $\cos(-40^\circ)=\cos40^\circ$.
+:::
+
+::: {.try-it}
+**Try It.** Simplify $\tan(-x)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-\tan x$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Combining two directional changes.** A survey direction is formed by adding $45^\circ$ and $30^\circ$. Use angle formulas to find its exact sine and cosine, then confirm that their squares sum to 1.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin75^\circ=(\sqrt6+\sqrt2)/4$ and $\cos75^\circ=(\sqrt6-\sqrt2)/4$. Squaring and adding gives 1.</details>
+:::
+
+### Practice Problems
+
+1. Simplify $1-\sin^2x$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\cos^2x$.</details>
+2. Rewrite $\tan x$ using sine and cosine. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin x/\cos x$.</details>
+3. Verify $\sec^2x-\tan^2x=1$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It is a rearrangement of $1+\tan^2x=\sec^2x$.</details>
+4. Find $\cos15^\circ$ exactly. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(\sqrt6+\sqrt2)/4$.</details>
+5. Simplify $\cos(-x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\cos x$.</details>
+6. If a pipe direction is $-25^\circ$, relate its sine to $\sin25^\circ$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sin(-25^\circ)=-\sin25^\circ$.</details>
+7. A resultant direction is $105^\circ=60^\circ+45^\circ$. Find its exact cosine. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(\sqrt2-\sqrt6)/4$.</details>
+8. If $\sin\theta=3/5$ in quadrant II, use an identity to find tangent. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\cos\theta=-4/5$, so $\tan\theta=-3/4$.</details>
+
+## Chapter Review {#trigonometric-functions-review}
+
+### Chapter summary
+
+Degree and radian measures describe the same rotations. Right-triangle ratios, reference angles, and the unit circle extend trigonometry to all angles. Sine and cosine model periodic behaviour through amplitude, period, phase shift, and midline. Inverse functions recover principal angles, while identities and angle formulas support exact rewriting and verification.
+
+### Common mistakes
+
+- Using the wrong calculator angle mode.
+- Assigning the wrong sign after finding a reference angle.
+- Confusing inverse trigonometric functions with reciprocals.
+- Reporting only the principal value when an interval requires multiple angles.
+- Applying a horizontal transformation in the wrong direction.
+
+### Exercises
+
+1. Convert $11\pi/9$ to degrees. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$220^\circ$.</details>
+2. Find all six ratios for a 5-12-13 triangle. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Relative to the angle opposite 5: $\sin=5/13$, $\cos=12/13$, $\tan=5/12$ and reciprocals.</details>
+3. Evaluate $\sin(5\pi/4)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-\sqrt2/2$.</details>
+4. Analyze $y=-3\cos(2x)+4$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Amplitude 3, period $\pi$, midline 4, reflected.</details>
+5. Solve $\cos\theta=-0.6$ for one revolution. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\theta\approx126.9^\circ,233.1^\circ$.</details>
+6. Verify $(1-\cos^2x)/\sin x=\sin x$ where defined. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$1-\cos^2x=\sin^2x$, then divide by $\sin x$.</details>
+
+### Questions for discussion
+
+1. When is an exact trigonometric value preferable to a decimal approximation?
+2. How do domain restrictions differ for tangent and inverse tangent?
+3. What physical assumptions are needed before using a sinusoidal water-level model?

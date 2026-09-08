@@ -1,0 +1,477 @@
+# Exponential and Logarithmic Functions {#exponential-logarithmic-functions}
+
+Exponential and logarithmic functions describe change governed by multiplication rather than constant addition. They arise in population growth, contaminant decay, compound processes, saturating systems, pH and other logarithmic measurements, and graphs spanning several orders of magnitude. This chapter follows the MATH 128 notes from exponential definitions and transformations through growth models, logarithmic functions, logarithm laws, equation solving, change of base, logarithmic scales, and flow-duration analysis. The emphasis is on translating among formulas, graphs, and practical interpretations while checking domain restrictions and units.
+
+::: {.learning-outcomes}
+**Learning outcomes.** By the end of this chapter, you should be able to:
+
+- graph and transform exponential and logarithmic functions;
+- construct and interpret growth, decay, compound-interest, and logistic models;
+- convert between exponential and logarithmic forms;
+- expand and combine logarithmic expressions;
+- solve exponential and logarithmic equations and reject invalid solutions;
+- use the change-of-base formula and logarithmic scales; and
+- interpret semi-log, log-log, and flow-duration graphs.
+:::
+
+## Exponential functions and transformations {#exponential-functions-transformations}
+
+An exponential function places the variable in an exponent. Its constant multiplicative change distinguishes it from a linear function's constant additive change.
+
+::: {.definition-box}
+**Exponential function.** A function $f(x)=ab^x$, where $a\ne0$, $b>0$, and $b\ne1$.
+:::
+
+### Basic graphs and properties
+
+For $f(x)=b^x$, the domain is $\mathbb R$, the range is $(0,\infty)$, the $y$-intercept is $(0,1)$, and $y=0$ is a horizontal asymptote. The function increases when $b>1$ and decreases when $0<b<1$. Equal increases in $x$ multiply the output by the same factor $b$.
+
+::: {.worked-example}
+[**Worked Example: Identifying an exponential base**]{.worked-example-title}
+
+An exponential graph passes through $(0,1)$ and $(2,9)$. If $f(x)=b^x$, then $b^2=9$. Since an exponential base is positive, $b=3$ and $f(x)=3^x$.
+:::
+
+::: {.try-it}
+**Try It.** Find $b$ if $f(x)=b^x$ passes through $(3,8)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$b^3=8$, so $b=2$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Interpreting exponential decay**]{.worked-example-title}
+
+For $C(t)=12(0.80)^t$, the initial concentration is $C(0)=12$. Each time unit multiplies concentration by 0.80, which is a 20% decrease.
+:::
+
+::: {.try-it}
+**Try It.** Interpret the initial value and percent change in $N(t)=450(1.06)^t$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The initial value is 450 and the quantity grows by 6% per time unit.</details>
+:::
+
+### Transformations of exponential graphs
+
+The transformation rules developed in the functions chapter apply. In $y=ab^{k(x-h)}+d$, $h$ shifts horizontally, $d$ shifts vertically, $a$ changes vertical scale and may reflect the graph, and $k$ changes horizontal scale. The horizontal asymptote moves from $y=0$ to $y=d$.
+
+::: {.worked-example}
+[**Worked Example: Transforming an exponential graph**]{.worked-example-title}
+
+For $f(x)=2(3^{x-1})+2$, shift $3^x$ right 1, stretch vertically by 2, and shift up 2. The horizontal asymptote is $y=2$, and $f(1)=4$.
+:::
+
+::: {.try-it}
+**Try It.** Describe $g(x)=-2^{x+3}+1$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Shift $2^x$ left 3, reflect across the $x$-axis, and shift up 1. The asymptote is $y=1$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Determining a transformed range**]{.worked-example-title}
+
+For $y=5-4(0.5)^x$, the exponential term is positive, so $y<5$. The domain is $\mathbb R$, the range is $(-\infty,5)$, and the horizontal asymptote is $y=5$.
+:::
+
+::: {.try-it}
+**Try It.** State the range and asymptote of $y=3(2^x)-7$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Range $(-7,\infty)$; asymptote $y=-7$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Modelling contaminant decay.** A contaminant concentration is initially 18 mg/L and decreases by 15% each day. Write an exponential model, find the concentration after 6 days, and identify the horizontal asymptote.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$C(t)=18(0.85)^t$. Then $C(6)\approx6.79$ mg/L. The horizontal asymptote is $C=0$.</details>
+:::
+
+### Practice Problems
+
+1. State the domain and range of $4^x$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain $\mathbb R$; range $(0,\infty)$.</details>
+2. Does $(1/3)^x$ increase or decrease? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It decreases because $0<1/3<1$.</details>
+3. Find the horizontal asymptote of $2(5^x)-6$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=-6$.</details>
+4. Find $f(3)$ for $f(x)=7(0.5)^x$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$7/8=0.875$.</details>
+5. Write a model with initial value 80 and growth rate 4%. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f(t)=80(1.04)^t$.</details>
+6. Bacterial concentration begins at 240 cells/mL and grows 8% per hour. Write the model. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$N(t)=240(1.08)^t$.</details>
+7. Chlorine concentration begins at 2.4 mg/L and retains 92% each hour. Find it after 5 h. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2.4(0.92)^5\approx1.58$ mg/L.</details>
+8. A transformed treatment model is $R(t)=60-20(0.7)^t$. State its initial value and limiting value. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$R(0)=40$ and the limiting value is 60.</details>
+
+## Exponential models in applications {#exponential-models-applications}
+
+Exponential models are built from an initial value and a growth factor. Their parameters should be interpreted before calculation so that growth, decay, and units are handled correctly.
+
+### Discrete and continuous growth and decay
+
+The form $A(t)=A_0(1+r)^t$ represents a constant proportional change of $r$ per time period. For decay, $r$ is negative, or use a factor $b$ between 0 and 1. Continuous growth or decay uses
+
+$$A(t)=A_0e^{kt},$$
+
+where the sign of $k$ determines growth or decay. Compound interest is
+
+$$A(t)=P\left(1+\frac rn\right)^{nt},$$
+
+with principal $P$, annual rate $r$, $n$ compounding periods per year, and time $t$ in years.
+
+::: {.worked-example}
+[**Worked Example: Applying discrete decay**]{.worked-example-title}
+
+A chemical stock of 50 kg loses 7% per month. After 8 months,
+
+$$A(8)=50(0.93)^8\approx28.0\ \text{kg}.$$
+:::
+
+::: {.try-it}
+**Try It.** A quantity begins at 75 and grows 3% per period. Find it after 10 periods.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$75(1.03)^{10}\approx100.8$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Continuous growth**]{.worked-example-title}
+
+For $A(t)=600e^{0.025t}$, the value after 10 years is
+
+$$A(10)=600e^{0.25}\approx770.42.$$
+:::
+
+::: {.try-it}
+**Try It.** Find $A(4)$ if $A(t)=900e^{-0.08t}$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$900e^{-0.32}\approx653.53$.</details>
+:::
+
+### Logistic growth
+
+::: {.definition-box}
+**Logistic model.** A growth model that approaches a limiting carrying capacity, commonly written $P(t)=d/(1+ke^{-ct})$ for positive constants $c$, $d$, and $k$.
+:::
+
+The parameter $d$ is the long-term limiting population. At $t=0$, $P(0)=d/(1+k)$. Logistic growth is initially close to exponential but slows as limited space or resources become important.
+
+::: {.worked-example}
+[**Worked Example: Evaluating a logistic model**]{.worked-example-title}
+
+For $P(t)=1200/[1+11e^{-0.2t}]$, the initial population is
+
+$$P(0)=\frac{1200}{12}=100.$$
+
+As $t\to\infty$, the population approaches 1200.
+:::
+
+::: {.try-it}
+**Try It.** Find the initial value and limiting value of $P(t)=800/[1+7e^{-0.3t}]$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$P(0)=800/8=100$ and the limiting value is 800.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Comparing two exponential populations**]{.worked-example-title}
+
+Suppose $A(t)=1000e^{0.06t}$ and $B(t)=5000(0.95)^t$. Equality requires
+
+$$1000e^{0.06t}=5000(0.95)^t.$$
+
+Taking logarithms and solving gives $t=\ln5/[0.06-\ln(0.95)]\approx14.46$ years.
+:::
+
+::: {.try-it}
+**Try It.** Solve $200(1.04)^t=400(0.98)^t$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$t=\ln2/[\ln(1.04)-\ln(0.98)]\approx11.66$ periods.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Comparing decay models.** Chlorine concentration is 3.0 mg/L initially. Model A retains 88% each hour, while Model B follows continuous decay $C_B(t)=3e^{-0.13t}$. Find both concentrations after 8 h and identify which model predicts the larger residual.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$C_A(8)=3(0.88)^8\approx1.08$ mg/L. $C_B(8)=3e^{-1.04}\approx1.06$ mg/L. Model A predicts the slightly larger residual.</details>
+:::
+
+### Practice Problems
+
+1. Identify the initial value and rate in $A(t)=420(1.05)^t$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Initial value 420; growth rate 5%.</details>
+2. Find $A(6)$ for $A(t)=1000(0.9)^t$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$531.44$.</details>
+3. Evaluate $500e^{0.04t}$ at $t=12$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Approximately 808.04.</details>
+4. Find the limit of $900/[1+5e^{-0.2t}]$ as $t\to\infty$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>900.</details>
+5. Find the initial value of $600/[1+3e^{-0.4t}]$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>150.</details>
+6. A contaminant retains 81% of its mass each day. What percent is lost daily? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>19%.</details>
+7. A bacterial count of 350 grows continuously at 9% per hour. Find the count after 5 h. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$350e^{0.45}\approx549$.</details>
+8. A wetland population follows $P(t)=2400/[1+5e^{-0.1t}]$. Find its initial and limiting populations. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Initial 400; limiting 2400.</details>
+
+## Logarithmic functions and laws {#logarithmic-functions-laws}
+
+Logarithms answer exponent questions and provide the inverse operation needed to solve many exponential equations.
+
+### Definition, graph, and domain
+
+::: {.definition-box}
+**Logarithm.** For $b>0$ and $b\ne1$, $\log_b(y)=x$ exactly when $b^x=y$.
+:::
+
+The logarithm's input must be positive. The graph of $y=\log_bx$ has domain $(0,\infty)$, range $\mathbb R$, $x$-intercept $(1,0)$, and vertical asymptote $x=0$. It is the reflection of $y=b^x$ across $y=x$. Natural logarithm uses base $e$ and is written $\ln x$.
+
+::: {.worked-example}
+[**Worked Example: Converting forms**]{.worked-example-title}
+
+The statement $4^{1/2}=2$ is equivalent to $\log_4(2)=1/2$. Likewise, $\log_3(1/9)=-2$ because $3^{-2}=1/9$.
+:::
+
+::: {.try-it}
+**Try It.** Rewrite $5^3=125$ in logarithmic form.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\log_5(125)=3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a logarithmic domain**]{.worked-example-title}
+
+For $f(x)=\log_7(9-5x)$, require $9-5x>0$. Therefore, $x<9/5$.
+:::
+
+::: {.try-it}
+**Try It.** Find the domain of $\ln(3x+12)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3x+12>0$, so $x>-4$.</details>
+:::
+
+### Product, quotient, and power laws
+
+For positive arguments,
+
+$$\log_b(MN)=\log_bM+\log_bN,$$
+$$\log_b(M/N)=\log_bM-\log_bN,$$
+$$\log_b(M^p)=p\log_bM.$$
+
+These laws do not permit splitting a sum or difference inside a logarithm. Domains must be taken from the original expression.
+
+::: {.worked-example}
+[**Worked Example: Expanding a logarithm**]{.worked-example-title}
+
+For positive $x$ and $x+1$,
+
+$$\ln\left(\frac{3e^x(x+1)^5}{x^2}\right)=\ln3+x+5\ln(x+1)-2\ln x.$$
+:::
+
+::: {.try-it}
+**Try It.** Expand $\log_2[8x^3/(x-1)]$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3+3\log_2x-\log_2(x-1)$, on the original domain.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Combining logarithms**]{.worked-example-title}
+
+$$3\ln x+2\ln(x+1)-\ln(4x-1)=\ln\left(\frac{x^3(x+1)^2}{4x-1}\right).$$
+:::
+
+::: {.try-it}
+**Try It.** Combine $2\log_5x-\log_5(x+3)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\log_5[x^2/(x+3)]$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Determining a pressure parameter.** A model gives $\ln(k)=-21.504$, where $k$ is measured in Pa$^{-1}$. Solve for $k$ and report it in scientific notation.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Apply the exponential function: $k=e^{-21.504}\approx4.59\times10^{-10}$ Pa$^{-1}$.</details>
+:::
+
+### Practice Problems
+
+1. Rewrite $2^{-4}=1/16$ logarithmically. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\log_2(1/16)=-4$.</details>
+2. Evaluate $\log_{10}(1000)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>3.</details>
+3. Find the domain of $\ln(7-2x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x<7/2$.</details>
+4. Expand $\ln(x^4/y^2)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$4\ln x-2\ln y$ for positive $x,y$.</details>
+5. Combine $\log x+3\log y$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\log(xy^3)$.</details>
+6. A water model gives $\ln k=-8.2$. Find $k$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$k=e^{-8.2}\approx2.75\times10^{-4}$.</details>
+7. Find the domain of $\log(12-C)$ for concentration $C\ge0$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$0\le C<12$.</details>
+8. Expand $\ln[Q^2/(Q+5)]$ for positive quantities. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2\ln Q-\ln(Q+5)$.</details>
+
+## Solving exponential and logarithmic equations {#solving-exponential-logarithmic-equations}
+
+Inverse properties and logarithm laws allow an unknown exponent or logarithmic argument to be isolated. Every logarithmic candidate must be checked against the original domain.
+
+### Exponential equations
+
+If both sides can be written with the same base, equate exponents. Otherwise, isolate the exponential expression, take logarithms, apply the power law, and solve.
+
+::: {.worked-example}
+[**Worked Example: Using a common base**]{.worked-example-title}
+
+Solve $3^{2x+1}=1$. Since $1=3^0$, $2x+1=0$ and $x=-1/2$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $2^{3x-2}=8$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$8=2^3$, so $3x-2=3$ and $x=5/3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Taking logarithms**]{.worked-example-title}
+
+For $3^{2x+3}=5$,
+
+$$(2x+3)\ln3=\ln5,$$
+
+so $x=[\ln5/\ln3-3]/2\approx-0.768$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $4^{x-1}=17$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=1+\ln17/\ln4\approx3.044$.</details>
+:::
+
+### Logarithmic equations and domain checks
+
+Combine logarithms when useful, convert to exponential form, solve the resulting algebraic equation, and reject any value that makes an original logarithmic argument nonpositive.
+
+::: {.worked-example}
+[**Worked Example: Solving a logarithmic equation**]{.worked-example-title}
+
+Solve $\log_7x+\log_7(x+1)=\log_7(20)$. Then $x(x+1)=20$, so $(x+5)(x-4)=0$. The domain requires $x>0$, leaving $x=4$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $\log_2(x+1)-\log_2(x-1)=2$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(x+1)/(x-1)=4$, so $x=5/3$, which satisfies $x>1$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Solving a decay-time equation**]{.worked-example-title}
+
+If $C(t)=3(0.88)^t$ and the target is 1 mg/L, then
+
+$$t=\frac{\ln(1/3)}{\ln(0.88)}\approx8.59\ \text{h}.$$
+:::
+
+::: {.try-it}
+**Try It.** When does $10(0.75)^t=2$?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$t=\ln(0.2)/\ln(0.75)\approx5.59$ periods.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Meeting a disinfection residual target.** Chlorine residual follows $C(t)=2.8e^{-0.16t}$ mg/L. Determine when it first falls to 0.50 mg/L and interpret the result.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$0.50=2.8e^{-0.16t}$ gives $t=-\ln(0.50/2.8)/0.16\approx10.77$ h. The residual reaches 0.50 mg/L about 10.8 h after the initial measurement.</details>
+:::
+
+### Practice Problems
+
+1. Solve $5^{x+1}=25$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=1$.</details>
+2. Solve $2^x=7$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=\ln7/\ln2\approx2.807$.</details>
+3. Solve $\ln x=3$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=e^3$.</details>
+4. Solve $\log(x)+\log(x-9)=1$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x(x-9)=10$ gives $x=10$ or $-1$; only $x=10$ is valid.</details>
+5. Solve $\ln(2x-1)=\ln7$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2x-1=7$, so $x=4$.</details>
+6. A contaminant follows $M(t)=40(0.82)^t$. When is $M=10$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$t=\ln(0.25)/\ln(0.82)\approx6.99$ periods.</details>
+7. A bacterial count follows $N(t)=500e^{0.12t}$. When does it reach 1200? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$t=\ln(1200/500)/0.12\approx7.30$ h.</details>
+8. Solve $\log(C)+\log(C-3)=\log28$ for a positive concentration. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$C(C-3)=28$, so $(C-7)(C+4)=0$. The valid solution is $C=7$.</details>
+
+## Change of base, logarithmic scales, and flow duration {#log-scales-flow-duration}
+
+Logarithmic scales compress large ranges by representing equal ratios with equal distances. They make multiplicative patterns and power relationships easier to see.
+
+### Change of base and orders of magnitude
+
+::: {.theorem-box}
+**Change-of-Base Formula.** For valid bases $a$ and $b$,
+
+$$\log_bx=\frac{\log_ax}{\log_ab}.$$
+:::
+
+The number of orders of magnitude separating positive values $A$ and $B$ is $\log_{10}(A/B)$. One order represents a factor of 10.
+
+::: {.worked-example}
+[**Worked Example: Changing logarithm base**]{.worked-example-title}
+
+$$\log_7(20)=\frac{\ln20}{\ln7}\approx1.5395.$$
+:::
+
+::: {.try-it}
+**Try It.** Evaluate $\log_3(14)$ using natural logarithms.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\ln14/\ln3\approx2.402$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Comparing concentration scales**]{.worked-example-title}
+
+Concentrations $10^5$ cells/mL and $10^2$ cells/mL differ by
+
+$$\log_{10}(10^5/10^2)=3$$
+
+orders of magnitude.
+:::
+
+::: {.try-it}
+**Try It.** How many orders of magnitude separate $4\times10^6$ and $4\times10^2$?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\log_{10}(10^4)=4$ orders.</details>
+:::
+
+### Semi-log, log-log, and flow-duration graphs
+
+::: {.definition-box}
+**Semi-log graph.** A graph with one logarithmic axis and one linear axis.
+:::
+
+::: {.definition-box}
+**Log-log graph.** A graph with logarithmic scales on both axes.
+:::
+
+Exponential data become approximately linear when the response is logged and plotted against a linear input. Power-law data become linear when both variables are logged. A flow-duration curve plots discharge against the percentage of time that flow is equalled or exceeded. It helps characterize dependable flow and compare discharge magnitudes across a wide range.
+
+::: {.worked-example}
+[**Worked Example: Reading a flow-duration point**]{.worked-example-title}
+
+If a flow-duration curve shows 18 m³/s at 80% exceedance, then streamflow equals or exceeds 18 m³/s approximately 80% of the observation period.
+:::
+
+::: {.try-it}
+**Try It.** Interpret 35 m³/s at 20% exceedance.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Flow equals or exceeds 35 m³/s about 20% of the time.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Linearizing exponential decay**]{.worked-example-title}
+
+If $C(t)=C_0e^{-kt}$, then
+
+$$\ln C=\ln C_0-kt.$$
+
+A plot of $\ln C$ against $t$ is linear with slope $-k$ and intercept $\ln C_0$.
+:::
+
+::: {.try-it}
+**Try It.** Linearize $N(t)=80e^{0.3t}$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\ln N=\ln80+0.3t$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Interpreting dependable streamflow.** A flow-duration table reports 42, 25, and 11 m³/s at exceedance percentages 10%, 50%, and 90%. Interpret all three values and identify the median daily flow.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Flow equals or exceeds 42 m³/s about 10% of the time, 25 m³/s about 50% of the time, and 11 m³/s about 90% of the time. The 50% exceedance value is the median daily flow, 25 m³/s.</details>
+:::
+
+### Practice Problems
+
+1. Evaluate $\log_4(11)$ using change of base. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\ln11/\ln4\approx1.730$.</details>
+2. How many orders separate $10^8$ and $10^3$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Five.</details>
+3. Which graph often linearizes $y=ab^x$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>A semi-log graph with a logarithmic $y$-axis.</details>
+4. Which graph often linearizes $y=ax^p$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>A log-log graph.</details>
+5. Interpret 60% exceedance at 14 m³/s. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Flow equals or exceeds 14 m³/s about 60% of the time.</details>
+6. Bacterial counts range from $2\times10^2$ to $2\times10^7$ cells/mL. How many orders of magnitude separate them? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Five.</details>
+7. A flow-duration curve gives 9 m³/s at 95% exceedance. What does this indicate? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Flow is at least 9 m³/s approximately 95% of the time.</details>
+8. If $C(t)=6e^{-0.25t}$, state the slope and intercept of a plot of $\ln C$ versus $t$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Slope $-0.25$ and intercept $\ln6$.</details>
+
+## Chapter Review {#exponential-logarithmic-functions-review}
+
+### Chapter summary
+
+Exponential models describe constant proportional change, while logarithms recover exponents and invert exponential functions. Logarithm laws support simplification and equation solving, but require positive arguments. Logarithmic scales reveal multiplicative structure, and flow-duration curves summarize how often streamflows meet or exceed selected values.
+
+### Common mistakes
+
+- Using the percent rate as the growth factor.
+- Forgetting that logarithmic inputs must be positive.
+- Splitting the logarithm of a sum.
+- Failing to check solutions in the original logarithmic equation.
+- Confusing an exceedance percentage with the percentage of observations below a flow.
+
+### Exercises
+
+1. Find the value after 7 periods for $A(t)=50(1.08)^t$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Approximately 85.69.</details>
+2. Find the domain of $\ln(4-3x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x<4/3$.</details>
+3. Expand $\log(x^5/\sqrt y)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$5\log x-(1/2)\log y$.</details>
+4. Solve $3^x=20$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=\ln20/\ln3\approx2.727$.</details>
+5. Solve $\ln x+\ln(x-1)=\ln6$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=3$.</details>
+6. Interpret a discharge of 16 m³/s at 75% exceedance. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Discharge equals or exceeds 16 m³/s about 75% of the time.</details>
+
+### Questions for discussion
+
+1. What evidence would support choosing an exponential model instead of a linear one?
+2. Why are logarithmic axes useful for water-quality measurements spanning a large range?
+3. What planning information can a flow-duration curve provide?

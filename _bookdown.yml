@@ -1,0 +1,18 @@
+book_filename: "Foundational_Mathematics_for_Water_Engineering"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files:
+  - index.Rmd
+  - 01-basics.Rmd
+  - 02-functions.Rmd
+  - 03-polynomial-rational-functions.Rmd
+  - 04-exponential-logarithmic-functions.Rmd
+  - 05-trigonometric-functions.Rmd
+  - 06-statistics.Rmd
+  - 07-glossary.Rmd
+  - 08-formula-reference.Rmd
+  - 09-references.Rmd
+output_dir: "docs"
+clean: ["docs"]

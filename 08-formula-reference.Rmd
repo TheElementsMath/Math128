@@ -1,0 +1,49 @@
+# (APPENDIX) Appendices {-}
+
+# Formula Reference {#formula-reference}
+
+This appendix collects formulas used repeatedly in the book. Each formula should be used with the domain restrictions, units, and assumptions developed in its chapter.
+
+## Algebra and geometry {#formula-algebra-geometry}
+
+$$V_{\text{rectangular}}=LWH,\qquad A_{\text{circle}}=\pi r^2,\qquad V_{\text{cylinder}}=\pi r^2h.$$
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},\qquad D=b^2-4ac.$$
+
+## Functions and rates {#formula-functions-rates}
+
+$$m=\frac{y_2-y_1}{x_2-x_1},\qquad \text{average rate}=\frac{f(b)-f(a)}{b-a}.$$
+
+$$ (f\circ g)(x)=f(g(x)). $$
+
+## Exponential and logarithmic models {#formula-exponential-logarithmic}
+
+$$A(t)=A_0(1+r)^t,\qquad A(t)=A_0e^{kt},$$
+
+$$A(t)=P\left(1+\frac rn\right)^{nt},\qquad P(t)=\frac{d}{1+ke^{-ct}}.$$
+
+$$\log_b(MN)=\log_bM+\log_bN,$$
+$$\log_b(M/N)=\log_bM-\log_bN,$$
+$$\log_b(M^p)=p\log_bM,\qquad \log_bx=\frac{\ln x}{\ln b}.$$
+
+## Trigonometry {#formula-trigonometry}
+
+$$\sin\theta=\frac{\text{opposite}}{\text{hypotenuse}},\quad
+\cos\theta=\frac{\text{adjacent}}{\text{hypotenuse}},\quad
+\tan\theta=\frac{\text{opposite}}{\text{adjacent}}.$$
+
+$$180^\circ=\pi\ \text{radians},\qquad a^2+b^2=c^2.$$
+
+$$\sin^2\theta+\cos^2\theta=1,$$
+$$\sin(s+t)=\sin s\cos t+\cos s\sin t,$$
+$$\cos(s+t)=\cos s\cos t-\sin s\sin t.$$
+
+## Descriptive statistics {#formula-statistics}
+
+$$\bar x=\frac{\sum_{i=1}^n x_i}{n},\qquad
+s^2=\frac{\sum_{i=1}^n(x_i-\bar x)^2}{n-1},\qquad s=\sqrt{s^2}.$$
+
+$$IQR=Q_3-Q_1,$$
+
+$$\text{lower fence}=Q_1-1.5IQR,\qquad
+\text{upper fence}=Q_3+1.5IQR.$$

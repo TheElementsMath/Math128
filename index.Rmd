@@ -1,0 +1,36 @@
+---
+title: "Foundational Mathematics for Water Engineering"
+subtitle: "MATH 128"
+author: "Joya Danyluk and Joe Hobart"
+date: "Draft 1 Published Fall 2026"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [references.bib]
+link-citations: true
+description: "[Brief description to be confirmed.]"
+---
+
+# Welcome {-}
+
+<!-- Copyright statement to be confirmed. -->
+
+Mathematics is a practical language for describing, measuring, and improving water systems. In Water Engineering Technology, that language appears in calculations involving flow, storage, treatment, pumping, chemical dosing, site geometry, and the interpretation of operational data. *Foundational Mathematics for Water Engineering* develops the mathematical habits needed to work carefully in those settings: stating assumptions, tracking units, representing relationships clearly, checking whether an answer is reasonable, and explaining what a result means.
+
+This book is organized in six chapters. It begins with algebraic foundations and then develops functions, polynomial and rational models, exponential and logarithmic models, trigonometry, and descriptive statistics. Each chapter opens with learning outcomes, then introduces key terms in definition boxes immediately before they are needed. Concepts are developed through explanations, worked examples, applied problems, and practice. Chapter reviews include exercises with immediate feedback and open-ended questions for discussion.
+
+The central perspective is that a calculation is not complete when a number appears on a calculator. A useful mathematical result includes a quantity, appropriate units, a sensible magnitude, and an interpretation in the setting that produced it. The examples use realistic but fictional water-engineering situations unless a cited source is necessary.
+
+## Learning goals {-}
+
+By the end of the book, readers should be able to:
+
+- represent and solve quantitative water-engineering problems with appropriate algebra, functions, trigonometry, and descriptive statistics;
+- interpret graphs, tables, formulas, and calculations in context;
+- communicate assumptions, units, and conclusions clearly; and
+- check the reasonableness of a calculation before using it to support a decision.
+
+### Software {-}
+
+Optional demonstrations use [Desmos](https://www.desmos.com/calculator) for graphing and Microsoft Excel for tables, calculations, and charts. Both are tools for checking and communicating mathematics, not substitutes for understanding the underlying method.
+
+Copyright © 2026 TheElementsMath. All rights reserved.

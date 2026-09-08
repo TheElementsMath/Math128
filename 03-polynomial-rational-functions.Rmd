@@ -1,0 +1,392 @@
+# Polynomial and Rational Functions {#polynomial-rational-functions}
+
+Polynomial and rational functions describe curved relationships that linear models cannot capture. Quadratic models represent areas and trajectories, higher-degree polynomials can model responses with several turning points, and rational functions describe ratios whose behaviour may change sharply near excluded inputs. This chapter develops the graphical features emphasized in the MATH 128 notes: vertex form, completing the square, intercepts, local extrema, end behaviour, zeros and multiplicity, asymptotes, holes, and systematic graphing. Water-engineering examples include basin dimensions, pump-response curves, and models whose denominators represent operational limits. Algebraic work is connected continually to graph shape and physical interpretation.
+
+::: {.learning-outcomes}
+**Learning outcomes.** By the end of this chapter, you should be able to:
+
+- graph quadratic functions from vertex, standard, and factored forms;
+- complete the square and interpret the resulting vertex;
+- describe polynomial end behaviour and the effect of zero multiplicity;
+- produce a systematic sketch of a polynomial function;
+- find domains, intercepts, holes, and asymptotes of rational functions; and
+- sketch and interpret rational functions in applied settings.
+:::
+
+## Quadratic functions and completing the square {#quadratic-functions-completing-square}
+
+A quadratic function has a parabolic graph whose direction, width, vertex, and intercepts can be read from different algebraic forms.
+
+::: {.definition-box}
+**Quadratic function.** A polynomial function $f(x)=ax^2+bx+c$ with $a\ne0$.
+:::
+
+### Vertex form and intercepts
+
+In vertex form,
+
+$$f(x)=a(x-h)^2+k,$$
+
+the vertex is $(h,k)$. The graph opens upward when $a>0$ and downward when $a<0$. If $a>0$, the vertex gives the minimum value $k$; if $a<0$, it gives the maximum. The magnitude $|a|$ controls vertical stretch or compression. Find $y$-intercepts by setting $x=0$ and $x$-intercepts by solving $f(x)=0$.
+
+::: {.worked-example}
+[**Worked Example: Graphing from vertex form**]{.worked-example-title}
+
+For $f(x)=2(x-2)^2-2$, the vertex is $(2,-2)$ and the parabola opens upward. The $y$-intercept is $f(0)=6$. Solving $2(x-2)^2-2=0$ gives $x=1$ and $x=3$.
+:::
+
+::: {.try-it}
+**Try It.** Find the vertex and intercepts of $g(x)=-(x+1)^2+4$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Vertex $(-1,4)$; $y$-intercept $(0,3)$; $x$-intercepts $(-3,0)$ and $(1,0)$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Interpreting a basin-area parabola**]{.worked-example-title}
+
+A fixed-perimeter design produces $A(w)=-w^2+20w$. Factoring gives zeros at 0 and 20, and completing the square gives
+
+$$A(w)=-(w-10)^2+100.$$
+
+The maximum area is 100 m² at width 10 m.
+:::
+
+::: {.try-it}
+**Try It.** Find the maximum of $A(x)=-x^2+16x$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A(x)=-(x-8)^2+64$, so the maximum is 64 at $x=8$.</details>
+:::
+
+### Completing the square
+
+::: {.definition-box}
+**Completing the square.** Rewriting a quadratic by adding and subtracting the value needed to form a perfect-square trinomial.
+:::
+
+For $x^2+bx$, add and subtract $(b/2)^2$:
+
+$$x^2+bx=\left(x+\frac b2\right)^2-\left(\frac b2\right)^2.$$
+
+When $a\ne1$, first factor $a$ from the variable terms. The vertex of $ax^2+bx+c$ occurs at $h=-b/(2a)$, with $k=f(h)$.
+
+::: {.worked-example}
+[**Worked Example: Completing the square**]{.worked-example-title}
+
+Rewrite $x^2+10x+7$:
+
+$$x^2+10x+7=(x+5)^2-25+7=(x+5)^2-18.$$
+
+The vertex is $(-5,-18)$.
+:::
+
+::: {.try-it}
+**Try It.** Rewrite $x^2-8x+3$ in vertex form.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(x-4)^2-13$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Completing the square with a leading coefficient**]{.worked-example-title}
+
+For $2x^2-12x+5$,
+
+$$2(x^2-6x)+5=2[(x-3)^2-9]+5=2(x-3)^2-13.$$
+
+The vertex is $(3,-13)$.
+:::
+
+::: {.try-it}
+**Try It.** Rewrite $3x^2+12x-1$ in vertex form.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3(x+2)^2-13$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Maximizing rectangular channel area.** A rectangular channel is built inside a 24 m wide lined cross-section so that its width is $24-2d$ when its depth is $d$. Form the area function, rewrite it in vertex form, and find the dimensions that maximize area.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A(d)=d(24-2d)=-2d^2+24d=-2(d-6)^2+72$. The maximum occurs at $d=6$ m, giving width 12 m and area 72 m².</details>
+:::
+
+### Practice Problems
+
+1. State the vertex of $2(x-4)^2+3$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(4,3)$.</details>
+2. Find the intercepts of $(x-1)^2-9$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y$-intercept $(0,-8)$; $x$-intercepts $(-2,0)$ and $(4,0)$.</details>
+3. Complete the square for $x^2+6x-2$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(x+3)^2-11$.</details>
+4. Rewrite $4x^2-16x+1$ in vertex form. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$4(x-2)^2-15$.</details>
+5. Find the maximum or minimum of $-3(x+2)^2+7$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Maximum 7 at $x=-2$.</details>
+6. A basin-area model is $A(w)=-w^2+18w$. Find its maximum. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A=-(w-9)^2+81$, so the maximum is 81 m².</details>
+7. A pump index is $E(q)=-0.5(q-12)^2+40$. State the optimal flow and maximum index. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Optimal flow 12 units; maximum index 40.</details>
+8. A rectangular enclosure has area $A(x)=x(30-2x)$. Find the positive dimension that maximizes area. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A=-2(x-7.5)^2+112.5$, so $x=7.5$.</details>
+
+## Polynomial behaviour and graphing {#polynomial-behaviour-graphing}
+
+The leading term, zeros, and multiplicities of a polynomial control its large-scale shape. A careful sketch combines these features with intercepts and sign information.
+
+### End behaviour and local extrema
+
+::: {.definition-box}
+**End behaviour.** The behaviour of a function as $x\to\infty$ and as $x\to-\infty$.
+:::
+
+For a polynomial $P(x)=a_nx^n+\cdots$, the leading term $a_nx^n$ determines end behaviour. Even degree gives matching end directions; odd degree gives opposite directions. A positive leading coefficient points upward as $x\to\infty$, while a negative one points downward. A degree-$n$ polynomial has at most $n-1$ local extrema.
+
+::: {.worked-example}
+[**Worked Example: Describing cubic end behaviour**]{.worked-example-title}
+
+For $P(x)=2x^3-5x^2+x+1$, the leading term is $2x^3$. Therefore, $P(x)\to\infty$ as $x\to\infty$ and $P(x)\to-\infty$ as $x\to-\infty$.
+:::
+
+::: {.try-it}
+**Try It.** Describe the end behaviour of $-4x^5+2x$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>As $x\to\infty$, $P(x)\to-\infty$; as $x\to-\infty$, $P(x)\to\infty$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Bounding the number of turns**]{.worked-example-title}
+
+A fourth-degree polynomial can have at most three local extrema. A graph showing four distinct turning points therefore cannot represent a fourth-degree polynomial.
+:::
+
+::: {.try-it}
+**Try It.** What is the maximum possible number of local extrema for a degree-7 polynomial?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Six.</details>
+:::
+
+### Zeros, multiplicity, and a systematic sketch
+
+::: {.definition-box}
+**Multiplicity.** The number of times a factor corresponding to a zero occurs in a polynomial.
+:::
+
+At a zero of odd multiplicity, a polynomial changes sign and crosses the axis. At a zero of even multiplicity, it touches the axis and turns back. To sketch, factor completely, identify zeros and multiplicities, find the $y$-intercept, determine signs between zeros, establish end behaviour, and connect the features smoothly.
+
+::: {.worked-example}
+[**Worked Example: Sketching a factored cubic**]{.worked-example-title}
+
+For $P(x)=5(x+2)(x-1)(x-3)$, the zeros $-2$, 1, and 3 all have multiplicity 1, so the graph crosses at each. The $y$-intercept is 30. Positive cubic end behaviour runs from lower left to upper right.
+:::
+
+::: {.try-it}
+**Try It.** Describe the intercept behaviour of $x(x-4)^2$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It crosses at $x=0$ and touches without crossing at $x=4$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Interpreting repeated process thresholds**]{.worked-example-title}
+
+For $R(q)=-q^2(2q+3)(q-1)$, the zero at $q=0$ has multiplicity 2, so the graph touches there. It crosses at $q=-3/2$ and $q=1$. The negative leading term is degree 4, so both ends point downward.
+:::
+
+::: {.try-it}
+**Try It.** Describe the zeros and end behaviour of $2(x+1)^2(x-3)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It touches at $x=-1$, crosses at $x=3$, and has positive odd-degree behaviour from lower left to upper right.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Analyzing a treatment-response polynomial.** A dimensionless response is $R(q)=-0.01q(q-20)^2(q-50)$. Identify the zeros and their multiplicities, state where the graph crosses or touches the axis, and describe its end behaviour.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The zeros are 0 and 50 with multiplicity 1, and 20 with multiplicity 2. The graph crosses at 0 and 50 and touches at 20. The degree is 4 and the leading coefficient is negative, so both ends approach $-\infty$.</details>
+:::
+
+### Practice Problems
+
+1. Describe the end behaviour of $3x^4-2x+1$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both ends approach $\infty$.</details>
+2. Describe the end behaviour of $-x^3+4x$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Left end up, right end down.</details>
+3. State the maximum number of local extrema for degree 6. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Five.</details>
+4. Identify zeros and multiplicities of $(x+2)^3(x-5)^2$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-2$ has multiplicity 3; 5 has multiplicity 2.</details>
+5. Find the $y$-intercept of $2(x-1)(x+3)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-6$.</details>
+6. A response model is $P(q)=q(q-10)(q-25)$. At which flows does it cross zero? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>At $q=0$, 10, and 25.</details>
+7. A model contains $(q-18)^2$. Describe its graph at $q=18$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The zero has even multiplicity, so the graph touches the axis without changing sign.</details>
+8. Describe the end behaviour of the pump polynomial $-0.2q^4+3q^2$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both ends approach $-\infty$.</details>
+
+## Rational functions, holes, and asymptotes {#rational-functions-asymptotes}
+
+Rational functions are ratios of polynomials. Their graphs can contain excluded points and can approach lines that organize their long-term or near-boundary behaviour.
+
+::: {.definition-box}
+**Vertical asymptote.** A line $x=a$ approached by a function whose magnitude grows without bound as $x$ approaches $a$ from at least one side.
+:::
+
+### Domains, holes, and vertical asymptotes
+
+Factor numerator and denominator before interpreting a rational function. Original denominator zeros are excluded from the domain. A factor that cancels produces a hole, not a vertical asymptote. An uncancelled denominator zero produces a vertical asymptote.
+
+::: {.definition-box}
+**Hole.** A removable discontinuity created when a common factor cancels but its zero remains excluded from the original domain.
+:::
+
+::: {.worked-example}
+[**Worked Example: Distinguishing a hole from an asymptote**]{.worked-example-title}
+
+For
+
+$$r(x)=\frac{x^2-1}{x^2+x-2}=\frac{(x-1)(x+1)}{(x-1)(x+2)}=\frac{x+1}{x+2},$$
+
+the domain excludes $x=1,-2$. There is a hole at $(1,2/3)$ and a vertical asymptote at $x=-2$.
+:::
+
+::: {.try-it}
+**Try It.** Analyze $(x^2-4)/(x^2-x-6)$ for holes and vertical asymptotes.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It simplifies to $(x-2)/(x-3)$ with $x\ne-2,3$. There is a hole at $(-2,4/5)$ and a vertical asymptote at $x=3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: One-sided behaviour near an operating limit**]{.worked-example-title}
+
+For $f(q)=1/(q-10)$, $f(q)\to-\infty$ as $q\to10^-$ and $f(q)\to\infty$ as $q\to10^+$. The line $q=10$ is a vertical asymptote.
+:::
+
+::: {.try-it}
+**Try It.** Describe the one-sided behaviour of $1/(x+4)$ near $x=-4$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>As $x\to-4^-$, the function approaches $-\infty$; as $x\to-4^+$, it approaches $\infty$.</details>
+:::
+
+### Horizontal asymptotes
+
+::: {.definition-box}
+**Horizontal asymptote.** A line $y=L$ approached by a function as $x\to\infty$ or $x\to-\infty$.
+:::
+
+For a rational function with numerator degree $n$ and denominator degree $m$: if $n<m$, the horizontal asymptote is $y=0$; if $n=m$, it is the ratio of leading coefficients; if $n>m$, there is no horizontal asymptote. A graph may cross a horizontal asymptote.
+
+::: {.worked-example}
+[**Worked Example: Finding a horizontal asymptote**]{.worked-example-title}
+
+For $f(x)=(2x^2+7x-4)/(x^2+x-2)$, numerator and denominator have equal degree. The horizontal asymptote is $y=2/1=2$.
+:::
+
+::: {.try-it}
+**Try It.** Find the horizontal asymptote of $(3x+1)/(2x-5)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=3/2$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Comparing degrees**]{.worked-example-title}
+
+For $g(x)=(5x-1)/(x^3+2)$, the numerator degree is less than the denominator degree, so $g(x)\to0$ as $x\to\pm\infty$. The horizontal asymptote is $y=0$.
+:::
+
+::: {.try-it}
+**Try It.** Does $(x^3+1)/(x^2-4)$ have a horizontal asymptote?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>No. The numerator degree is greater than the denominator degree.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Interpreting a rational pressure model.** A simplified pressure index is $P(q)=(4q^2-16)/(q^2-q-6)$. Factor the model, state its domain, identify any hole and vertical asymptote, and find the horizontal asymptote.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$P(q)=4(q-2)(q+2)/[(q-3)(q+2)]=4(q-2)/(q-3)$, with $q\ne-2,3$. The hole is at $(-2,16/5)$, the vertical asymptote is $q=3$, and the horizontal asymptote is $P=4$.</details>
+:::
+
+### Practice Problems
+
+1. State the domain of $(x+1)/(x^2-9)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x\ne-3,3$.</details>
+2. Find the hole of $(x^2-4)/(x-2)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Hole at $(2,4)$.</details>
+3. Find the vertical asymptotes of $(x+1)/[(x-2)(x+5)]$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=2$ and $x=-5$.</details>
+4. Find the horizontal asymptote of $(7x^2+1)/(2x^2-3)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=7/2$.</details>
+5. Find the horizontal asymptote of $4/(x^2+1)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=0$.</details>
+6. A head-loss index is $(q^2-25)/(q-5)$. Identify its hole. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It simplifies to $q+5$ with a hole at $(5,10)$.</details>
+7. A pressure model is $3q/(q-12)$. Identify its vertical and horizontal asymptotes. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Vertical $q=12$; horizontal $P=3$.</details>
+8. A treatment model is $(2q+1)/(q^2-16)$. State the excluded flows. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$q\ne-4,4$.</details>
+
+## Sketching and interpreting rational functions {#sketching-rational-functions}
+
+A rational graph is assembled from domain restrictions, discontinuities, intercepts, sign intervals, and end behaviour. Each feature constrains the final sketch.
+
+### A systematic graphing process
+
+First factor and state the domain. Record holes before cancelling. Find intercepts, vertical asymptotes, and one-sided behaviour. Use zeros and asymptotes to divide the number line into sign intervals. Determine horizontal behaviour from degrees, then sketch branches that respect every feature.
+
+::: {.worked-example}
+[**Worked Example: Graphing a rational function with two asymptotes**]{.worked-example-title}
+
+For $f(x)=(2x-1)/(x+2)$, the domain excludes $-2$, the $x$-intercept is $1/2$, the $y$-intercept is $-1/2$, the vertical asymptote is $x=-2$, and the horizontal asymptote is $y=2$. Test points determine the sign of each branch.
+:::
+
+::: {.try-it}
+**Try It.** List the key graphing features of $(x+3)/(x-1)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain $x\ne1$; $x$-intercept $-3$; $y$-intercept $-3$; vertical asymptote $x=1$; horizontal asymptote $y=1$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Graphing with a hole**]{.worked-example-title}
+
+For $r(x)=(x^2-4)/(2x^2+2x)$,
+
+$$r(x)=\frac{(x-2)(x+2)}{2x(x+1)}.$$
+
+No factor cancels, so there is no hole. The vertical asymptotes are $x=0,-1$, zeros are $x=\pm2$, and the horizontal asymptote is $y=1/2$.
+:::
+
+::: {.try-it}
+**Try It.** Does $(x^2-1)/(x^2+3x+2)$ contain a hole?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Yes. It simplifies from $(x-1)(x+1)/[(x+1)(x+2)]$ and has a hole at $x=-1$.</details>
+:::
+
+### Domain and range from a rational graph
+
+Domain is read horizontally and excludes holes and vertical asymptotes. Range is read vertically and may exclude a horizontal value or the output at a hole. Solving $y=f(x)$ for $x$ can help identify excluded output values when the graph is difficult to read.
+
+::: {.worked-example}
+[**Worked Example: Finding the range of a reciprocal transformation**]{.worked-example-title}
+
+For $f(x)=3+2/(x-4)$, the vertical asymptote is $x=4$ and the horizontal asymptote is $y=3$. Since $2/(x-4)$ can never be zero, the range is $(-\infty,3)\cup(3,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** Find the domain and range of $-1+5/(x+2)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain excludes $-2$; range excludes $-1$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Checking a physically restricted branch**]{.worked-example-title}
+
+If $H(q)=40q/(q+5)$ models head for $q\ge0$, the algebraic vertical asymptote $q=-5$ lies outside the physical domain. On $q\ge0$, $H$ begins at 0, increases, and approaches 40 from below.
+:::
+
+::: {.try-it}
+**Try It.** Interpret $C(t)=10t/(t+2)$ for $t\ge0$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It begins at 0, increases for nonnegative time, and approaches 10 without reaching it.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Analyzing a saturating treatment model.** Removal efficiency is modelled by $E(C)=90C/(C+4)$ for dosage $C\ge0$. Find the intercept, identify the relevant asymptotes, describe the physical range, and calculate $E(8)$.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The intercept is $(0,0)$. The algebraic vertical asymptote $C=-4$ is outside the physical domain. The horizontal asymptote is $E=90$, so the physical range is $[0,90)$. At $C=8$, $E=90(8)/12=60$.</details>
+:::
+
+### Practice Problems
+
+1. List the intercepts and asymptotes of $(x-2)/(x+1)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x$-intercept 2; $y$-intercept $-2$; vertical asymptote $x=-1$; horizontal asymptote $y=1$.</details>
+2. Determine the sign of $(x-3)/(x+2)$ on $(-2,3)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Negative.</details>
+3. Find the domain and range of $2+1/(x-5)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain excludes 5; range excludes 2.</details>
+4. Identify all graphing features of $x/(x^2-4)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain excludes $\pm2$; intercept $(0,0)$; vertical asymptotes $x=\pm2$; horizontal asymptote $y=0$.</details>
+5. Explain why a graph cannot pass through a hole. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The corresponding input is excluded from the original domain.</details>
+6. A dosage response is $E(C)=75C/(C+3)$ for $C\ge0$. Find $E(6)$ and the limiting efficiency. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$E(6)=50$; the limiting efficiency is 75.</details>
+7. A hydraulic index is $H(q)=20q/(q+10)$ for $q\ge0$. State its physical range. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$[0,20)$.</details>
+8. A model $P(q)=(q-5)/(q+1)$ is used only for $q\ge0$. Which algebraic features lie outside the physical domain? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The vertical asymptote $q=-1$ lies outside the physical domain.</details>
+
+## Chapter Review {#polynomial-rational-functions-review}
+
+### Chapter summary
+
+Vertex form reveals the turning point of a quadratic, and completing the square converts standard form to vertex form. A polynomial's leading term controls end behaviour, while zeros and multiplicities control axis crossings. Rational functions require careful distinction among holes, vertical asymptotes, and horizontal asymptotes. A reliable graph combines algebraic features, signs, and physical restrictions.
+
+### Common mistakes
+
+- Reading the vertex sign incorrectly from $(x-h)^2$.
+- Completing the square without accounting for a leading coefficient.
+- Assuming every zero produces an axis crossing.
+- Treating a cancelled denominator factor as a vertical asymptote.
+- Forgetting original domain restrictions.
+- Assuming a horizontal asymptote can never be crossed.
+
+### Exercises
+
+1. Rewrite $2x^2+8x-3$ in vertex form. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2(x+2)^2-11$.</details>
+2. Describe the end behaviour of $-5x^6+2x^3$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both ends approach $-\infty$.</details>
+3. Describe the zeros of $(x+3)^2(x-1)^3$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It touches at $-3$ and crosses at 1.</details>
+4. Find the hole and asymptote of $(x^2-9)/(x^2-x-6)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Hole at $x=3$ and vertical asymptote at $x=-2$.</details>
+5. Find the horizontal asymptote of $(4x^2+1)/(5x^2-2x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$y=4/5$.</details>
+6. A basin-area model is $A(w)=-2w^2+32w$. Find the maximum. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A=-2(w-8)^2+128$, so the maximum is 128 m².</details>
+
+### Questions for discussion
+
+1. Which algebraic form of a quadratic is most useful for each graph feature?
+2. How can a physically restricted domain change the interpretation of an asymptote?
+3. Why should a rational-function sketch be checked against sign intervals?

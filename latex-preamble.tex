@@ -1,0 +1,22 @@
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+\definecolor{wetblue}{HTML}{123C5A}
+\definecolor{wetteal}{HTML}{0B6B73}
+\definecolor{wetpale}{HTML}{EEF6F7}
+\definecolor{wetwarm}{HTML}{FFF8E7}
+\definecolor{wetpurple}{HTML}{57447A}
+\newtcolorbox{wetexample}{enhanced,breakable,colback=white,colframe=wetblue,boxrule=0.7pt,leftrule=4pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,before skip=10pt,after skip=8pt}
+\newtcolorbox{wetdefinition}{enhanced,breakable,colback=wetpale,colframe=wetteal,boxrule=0.7pt,leftrule=4pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,before skip=9pt,after skip=9pt}
+\newtcolorbox{wettheorem}{enhanced,breakable,colback=purple!4,colframe=wetpurple,boxrule=0.7pt,leftrule=4pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,before skip=9pt,after skip=9pt}
+\newtcolorbox{wetoutcomes}{enhanced,breakable,colback=blue!3,colframe=wetblue,boxrule=0.7pt,toprule=3pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,before skip=10pt,after skip=10pt}
+\newtcolorbox{wettry}{enhanced,breakable,colback=black!2,colframe=black!25,boxrule=0.5pt,leftrule=3pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,before skip=6pt,after skip=10pt}
+\newtcolorbox{wetapplied}{enhanced,breakable,colback=wetwarm,colframe=orange!60!black,boxrule=0.7pt,leftrule=4pt,arc=2pt,left=8pt,right=8pt,top=7pt,bottom=7pt,before skip=10pt,after skip=10pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\nouppercase{\leftmark}}
+\fancyfoot[CE,CO]{\thepage}
+\setlength{\headheight}{14pt}

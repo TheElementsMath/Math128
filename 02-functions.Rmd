@@ -1,0 +1,468 @@
+# Functions {#functions}
+
+Functions provide a precise way to describe how one quantity depends on another. In water engineering, a function may connect time to tank volume, flow to pressure loss, concentration to sensor output, or pipe diameter to cross-sectional area. A function is more than a formula. Its domain states which inputs are permitted, its range states which outputs occur, and its graph shows how the output changes. This chapter follows the progression of the MATH 128 notes from function notation and graphs through rates of change, transformations, combinations, composition, one-to-one and onto behaviour, and inverse functions. Throughout the chapter, units and physical restrictions are treated as part of the model.
+
+::: {.learning-outcomes}
+**Learning outcomes.** By the end of this chapter, you should be able to:
+
+- evaluate functions and interpret their inputs and outputs;
+- determine domains and ranges from formulas and graphs;
+- analyze piecewise functions, net change, and average rate of change;
+- solve equations and inequalities graphically and describe graph behaviour;
+- graph functions using transformations;
+- combine and compose functions while tracking domains; and
+- determine whether a function is one-to-one or onto and find an inverse when one exists.
+:::
+
+## Function language, evaluation, domain, and range {#function-language-domain-range}
+
+A function formalizes a dependable input-output relationship. Each allowable input must produce exactly one output, although different inputs may produce the same output.
+
+::: {.definition-box}
+**Function.** A rule that assigns exactly one output to every input in its domain.
+:::
+
+If a function maps a set $A$ to a set $B$, write $f:A\to B$. The set $A$ is the domain and $B$ is the codomain. The value assigned to $x$ is $f(x)$, read “$f$ of $x$.” The set of outputs actually produced is the range. The range is contained in the codomain but does not always equal it.
+
+### Evaluating functions and recognizing graphs
+
+To evaluate a function, replace every occurrence of its variable with the specified input. Parentheses are essential when the input is negative or algebraic. For $f(x)=x^2-3x$, for example,
+
+$$f(-2)=(-2)^2-3(-2)=10.$$
+
+An input $a$ produces the point $(a,f(a))$ on the graph. A graph represents a function of $x$ exactly when every vertical line intersects it at most once. This vertical line test checks whether one input has been assigned more than one output. A circle fails the test, while a vertical parabola such as $y=x^2$ passes.
+
+::: {.worked-example}
+[**Worked Example: Evaluating a flow function**]{.worked-example-title}
+
+The flow through a control setting is modelled by $Q(s)=2.5s^2+4$, where $Q$ is in litres per second. At $s=3$,
+
+$$Q(3)=2.5(3)^2+4=26.5\ \text{L/s}.$$
+
+The ordered pair $(3,26.5)$ lies on the graph.
+:::
+
+::: {.try-it}
+**Try It.** Evaluate $Q(-2)$ for the same algebraic rule.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$Q(-2)=2.5(-2)^2+4=14$ L/s. Whether a negative setting is physically permitted is a separate domain question.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Evaluating a difference quotient input**]{.worked-example-title}
+
+For $f(x)=1/(x+1)^2$,
+
+$$f(x+h)=\frac{1}{(x+h+1)^2}.$$
+
+The entire expression $x+h$ replaces the original input variable.
+:::
+
+::: {.try-it}
+**Try It.** If $g(x)=3x^2-1$, find $g(a+h)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$g(a+h)=3(a+h)^2-1$.</details>
+:::
+
+### Domain, codomain, and range
+
+::: {.definition-box}
+**Domain.** The set of inputs for which a function is defined.
+:::
+
+::: {.definition-box}
+**Range.** The set of outputs a function actually produces.
+:::
+
+The algebraic domain is found by excluding operations that are undefined over the real numbers. A denominator cannot equal zero. The radicand of an even root must be nonnegative, and it must be positive when that root appears in a denominator. Logarithmic inputs, introduced later, must be positive. Physical models may add restrictions such as $t\ge0$, $Q\ge0$, or a maximum equipment setting.
+
+Range is often easiest to determine from a graph. The function $g(x)=|x|$ has domain $\mathbb R$ and range $[0,\infty)$. A quadratic opening upward has a minimum output at its vertex. A reciprocal function may exclude a horizontal value. State range restrictions on outputs, not inputs.
+
+::: {.worked-example}
+[**Worked Example: Finding a radical domain**]{.worked-example-title}
+
+For
+
+$$h(x)=\frac{2+x}{\sqrt{x(x+3)}},$$
+
+the denominator requires $x(x+3)>0$. A sign chart gives $x<-3$ or $x>0$, so the domain is $(-\infty,-3)\cup(0,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** Find the domain of $k(x)=1/\sqrt{x-5}$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The denominator requires $x-5>0$, so the domain is $(5,\infty)$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Interpreting the range of a storage model**]{.worked-example-title}
+
+A tank-depth model is $D(t)=4-0.2t$ for $0\le t\le20$ min. The depth decreases from 4 m to 0 m. Its physical domain is $[0,20]$ and its range is $[0,4]$ m.
+:::
+
+::: {.try-it}
+**Try It.** Find the range of $V(t)=10+3t$ for $0\le t\le8$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$V$ increases from 10 to 34, so the range is $[10,34]$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Restricting a reservoir model.** Reservoir volume is modelled by $V(t)=120-4.5t$ megalitres, where $t$ is measured in days. Determine the largest physical domain for which time and volume are nonnegative, and state the corresponding range.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Require $t\ge0$ and $120-4.5t\ge0$. Thus $0\le t\le120/4.5=26.67$ days. The physical domain is approximately $[0,26.67]$ days and the range is $[0,120]$ ML.</details>
+:::
+
+### Practice Problems
+
+1. For $f(x)=x^2-4x+1$, find $f(3)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f(3)=9-12+1=-2$.</details>
+2. If $g(x)=2/(x-1)$, find $g(a+h)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$g(a+h)=2/(a+h-1)$.</details>
+3. Does $x=y^2$ define $y$ as a function of $x$ over all real values? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>No. For most positive $x$, the relation has two outputs, $y=\pm\sqrt{x}$.</details>
+4. Find the domain of $\sqrt{12-3x}$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$12-3x\ge0$, so $x\le4$.</details>
+5. State the domain and range of $f(x)=(x-2)^2+1$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain $\mathbb R$; range $[1,\infty)$.</details>
+6. A flow model is $Q(v)=0.8v+6$. Find $Q(25)$ and interpret it if $Q$ is measured in L/s. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$Q(25)=26$ L/s.</details>
+7. A water-depth function is $d(t)=3.6-0.12t$ for $0\le t\le30$. State its range. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The depth falls from 3.6 m to 0 m, so the range is $[0,3.6]$ m.</details>
+8. Find the physical domain of $A(d)=\sqrt{25-d^2}$ when $d$ is a nonnegative pipe dimension. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$25-d^2\ge0$ and $d\ge0$, giving $0\le d\le5$.</details>
+
+## Parent functions, piecewise models, and rates of change {#parent-piecewise-rates}
+
+Familiar parent graphs make it possible to recognize new functions quickly. Piecewise models allow different rules on different intervals, while rates of change measure how output responds as input changes.
+
+### Parent functions and piecewise definitions
+
+::: {.definition-box}
+**Parent function.** A basic function whose graph provides a starting shape for a family of related functions.
+:::
+
+Important parent functions include constant and linear functions, powers such as $x^2$ and $x^3$, roots such as $\sqrt{x}$ and $\sqrt[3]{x}$, reciprocal functions such as $1/x$ and $1/x^2$, and the absolute-value function $|x|$. For each, know the general shape, domain, range, intercepts, symmetry, and asymptotes.
+
+A piecewise function uses different rules on different parts of its domain. Endpoint symbols determine which rule applies. A solid point represents an included endpoint, while an open point represents an excluded endpoint. Evaluate a boundary input using the rule whose condition includes equality.
+
+::: {.worked-example}
+[**Worked Example: Evaluating a piecewise pump rule**]{.worked-example-title}
+
+Let
+
+$$P(t)=\begin{cases}12t,&0\le t<5,\\60+8(t-5),&t\ge5.\end{cases}$$
+
+Then $P(4)=48$ and $P(5)=60$. The second rule is used at $t=5$ because it includes equality.
+:::
+
+::: {.try-it}
+**Try It.** Find $P(7)$ for the same function.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$P(7)=60+8(7-5)=76$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Recognizing an absolute-value response**]{.worked-example-title}
+
+The function $E(x)=|x-7|$ measures distance from the target 7. Its graph is V-shaped, has vertex $(7,0)$, domain $\mathbb R$, and range $[0,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** State the vertex and range of $y=|x+3|$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The vertex is $(-3,0)$ and the range is $[0,\infty)$.</details>
+:::
+
+### Net change, average rate of change, and difference quotients
+
+::: {.definition-box}
+**Average rate of change.** The ratio of net output change to input change over an interval.
+:::
+
+Between inputs $a$ and $b$, net change is $f(b)-f(a)$ and average rate of change is
+
+$$\frac{f(b)-f(a)}{b-a}.$$
+
+Its units are output units per input unit. For inputs $a$ and $a+h$, this becomes the difference quotient
+
+$$\frac{f(a+h)-f(a)}{h},\qquad h\ne0.$$
+
+For a linear function, the average rate of change is constant and equals its slope. For nonlinear functions, it depends on the interval.
+
+::: {.worked-example}
+[**Worked Example: Finding an average inflow rate**]{.worked-example-title}
+
+A reservoir contains 42 ML at hour 2 and 57 ML at hour 7. The net change is $57-42=15$ ML, and the average rate is
+
+$$\frac{57-42}{7-2}=3\ \text{ML/h}.$$
+:::
+
+::: {.try-it}
+**Try It.** Volume rises from 18 m³ at 4 min to 30 m³ at 10 min. Find the average rate.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(30-18)/(10-4)=2$ m³/min.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Simplifying a difference quotient**]{.worked-example-title}
+
+For $f(x)=x-3x^2$,
+
+$$\frac{f(2+h)-f(2)}h=\frac{-11h-3h^2}{h}=-11-3h,\qquad h\ne0.$$
+:::
+
+::: {.try-it}
+**Try It.** Find $[g(1+h)-g(1)]/h$ for $g(x)=x^2$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$[(1+h)^2-1]/h=(2h+h^2)/h=2+h$, $h\ne0$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Comparing filtration rates.** Cumulative filtered volume is 18 m³ after 30 min and 52 m³ after 80 min. Find the net change and average filtration rate. If the rate were constant, estimate the additional volume filtered during the next 25 min.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The net change is 34 m³. The average rate is $34/(80-30)=0.68$ m³/min. At that rate, the next 25 min would add $0.68(25)=17$ m³.</details>
+:::
+
+### Practice Problems
+
+1. State the domain and range of $y=\sqrt{x}$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both are $[0,\infty)$.</details>
+2. State the domain and range of $y=1/x$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both are $(-\infty,0)\cup(0,\infty)$.</details>
+3. For $f(x)=x+2$ when $x<1$ and $f(x)=3x$ when $x\ge1$, find $f(1)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f(1)=3$.</details>
+4. Find the average rate of change of $x^2$ from $x=1$ to $x=5$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(25-1)/(5-1)=6$.</details>
+5. Simplify $[(x+h)^2-x^2]/h$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2x+h$, $h\ne0$.</details>
+6. Tank volume rises from 9 m³ at 3 min to 33 m³ at 15 min. Find the average rate. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(33-9)/(15-3)=2$ m³/min.</details>
+7. A two-stage pump delivers $10t$ L for $0\le t<4$ and $40+6(t-4)$ L for $t\ge4$. Find the volume at 3 min and 7 min. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$P(3)=30$ L and $P(7)=58$ L.</details>
+8. Concentration changes from 1.8 mg/L at 10 min to 1.2 mg/L at 25 min. Find and interpret the average rate. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(1.2-1.8)/(25-10)=-0.04$ mg/L per min. Concentration decreases by 0.04 mg/L per minute on average.</details>
+
+## Graphical behaviour and transformations {#graphical-behaviour-transformations}
+
+Graphs support both qualitative interpretation and numerical problem solving. They show intersections, sign, intervals of increase or decrease, extrema, and the effects of changing a familiar formula.
+
+### Graphical equations, inequalities, and extrema
+
+The solutions of $f(x)=g(x)$ are the $x$-coordinates where their graphs intersect. The inequality $f(x)<g(x)$ holds where the graph of $f$ lies below the graph of $g$. Include intersection points only when equality is part of the comparison.
+
+::: {.definition-box}
+**Increasing function.** A function whose outputs rise as inputs increase on a specified interval.
+:::
+
+::: {.definition-box}
+**Local extremum.** A local maximum or minimum value compared with nearby function values.
+:::
+
+An interval of increase or decrease is described with input values. A turning point may be a local maximum or minimum. A graph can have several local extrema, and a local extremum need not be the greatest or least value on the entire domain.
+
+::: {.worked-example}
+[**Worked Example: Solving an equation graphically**]{.worked-example-title}
+
+To solve $x^2-1=8-x^2$, graph $y=x^2-1$ and $y=8-x^2$. Their intersections satisfy $2x^2=9$, so the intersection inputs are $x=\pm3/\sqrt2\approx\pm2.12$.
+:::
+
+::: {.try-it}
+**Try It.** Find the intersection inputs of $y=x^2$ and $y=4$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=-2$ and $x=2$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Describing a quadratic's behaviour**]{.worked-example-title}
+
+For $f(x)=-(x-3)^2+8$, the vertex $(3,8)$ is a maximum. The function increases on $(-\infty,3)$ and decreases on $(3,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** State the increasing and decreasing intervals of $(x+1)^2-4$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It decreases on $(-\infty,-1)$ and increases on $(-1,\infty)$.</details>
+:::
+
+### Transforming parent graphs
+
+If $c>0$, $f(x)+c$ shifts upward and $f(x)-c$ shifts downward. The graph of $f(x-c)$ shifts right, while $f(x+c)$ shifts left. The graph of $-f(x)$ reflects across the $x$-axis, and $f(-x)$ reflects across the $y$-axis. Multiplying by $a$ changes vertical scale by $|a|$ and reflects vertically when $a<0$. Replacing $x$ by $kx$ changes horizontal scale by $1/|k|$.
+
+Order matters. Work from inside to outside: horizontal scale, horizontal shift, vertical scale or reflection, then vertical shift. Track a small set of key points rather than producing a new table from scratch.
+
+::: {.worked-example}
+[**Worked Example: Transforming a quadratic**]{.worked-example-title}
+
+The graph of $y=-3(x+3)^2+2$ comes from $y=x^2$. Shift left 3, stretch vertically by 3, reflect across the $x$-axis, and shift up 2. The vertex is $(-3,2)$ and the parabola opens downward.
+:::
+
+::: {.try-it}
+**Try It.** Describe the transformations and vertex of $y=2(x-4)^2-1$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Stretch vertically by 2, shift right 4, and down 1. The vertex is $(4,-1)$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Transforming a square-root model**]{.worked-example-title}
+
+The graph of $y=\sqrt{x-3}+2$ is $y=\sqrt{x}$ shifted right 3 and up 2. Its starting point is $(3,2)$, its domain is $[3,\infty)$, and its range is $[2,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** State the starting point, domain, and range of $y=-\sqrt{x+1}+4$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Starting point $(-1,4)$; domain $[-1,\infty)$; range $(-\infty,4]$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Interpreting a transformed pump curve.** A simplified pump-efficiency index is $E(q)=-0.02(q-30)^2+18$. Identify the transformation from $y=x^2$, state the maximum point, and determine the intervals on which efficiency rises and falls.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The graph is reflected, vertically compressed by 0.02, shifted right 30, and shifted up 18. Its maximum is $(30,18)$. It increases for $q<30$ and decreases for $q>30$.</details>
+:::
+
+### Practice Problems
+
+1. Solve graphically or algebraically where $x^2=9$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=-3$ or $x=3$.</details>
+2. Where is $x^2<4$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-2<x<2$.</details>
+3. State the local minimum of $(x-5)^2-2$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The minimum value is $-2$ at $x=5$.</details>
+4. Describe the transformations from $|x|$ to $-2|x+1|+3$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Left 1, vertical stretch by 2, reflection across the $x$-axis, and up 3.</details>
+5. State the domain and range of $\sqrt{x+4}-2$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Domain $[-4,\infty)$; range $[-2,\infty)$.</details>
+6. A pump curve is $H(q)=-(q-20)^2+100$. State its maximum and where it decreases. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Maximum 100 at $q=20$; decreasing on $(20,\infty)$.</details>
+7. Two pressure models are $P_1(q)=2q+10$ and $P_2(q)=70-q$. Find their intersection. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$2q+10=70-q$, so $q=20$ and $P=50$.</details>
+8. A transformed depth model is $d(t)=-\sqrt{t-4}+6$. State its initial point and physical range for $t\ge4$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It begins at $(4,6)$. Algebraically the range is $(-\infty,6]$; restricting to nonnegative depth gives $[0,6]$.</details>
+
+## Function operations, composition, and inverses {#function-operations-composition-inverses}
+
+Functions can be combined to build richer models. Algebraic operations combine outputs at the same input, composition passes the output of one function into another, and inversion reverses a one-to-one relationship.
+
+### Arithmetic with functions
+
+For functions $f$ and $g$,
+
+$$(f+g)(x)=f(x)+g(x),\quad(f-g)(x)=f(x)-g(x),$$
+
+$$(fg)(x)=f(x)g(x),\quad\left(\frac fg\right)(x)=\frac{f(x)}{g(x)}.$$
+
+The domain of a sum, difference, or product is the intersection of the original domains. A quotient also excludes values for which $g(x)=0$.
+
+::: {.worked-example}
+[**Worked Example: Combining inflow and outflow functions**]{.worked-example-title}
+
+Let inflow be $I(t)=40+2t$ L/s and outflow be $O(t)=18+t$ L/s. Net inflow is
+
+$$(I-O)(t)=40+2t-(18+t)=22+t\ \text{L/s}.$$
+:::
+
+::: {.try-it}
+**Try It.** If $I(t)=30+3t$ and $O(t)=12+2t$, find net inflow.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(I-O)(t)=18+t$.</details>
+:::
+
+### Composition of functions
+
+::: {.definition-box}
+**Composite function.** The function $(f\circ g)(x)=f(g(x))$, formed by using the output of $g$ as the input of $f$.
+:::
+
+Composition order matters. In general, $f\circ g$ differs from $g\circ f$. Its domain consists of inputs in the domain of $g$ whose outputs also lie in the domain of $f$.
+
+::: {.worked-example}
+[**Worked Example: Composing radius and area**]{.worked-example-title}
+
+A circular spill radius grows as $r(t)=24+8t$, and area is $A(r)=\pi r^2$. Then
+
+$$(A\circ r)(t)=\pi(24+8t)^2.$$
+
+The composition converts time directly to area.
+:::
+
+::: {.try-it}
+**Try It.** If a circular tank radius is $r(t)=2+0.1t$, write its surface area as a function of time.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A(t)=\pi(2+0.1t)^2$.</details>
+:::
+
+### One-to-one and onto functions
+
+::: {.definition-box}
+**One-to-one function.** A function in which distinct inputs always produce distinct outputs.
+:::
+
+The horizontal line test identifies one-to-one graphs. Algebraically, assume $f(a)=f(b)$ and show that $a=b$. To prove that a function is not one-to-one, one counterexample with two inputs sharing an output is enough.
+
+::: {.definition-box}
+**Onto function.** A function whose range equals its stated codomain.
+:::
+
+Onto depends on the codomain. The rule $f(x)=x^2$ from $\mathbb R$ to $\mathbb R$ is not onto because it produces no negative outputs. The same rule from $\mathbb R$ to $[0,\infty)$ is onto.
+
+::: {.worked-example}
+[**Worked Example: Testing one-to-one behaviour**]{.worked-example-title}
+
+For $f(x)=5(x-2)^5-7$, suppose $f(a)=f(b)$. Then $(a-2)^5=(b-2)^5$, so $a-2=b-2$ and $a=b$. Therefore, $f$ is one-to-one.
+:::
+
+::: {.try-it}
+**Try It.** Is $h(x)=x^2-3x$ one-to-one on $\mathbb R$?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>No. For example, $h(0)=0$ and $h(3)=0$.</details>
+:::
+
+### Inverse functions
+
+::: {.definition-box}
+**Inverse function.** A function $f^{-1}$ that reverses a one-to-one function, so $f^{-1}(f(x))=x$ on the domain of $f$.
+:::
+
+The notation $f^{-1}(x)$ does not mean $1/f(x)$. To find an inverse, first establish that $f$ is one-to-one, write $y=f(x)$, interchange $x$ and $y$, solve for $y$, and rename the result $f^{-1}(x)$. The domain and range exchange roles. Verify the result with both compositions.
+
+::: {.worked-example}
+[**Worked Example: Inverting a calibration function**]{.worked-example-title}
+
+For $V(C)=0.12C+0.8$, write $y=0.12C+0.8$ and solve for $C$:
+
+$$C=\frac{y-0.8}{0.12}.$$
+
+Thus $V^{-1}(x)=(x-0.8)/0.12$, which converts sensor voltage back to concentration.
+:::
+
+::: {.try-it}
+**Try It.** Find the inverse of $f(x)=3x-5$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f^{-1}(x)=(x+5)/3$.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Building and reversing a sensor model.** A linear sensor converts chlorine concentration $C$ in mg/L to voltage using $V(C)=1.5C+0.4$. Find the voltage at 0.8 mg/L, derive the inverse function, and use it to find the concentration corresponding to 2.2 V.
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$V(0.8)=1.6$ V. Solving $V=1.5C+0.4$ gives $C=(V-0.4)/1.5$, so $V^{-1}(x)=(x-0.4)/1.5$. At 2.2 V, $C=(2.2-0.4)/1.5=1.2$ mg/L.</details>
+:::
+
+### Practice Problems
+
+1. If $f(x)=x+2$ and $g(x)=x^2$, find $(f+g)(x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x^2+x+2$.</details>
+2. For the same functions, find $(f\circ g)(x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x^2+2$.</details>
+3. For the same functions, find $(g\circ f)(x)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(x+2)^2$.</details>
+4. Is $f(x)=4x+1$ one-to-one on $\mathbb R$? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Yes. It is a nonconstant linear function.</details>
+5. Find the inverse of $f(x)=(2x+1)/(x-3)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f^{-1}(x)=(3x+1)/(x-2)$, with $x\ne2$.</details>
+6. Inflow is $I(t)=50+4t$ and outflow is $O(t)=22+t$. Find net flow. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$I(t)-O(t)=28+3t$ L/s.</details>
+7. Pipe radius is $r(d)=d/2$ and area is $A(r)=\pi r^2$. Find $(A\circ r)(d)$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A(d)=\pi(d/2)^2=\pi d^2/4$.</details>
+8. A sensor function is $S(C)=0.25C+1$. Find its inverse and the concentration at output 3.5. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$S^{-1}(x)=4(x-1)$. At 3.5, $C=10$.</details>
+
+## Chapter Review {#functions-chapter-review}
+
+### Chapter summary
+
+A function assigns one output to each input. Domain and range identify allowable inputs and resulting outputs, while graphs reveal shape, change, intersections, and extrema. Parent functions support efficient graphing through transformations. Function arithmetic combines outputs, composition links successive relationships, and inverses reverse one-to-one functions. In applied work, domains, units, and physical meaning remain essential.
+
+### Common mistakes
+
+- Substituting a negative or algebraic input without parentheses.
+- Confusing codomain with range.
+- Ignoring a physical restriction after finding an algebraic domain.
+- Reversing the direction of a horizontal shift.
+- Assuming that $f\circ g=g\circ f$.
+- Treating $f^{-1}$ as a reciprocal.
+
+### Exercises
+
+1. For $f(x)=x^2-5x+4$, find $f(-2)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$f(-2)=4+10+4=18$.</details>
+
+2. Find the domain of $g(x)=\sqrt{x+2}/(x-4)$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$[-2,4)\cup(4,\infty)$.</details>
+
+3. Find the average rate of change of $f(x)=x^2+1$ from $x=2$ to $x=6$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(37-5)/(6-2)=8$.</details>
+
+4. Describe the transformations from $x^2$ to $-2(x-3)^2+5$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Vertical stretch by 2, reflection across the $x$-axis, right 3, and up 5.</details>
+
+5. If $f(x)=2x-1$ and $g(x)=\sqrt{x}$, find $(g\circ f)(x)$ and its domain.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\sqrt{2x-1}$ with domain $[1/2,\infty)$.</details>
+
+6. Determine whether $x^3+4$ is one-to-one and find its inverse.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It is one-to-one. The inverse is $f^{-1}(x)=\sqrt[3]{x-4}$.</details>
+
+7. Tank volume is $V(t)=24+1.8t$ m³. Interpret its intercept and slope.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The tank begins with 24 m³ and gains 1.8 m³ per unit of time.</details>
+
+8. A circular basin radius grows as $r(t)=5+0.02t$. Write area as a function of time.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$A(t)=\pi(5+0.02t)^2$.</details>
+
+### Questions for discussion
+
+1. Why can the physical domain of a water-engineering model be smaller than its algebraic domain?
+
+2. What information can a graph communicate more quickly than a formula?
+
+3. When is an inverse function useful in instrument calibration?

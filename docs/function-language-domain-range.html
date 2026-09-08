@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.1 Function language, evaluation, domain, and range | Foundational Mathematics for Water Engineering</title>
+  <meta name="description" content="[Brief description to be confirmed.]" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.1 Function language, evaluation, domain, and range | Foundational Mathematics for Water Engineering" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="[Brief description to be confirmed.]" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.1 Function language, evaluation, domain, and range | Foundational Mathematics for Water Engineering" />
+  
+  <meta name="twitter:description" content="[Brief description to be confirmed.]" />
+  
+
+<meta name="author" content="Joya Danyluk and Joe Hobart" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="functions.html"/>
+<link rel="next" href="parent-piecewise-rates.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-title"><a href="./">Foundational Math for Water Engineering</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="learning-goals.html"><a href="learning-goals.html"><i class="fa fa-check"></i>Learning goals</a>
+<ul>
+<li class="chapter" data-level="" data-path="learning-goals.html"><a href="learning-goals.html#software"><i class="fa fa-check"></i>Software</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>1</b> The Basics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="real-numbers-properties.html"><a href="real-numbers-properties.html"><i class="fa fa-check"></i><b>1.1</b> Real numbers and their properties</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="real-numbers-properties.html"><a href="real-numbers-properties.html#translating-signs-carefully"><i class="fa fa-check"></i><b>1.1.1</b> Translating signs carefully</a></li>
+<li class="chapter" data-level="1.1.2" data-path="real-numbers-properties.html"><a href="real-numbers-properties.html#practice-problems"><i class="fa fa-check"></i><b>1.1.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="bedmas-fractions.html"><a href="bedmas-fractions.html"><i class="fa fa-check"></i><b>1.2</b> BEDMAS and fractions</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="bedmas-fractions.html"><a href="bedmas-fractions.html#complex-numerical-fractions"><i class="fa fa-check"></i><b>1.2.1</b> Complex numerical fractions</a></li>
+<li class="chapter" data-level="1.2.2" data-path="bedmas-fractions.html"><a href="bedmas-fractions.html#units-conversion-factors-and-precision"><i class="fa fa-check"></i><b>1.2.2</b> Units, conversion factors, and precision</a></li>
+<li class="chapter" data-level="1.2.3" data-path="bedmas-fractions.html"><a href="bedmas-fractions.html#practice-problems-1"><i class="fa fa-check"></i><b>1.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="sets-interval-notation.html"><a href="sets-interval-notation.html"><i class="fa fa-check"></i><b>1.3</b> Sets, inequalities, and interval notation</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="sets-interval-notation.html"><a href="sets-interval-notation.html#converting-among-representations"><i class="fa fa-check"></i><b>1.3.1</b> Converting among representations</a></li>
+<li class="chapter" data-level="1.3.2" data-path="sets-interval-notation.html"><a href="sets-interval-notation.html#practice-problems-2"><i class="fa fa-check"></i><b>1.3.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="absolute-value-distance.html"><a href="absolute-value-distance.html"><i class="fa fa-check"></i><b>1.4</b> Absolute value and distance</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="absolute-value-distance.html"><a href="absolute-value-distance.html#practice-problems-3"><i class="fa fa-check"></i><b>1.4.1</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="exponents-roots.html"><a href="exponents-roots.html"><i class="fa fa-check"></i><b>1.5</b> Exponents, roots, and rational exponents</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="exponents-roots.html"><a href="exponents-roots.html#simplifying-roots"><i class="fa fa-check"></i><b>1.5.1</b> Simplifying roots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="exponents-roots.html"><a href="exponents-roots.html#practice-problems-4"><i class="fa fa-check"></i><b>1.5.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="algebraic-expressions-polynomials.html"><a href="algebraic-expressions-polynomials.html"><i class="fa fa-check"></i><b>1.6</b> Algebraic expressions and polynomials</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="algebraic-expressions-polynomials.html"><a href="algebraic-expressions-polynomials.html#polynomials-in-two-variables"><i class="fa fa-check"></i><b>1.6.1</b> Polynomials in two variables</a></li>
+<li class="chapter" data-level="1.6.2" data-path="algebraic-expressions-polynomials.html"><a href="algebraic-expressions-polynomials.html#domains-of-algebraic-expressions"><i class="fa fa-check"></i><b>1.6.2</b> Domains of algebraic expressions</a></li>
+<li class="chapter" data-level="1.6.3" data-path="algebraic-expressions-polynomials.html"><a href="algebraic-expressions-polynomials.html#practice-problems-5"><i class="fa fa-check"></i><b>1.6.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="expanding-factoring.html"><a href="expanding-factoring.html"><i class="fa fa-check"></i><b>1.7</b> Expanding and factoring</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="expanding-factoring.html"><a href="expanding-factoring.html#a-factoring-decision-process"><i class="fa fa-check"></i><b>1.7.1</b> A factoring decision process</a></li>
+<li class="chapter" data-level="1.7.2" data-path="expanding-factoring.html"><a href="expanding-factoring.html#practice-problems-6"><i class="fa fa-check"></i><b>1.7.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="polynomial-division-zeros.html"><a href="polynomial-division-zeros.html"><i class="fa fa-check"></i><b>1.8</b> Polynomial division and rational zeros</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="polynomial-division-zeros.html"><a href="polynomial-division-zeros.html#long-and-synthetic-division"><i class="fa fa-check"></i><b>1.8.1</b> Long and synthetic division</a></li>
+<li class="chapter" data-level="1.8.2" data-path="polynomial-division-zeros.html"><a href="polynomial-division-zeros.html#finding-all-rational-zeros"><i class="fa fa-check"></i><b>1.8.2</b> Finding all rational zeros</a></li>
+<li class="chapter" data-level="1.8.3" data-path="polynomial-division-zeros.html"><a href="polynomial-division-zeros.html#practice-problems-7"><i class="fa fa-check"></i><b>1.8.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="equations-initial-inequalities.html"><a href="equations-initial-inequalities.html"><i class="fa fa-check"></i><b>1.9</b> Equations and an initial look at inequalities</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="equations-initial-inequalities.html"><a href="equations-initial-inequalities.html#checking-and-classifying-results"><i class="fa fa-check"></i><b>1.9.1</b> Checking and classifying results</a></li>
+<li class="chapter" data-level="1.9.2" data-path="equations-initial-inequalities.html"><a href="equations-initial-inequalities.html#practice-problems-8"><i class="fa fa-check"></i><b>1.9.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="lines-linear-applications.html"><a href="lines-linear-applications.html"><i class="fa fa-check"></i><b>1.10</b> Lines and linear applications</a>
+<ul>
+<li class="chapter" data-level="1.10.1" data-path="lines-linear-applications.html"><a href="lines-linear-applications.html#intercepts-and-related-lines"><i class="fa fa-check"></i><b>1.10.1</b> Intercepts and related lines</a></li>
+<li class="chapter" data-level="1.10.2" data-path="lines-linear-applications.html"><a href="lines-linear-applications.html#practice-problems-9"><i class="fa fa-check"></i><b>1.10.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.11" data-path="fractional-rational-expressions.html"><a href="fractional-rational-expressions.html"><i class="fa fa-check"></i><b>1.11</b> Fractional and rational expressions</a>
+<ul>
+<li class="chapter" data-level="1.11.1" data-path="fractional-rational-expressions.html"><a href="fractional-rational-expressions.html#a-complete-simplification-routine"><i class="fa fa-check"></i><b>1.11.1</b> A complete simplification routine</a></li>
+<li class="chapter" data-level="1.11.2" data-path="fractional-rational-expressions.html"><a href="fractional-rational-expressions.html#practice-problems-10"><i class="fa fa-check"></i><b>1.11.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.12" data-path="solving-linear-quadratic.html"><a href="solving-linear-quadratic.html"><i class="fa fa-check"></i><b>1.12</b> Solving linear and quadratic equations</a>
+<ul>
+<li class="chapter" data-level="1.12.1" data-path="solving-linear-quadratic.html"><a href="solving-linear-quadratic.html#solving-by-factoring"><i class="fa fa-check"></i><b>1.12.1</b> Solving by factoring</a></li>
+<li class="chapter" data-level="1.12.2" data-path="solving-linear-quadratic.html"><a href="solving-linear-quadratic.html#using-the-quadratic-formula"><i class="fa fa-check"></i><b>1.12.2</b> Using the quadratic formula</a></li>
+<li class="chapter" data-level="1.12.3" data-path="solving-linear-quadratic.html"><a href="solving-linear-quadratic.html#interpreting-the-discriminant"><i class="fa fa-check"></i><b>1.12.3</b> Interpreting the discriminant</a></li>
+<li class="chapter" data-level="1.12.4" data-path="solving-linear-quadratic.html"><a href="solving-linear-quadratic.html#practice-problems-11"><i class="fa fa-check"></i><b>1.12.4</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.13" data-path="rearranging-radical-equations.html"><a href="rearranging-radical-equations.html"><i class="fa fa-check"></i><b>1.13</b> Rearranging formulas and radical equations</a>
+<ul>
+<li class="chapter" data-level="1.13.1" data-path="rearranging-radical-equations.html"><a href="rearranging-radical-equations.html#formula-and-radical-checks"><i class="fa fa-check"></i><b>1.13.1</b> Formula and radical checks</a></li>
+<li class="chapter" data-level="1.13.2" data-path="rearranging-radical-equations.html"><a href="rearranging-radical-equations.html#practice-problems-12"><i class="fa fa-check"></i><b>1.13.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.14" data-path="solving-inequalities.html"><a href="solving-inequalities.html"><i class="fa fa-check"></i><b>1.14</b> Solving inequalities</a>
+<ul>
+<li class="chapter" data-level="1.14.1" data-path="solving-inequalities.html"><a href="solving-inequalities.html#sign-charts-and-tolerances"><i class="fa fa-check"></i><b>1.14.1</b> Sign charts and tolerances</a></li>
+<li class="chapter" data-level="1.14.2" data-path="solving-inequalities.html"><a href="solving-inequalities.html#practice-problems-13"><i class="fa fa-check"></i><b>1.14.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="1.15" data-path="the-basics-chapter-review.html"><a href="the-basics-chapter-review.html"><i class="fa fa-check"></i><b>1.15</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.15.1" data-path="the-basics-chapter-review.html"><a href="the-basics-chapter-review.html#chapter-summary"><i class="fa fa-check"></i><b>1.15.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="1.15.2" data-path="the-basics-chapter-review.html"><a href="the-basics-chapter-review.html#common-mistakes"><i class="fa fa-check"></i><b>1.15.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="1.15.3" data-path="the-basics-chapter-review.html"><a href="the-basics-chapter-review.html#exercises"><i class="fa fa-check"></i><b>1.15.3</b> Exercises</a></li>
+<li class="chapter" data-level="1.15.4" data-path="the-basics-chapter-review.html"><a href="the-basics-chapter-review.html#questions-for-discussion"><i class="fa fa-check"></i><b>1.15.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="function-language-domain-range.html"><a href="function-language-domain-range.html"><i class="fa fa-check"></i><b>2.1</b> Function language, evaluation, domain, and range</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="function-language-domain-range.html"><a href="function-language-domain-range.html#evaluating-functions-and-recognizing-graphs"><i class="fa fa-check"></i><b>2.1.1</b> Evaluating functions and recognizing graphs</a></li>
+<li class="chapter" data-level="2.1.2" data-path="function-language-domain-range.html"><a href="function-language-domain-range.html#domain-codomain-and-range"><i class="fa fa-check"></i><b>2.1.2</b> Domain, codomain, and range</a></li>
+<li class="chapter" data-level="2.1.3" data-path="function-language-domain-range.html"><a href="function-language-domain-range.html#practice-problems-14"><i class="fa fa-check"></i><b>2.1.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="parent-piecewise-rates.html"><a href="parent-piecewise-rates.html"><i class="fa fa-check"></i><b>2.2</b> Parent functions, piecewise models, and rates of change</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="parent-piecewise-rates.html"><a href="parent-piecewise-rates.html#parent-functions-and-piecewise-definitions"><i class="fa fa-check"></i><b>2.2.1</b> Parent functions and piecewise definitions</a></li>
+<li class="chapter" data-level="2.2.2" data-path="parent-piecewise-rates.html"><a href="parent-piecewise-rates.html#net-change-average-rate-of-change-and-difference-quotients"><i class="fa fa-check"></i><b>2.2.2</b> Net change, average rate of change, and difference quotients</a></li>
+<li class="chapter" data-level="2.2.3" data-path="parent-piecewise-rates.html"><a href="parent-piecewise-rates.html#practice-problems-15"><i class="fa fa-check"></i><b>2.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-behaviour-transformations.html"><a href="graphical-behaviour-transformations.html"><i class="fa fa-check"></i><b>2.3</b> Graphical behaviour and transformations</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-behaviour-transformations.html"><a href="graphical-behaviour-transformations.html#graphical-equations-inequalities-and-extrema"><i class="fa fa-check"></i><b>2.3.1</b> Graphical equations, inequalities, and extrema</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-behaviour-transformations.html"><a href="graphical-behaviour-transformations.html#transforming-parent-graphs"><i class="fa fa-check"></i><b>2.3.2</b> Transforming parent graphs</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-behaviour-transformations.html"><a href="graphical-behaviour-transformations.html#practice-problems-16"><i class="fa fa-check"></i><b>2.3.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html"><i class="fa fa-check"></i><b>2.4</b> Function operations, composition, and inverses</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html#arithmetic-with-functions"><i class="fa fa-check"></i><b>2.4.1</b> Arithmetic with functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html#composition-of-functions"><i class="fa fa-check"></i><b>2.4.2</b> Composition of functions</a></li>
+<li class="chapter" data-level="2.4.3" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html#one-to-one-and-onto-functions"><i class="fa fa-check"></i><b>2.4.3</b> One-to-one and onto functions</a></li>
+<li class="chapter" data-level="2.4.4" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html#inverse-functions"><i class="fa fa-check"></i><b>2.4.4</b> Inverse functions</a></li>
+<li class="chapter" data-level="2.4.5" data-path="function-operations-composition-inverses.html"><a href="function-operations-composition-inverses.html#practice-problems-17"><i class="fa fa-check"></i><b>2.4.5</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="functions-chapter-review.html"><a href="functions-chapter-review.html"><i class="fa fa-check"></i><b>2.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="functions-chapter-review.html"><a href="functions-chapter-review.html#chapter-summary-1"><i class="fa fa-check"></i><b>2.5.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="2.5.2" data-path="functions-chapter-review.html"><a href="functions-chapter-review.html#common-mistakes-1"><i class="fa fa-check"></i><b>2.5.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="2.5.3" data-path="functions-chapter-review.html"><a href="functions-chapter-review.html#exercises-1"><i class="fa fa-check"></i><b>2.5.3</b> Exercises</a></li>
+<li class="chapter" data-level="2.5.4" data-path="functions-chapter-review.html"><a href="functions-chapter-review.html#questions-for-discussion-1"><i class="fa fa-check"></i><b>2.5.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="polynomial-rational-functions.html"><a href="polynomial-rational-functions.html"><i class="fa fa-check"></i><b>3</b> Polynomial and Rational Functions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="quadratic-functions-completing-square.html"><a href="quadratic-functions-completing-square.html"><i class="fa fa-check"></i><b>3.1</b> Quadratic functions and completing the square</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="quadratic-functions-completing-square.html"><a href="quadratic-functions-completing-square.html#vertex-form-and-intercepts"><i class="fa fa-check"></i><b>3.1.1</b> Vertex form and intercepts</a></li>
+<li class="chapter" data-level="3.1.2" data-path="quadratic-functions-completing-square.html"><a href="quadratic-functions-completing-square.html#completing-the-square"><i class="fa fa-check"></i><b>3.1.2</b> Completing the square</a></li>
+<li class="chapter" data-level="3.1.3" data-path="quadratic-functions-completing-square.html"><a href="quadratic-functions-completing-square.html#practice-problems-18"><i class="fa fa-check"></i><b>3.1.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="polynomial-behaviour-graphing.html"><a href="polynomial-behaviour-graphing.html"><i class="fa fa-check"></i><b>3.2</b> Polynomial behaviour and graphing</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="polynomial-behaviour-graphing.html"><a href="polynomial-behaviour-graphing.html#end-behaviour-and-local-extrema"><i class="fa fa-check"></i><b>3.2.1</b> End behaviour and local extrema</a></li>
+<li class="chapter" data-level="3.2.2" data-path="polynomial-behaviour-graphing.html"><a href="polynomial-behaviour-graphing.html#zeros-multiplicity-and-a-systematic-sketch"><i class="fa fa-check"></i><b>3.2.2</b> Zeros, multiplicity, and a systematic sketch</a></li>
+<li class="chapter" data-level="3.2.3" data-path="polynomial-behaviour-graphing.html"><a href="polynomial-behaviour-graphing.html#practice-problems-19"><i class="fa fa-check"></i><b>3.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="rational-functions-asymptotes.html"><a href="rational-functions-asymptotes.html"><i class="fa fa-check"></i><b>3.3</b> Rational functions, holes, and asymptotes</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="rational-functions-asymptotes.html"><a href="rational-functions-asymptotes.html#domains-holes-and-vertical-asymptotes"><i class="fa fa-check"></i><b>3.3.1</b> Domains, holes, and vertical asymptotes</a></li>
+<li class="chapter" data-level="3.3.2" data-path="rational-functions-asymptotes.html"><a href="rational-functions-asymptotes.html#horizontal-asymptotes"><i class="fa fa-check"></i><b>3.3.2</b> Horizontal asymptotes</a></li>
+<li class="chapter" data-level="3.3.3" data-path="rational-functions-asymptotes.html"><a href="rational-functions-asymptotes.html#practice-problems-20"><i class="fa fa-check"></i><b>3.3.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="sketching-rational-functions.html"><a href="sketching-rational-functions.html"><i class="fa fa-check"></i><b>3.4</b> Sketching and interpreting rational functions</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sketching-rational-functions.html"><a href="sketching-rational-functions.html#a-systematic-graphing-process"><i class="fa fa-check"></i><b>3.4.1</b> A systematic graphing process</a></li>
+<li class="chapter" data-level="3.4.2" data-path="sketching-rational-functions.html"><a href="sketching-rational-functions.html#domain-and-range-from-a-rational-graph"><i class="fa fa-check"></i><b>3.4.2</b> Domain and range from a rational graph</a></li>
+<li class="chapter" data-level="3.4.3" data-path="sketching-rational-functions.html"><a href="sketching-rational-functions.html#practice-problems-21"><i class="fa fa-check"></i><b>3.4.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="polynomial-rational-functions-review.html"><a href="polynomial-rational-functions-review.html"><i class="fa fa-check"></i><b>3.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="polynomial-rational-functions-review.html"><a href="polynomial-rational-functions-review.html#chapter-summary-2"><i class="fa fa-check"></i><b>3.5.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="3.5.2" data-path="polynomial-rational-functions-review.html"><a href="polynomial-rational-functions-review.html#common-mistakes-2"><i class="fa fa-check"></i><b>3.5.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="3.5.3" data-path="polynomial-rational-functions-review.html"><a href="polynomial-rational-functions-review.html#exercises-2"><i class="fa fa-check"></i><b>3.5.3</b> Exercises</a></li>
+<li class="chapter" data-level="3.5.4" data-path="polynomial-rational-functions-review.html"><a href="polynomial-rational-functions-review.html#questions-for-discussion-2"><i class="fa fa-check"></i><b>3.5.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="exponential-logarithmic-functions.html"><a href="exponential-logarithmic-functions.html"><i class="fa fa-check"></i><b>4</b> Exponential and Logarithmic Functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exponential-functions-transformations.html"><a href="exponential-functions-transformations.html"><i class="fa fa-check"></i><b>4.1</b> Exponential functions and transformations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="exponential-functions-transformations.html"><a href="exponential-functions-transformations.html#basic-graphs-and-properties"><i class="fa fa-check"></i><b>4.1.1</b> Basic graphs and properties</a></li>
+<li class="chapter" data-level="4.1.2" data-path="exponential-functions-transformations.html"><a href="exponential-functions-transformations.html#transformations-of-exponential-graphs"><i class="fa fa-check"></i><b>4.1.2</b> Transformations of exponential graphs</a></li>
+<li class="chapter" data-level="4.1.3" data-path="exponential-functions-transformations.html"><a href="exponential-functions-transformations.html#practice-problems-22"><i class="fa fa-check"></i><b>4.1.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="exponential-models-applications.html"><a href="exponential-models-applications.html"><i class="fa fa-check"></i><b>4.2</b> Exponential models in applications</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="exponential-models-applications.html"><a href="exponential-models-applications.html#discrete-and-continuous-growth-and-decay"><i class="fa fa-check"></i><b>4.2.1</b> Discrete and continuous growth and decay</a></li>
+<li class="chapter" data-level="4.2.2" data-path="exponential-models-applications.html"><a href="exponential-models-applications.html#logistic-growth"><i class="fa fa-check"></i><b>4.2.2</b> Logistic growth</a></li>
+<li class="chapter" data-level="4.2.3" data-path="exponential-models-applications.html"><a href="exponential-models-applications.html#practice-problems-23"><i class="fa fa-check"></i><b>4.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="logarithmic-functions-laws.html"><a href="logarithmic-functions-laws.html"><i class="fa fa-check"></i><b>4.3</b> Logarithmic functions and laws</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="logarithmic-functions-laws.html"><a href="logarithmic-functions-laws.html#definition-graph-and-domain"><i class="fa fa-check"></i><b>4.3.1</b> Definition, graph, and domain</a></li>
+<li class="chapter" data-level="4.3.2" data-path="logarithmic-functions-laws.html"><a href="logarithmic-functions-laws.html#product-quotient-and-power-laws"><i class="fa fa-check"></i><b>4.3.2</b> Product, quotient, and power laws</a></li>
+<li class="chapter" data-level="4.3.3" data-path="logarithmic-functions-laws.html"><a href="logarithmic-functions-laws.html#practice-problems-24"><i class="fa fa-check"></i><b>4.3.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="solving-exponential-logarithmic-equations.html"><a href="solving-exponential-logarithmic-equations.html"><i class="fa fa-check"></i><b>4.4</b> Solving exponential and logarithmic equations</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="solving-exponential-logarithmic-equations.html"><a href="solving-exponential-logarithmic-equations.html#exponential-equations"><i class="fa fa-check"></i><b>4.4.1</b> Exponential equations</a></li>
+<li class="chapter" data-level="4.4.2" data-path="solving-exponential-logarithmic-equations.html"><a href="solving-exponential-logarithmic-equations.html#logarithmic-equations-and-domain-checks"><i class="fa fa-check"></i><b>4.4.2</b> Logarithmic equations and domain checks</a></li>
+<li class="chapter" data-level="4.4.3" data-path="solving-exponential-logarithmic-equations.html"><a href="solving-exponential-logarithmic-equations.html#practice-problems-25"><i class="fa fa-check"></i><b>4.4.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="log-scales-flow-duration.html"><a href="log-scales-flow-duration.html"><i class="fa fa-check"></i><b>4.5</b> Change of base, logarithmic scales, and flow duration</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="log-scales-flow-duration.html"><a href="log-scales-flow-duration.html#change-of-base-and-orders-of-magnitude"><i class="fa fa-check"></i><b>4.5.1</b> Change of base and orders of magnitude</a></li>
+<li class="chapter" data-level="4.5.2" data-path="log-scales-flow-duration.html"><a href="log-scales-flow-duration.html#semi-log-log-log-and-flow-duration-graphs"><i class="fa fa-check"></i><b>4.5.2</b> Semi-log, log-log, and flow-duration graphs</a></li>
+<li class="chapter" data-level="4.5.3" data-path="log-scales-flow-duration.html"><a href="log-scales-flow-duration.html#practice-problems-26"><i class="fa fa-check"></i><b>4.5.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="exponential-logarithmic-functions-review.html"><a href="exponential-logarithmic-functions-review.html"><i class="fa fa-check"></i><b>4.6</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="exponential-logarithmic-functions-review.html"><a href="exponential-logarithmic-functions-review.html#chapter-summary-3"><i class="fa fa-check"></i><b>4.6.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="4.6.2" data-path="exponential-logarithmic-functions-review.html"><a href="exponential-logarithmic-functions-review.html#common-mistakes-3"><i class="fa fa-check"></i><b>4.6.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="4.6.3" data-path="exponential-logarithmic-functions-review.html"><a href="exponential-logarithmic-functions-review.html#exercises-3"><i class="fa fa-check"></i><b>4.6.3</b> Exercises</a></li>
+<li class="chapter" data-level="4.6.4" data-path="exponential-logarithmic-functions-review.html"><a href="exponential-logarithmic-functions-review.html#questions-for-discussion-3"><i class="fa fa-check"></i><b>4.6.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="trigonometric-functions.html"><a href="trigonometric-functions.html"><i class="fa fa-check"></i><b>5</b> Trigonometric Functions</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="angles-radians-right-triangles.html"><a href="angles-radians-right-triangles.html"><i class="fa fa-check"></i><b>5.1</b> Angles, radians, and right triangles</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="angles-radians-right-triangles.html"><a href="angles-radians-right-triangles.html#degree-and-radian-measure"><i class="fa fa-check"></i><b>5.1.1</b> Degree and radian measure</a></li>
+<li class="chapter" data-level="5.1.2" data-path="angles-radians-right-triangles.html"><a href="angles-radians-right-triangles.html#right-triangle-ratios"><i class="fa fa-check"></i><b>5.1.2</b> Right-triangle ratios</a></li>
+<li class="chapter" data-level="5.1.3" data-path="angles-radians-right-triangles.html"><a href="angles-radians-right-triangles.html#practice-problems-27"><i class="fa fa-check"></i><b>5.1.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="special-reference-unit-circle.html"><a href="special-reference-unit-circle.html"><i class="fa fa-check"></i><b>5.2</b> Special angles, reference angles, and the unit circle</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="special-reference-unit-circle.html"><a href="special-reference-unit-circle.html#special-triangles-and-reference-angles"><i class="fa fa-check"></i><b>5.2.1</b> Special triangles and reference angles</a></li>
+<li class="chapter" data-level="5.2.2" data-path="special-reference-unit-circle.html"><a href="special-reference-unit-circle.html#trigonometric-functions-of-any-angle"><i class="fa fa-check"></i><b>5.2.2</b> Trigonometric functions of any angle</a></li>
+<li class="chapter" data-level="5.2.3" data-path="special-reference-unit-circle.html"><a href="special-reference-unit-circle.html#practice-problems-28"><i class="fa fa-check"></i><b>5.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="trigonometric-graphs-transformations.html"><a href="trigonometric-graphs-transformations.html"><i class="fa fa-check"></i><b>5.3</b> Trigonometric graphs and transformations</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="trigonometric-graphs-transformations.html"><a href="trigonometric-graphs-transformations.html#parent-graphs-and-domains"><i class="fa fa-check"></i><b>5.3.1</b> Parent graphs and domains</a></li>
+<li class="chapter" data-level="5.3.2" data-path="trigonometric-graphs-transformations.html"><a href="trigonometric-graphs-transformations.html#amplitude-period-and-phase-shift"><i class="fa fa-check"></i><b>5.3.2</b> Amplitude, period, and phase shift</a></li>
+<li class="chapter" data-level="5.3.3" data-path="trigonometric-graphs-transformations.html"><a href="trigonometric-graphs-transformations.html#practice-problems-29"><i class="fa fa-check"></i><b>5.3.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="inverse-trigonometric-functions.html"><a href="inverse-trigonometric-functions.html"><i class="fa fa-check"></i><b>5.4</b> Inverse trigonometric functions</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="inverse-trigonometric-functions.html"><a href="inverse-trigonometric-functions.html#principal-values-and-solving-angles"><i class="fa fa-check"></i><b>5.4.1</b> Principal values and solving angles</a></li>
+<li class="chapter" data-level="5.4.2" data-path="inverse-trigonometric-functions.html"><a href="inverse-trigonometric-functions.html#practice-problems-30"><i class="fa fa-check"></i><b>5.4.2</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="trigonometric-identities-formulas.html"><a href="trigonometric-identities-formulas.html"><i class="fa fa-check"></i><b>5.5</b> Trigonometric identities and angle formulas</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="trigonometric-identities-formulas.html"><a href="trigonometric-identities-formulas.html#fundamental-identities"><i class="fa fa-check"></i><b>5.5.1</b> Fundamental identities</a></li>
+<li class="chapter" data-level="5.5.2" data-path="trigonometric-identities-formulas.html"><a href="trigonometric-identities-formulas.html#even-odd-addition-and-subtraction-formulas"><i class="fa fa-check"></i><b>5.5.2</b> Even, odd, addition, and subtraction formulas</a></li>
+<li class="chapter" data-level="5.5.3" data-path="trigonometric-identities-formulas.html"><a href="trigonometric-identities-formulas.html#practice-problems-31"><i class="fa fa-check"></i><b>5.5.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="trigonometric-functions-review.html"><a href="trigonometric-functions-review.html"><i class="fa fa-check"></i><b>5.6</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="trigonometric-functions-review.html"><a href="trigonometric-functions-review.html#chapter-summary-4"><i class="fa fa-check"></i><b>5.6.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="5.6.2" data-path="trigonometric-functions-review.html"><a href="trigonometric-functions-review.html#common-mistakes-4"><i class="fa fa-check"></i><b>5.6.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="5.6.3" data-path="trigonometric-functions-review.html"><a href="trigonometric-functions-review.html#exercises-4"><i class="fa fa-check"></i><b>5.6.3</b> Exercises</a></li>
+<li class="chapter" data-level="5.6.4" data-path="trigonometric-functions-review.html"><a href="trigonometric-functions-review.html#questions-for-discussion-4"><i class="fa fa-check"></i><b>5.6.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>6</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-variables-populations-samples.html"><a href="data-variables-populations-samples.html"><i class="fa fa-check"></i><b>6.1</b> Data, variables, populations, and samples</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="data-variables-populations-samples.html"><a href="data-variables-populations-samples.html#data-matrices-and-variable-types"><i class="fa fa-check"></i><b>6.1.1</b> Data matrices and variable types</a></li>
+<li class="chapter" data-level="6.1.2" data-path="data-variables-populations-samples.html"><a href="data-variables-populations-samples.html#populations-samples-parameters-and-statistics"><i class="fa fa-check"></i><b>6.1.2</b> Populations, samples, parameters, and statistics</a></li>
+<li class="chapter" data-level="6.1.3" data-path="data-variables-populations-samples.html"><a href="data-variables-populations-samples.html#practice-problems-32"><i class="fa fa-check"></i><b>6.1.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="sampling-studies-experiments.html"><a href="sampling-studies-experiments.html"><i class="fa fa-check"></i><b>6.2</b> Sampling, observational studies, and experiments</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="sampling-studies-experiments.html"><a href="sampling-studies-experiments.html#bias-and-sampling-methods"><i class="fa fa-check"></i><b>6.2.1</b> Bias and sampling methods</a></li>
+<li class="chapter" data-level="6.2.2" data-path="sampling-studies-experiments.html"><a href="sampling-studies-experiments.html#observational-studies-and-experiments"><i class="fa fa-check"></i><b>6.2.2</b> Observational studies and experiments</a></li>
+<li class="chapter" data-level="6.2.3" data-path="sampling-studies-experiments.html"><a href="sampling-studies-experiments.html#practice-problems-33"><i class="fa fa-check"></i><b>6.2.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="centre-variability.html"><a href="centre-variability.html"><i class="fa fa-check"></i><b>6.3</b> Measures of centre and variability</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="centre-variability.html"><a href="centre-variability.html#mean-median-and-mode"><i class="fa fa-check"></i><b>6.3.1</b> Mean, median, and mode</a></li>
+<li class="chapter" data-level="6.3.2" data-path="centre-variability.html"><a href="centre-variability.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>6.3.2</b> Variance and standard deviation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="centre-variability.html"><a href="centre-variability.html#practice-problems-34"><i class="fa fa-check"></i><b>6.3.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="quartiles-outliers-shape.html"><a href="quartiles-outliers-shape.html"><i class="fa fa-check"></i><b>6.4</b> Quartiles, outliers, and distribution shape</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="quartiles-outliers-shape.html"><a href="quartiles-outliers-shape.html#five-number-summaries-and-boxplots"><i class="fa fa-check"></i><b>6.4.1</b> Five-number summaries and boxplots</a></li>
+<li class="chapter" data-level="6.4.2" data-path="quartiles-outliers-shape.html"><a href="quartiles-outliers-shape.html#skewness-and-choosing-summaries"><i class="fa fa-check"></i><b>6.4.2</b> Skewness and choosing summaries</a></li>
+<li class="chapter" data-level="6.4.3" data-path="quartiles-outliers-shape.html"><a href="quartiles-outliers-shape.html#practice-problems-35"><i class="fa fa-check"></i><b>6.4.3</b> Practice Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="statistics-chapter-review.html"><a href="statistics-chapter-review.html"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="statistics-chapter-review.html"><a href="statistics-chapter-review.html#chapter-summary-5"><i class="fa fa-check"></i><b>6.5.1</b> Chapter summary</a></li>
+<li class="chapter" data-level="6.5.2" data-path="statistics-chapter-review.html"><a href="statistics-chapter-review.html#common-mistakes-5"><i class="fa fa-check"></i><b>6.5.2</b> Common mistakes</a></li>
+<li class="chapter" data-level="6.5.3" data-path="statistics-chapter-review.html"><a href="statistics-chapter-review.html#exercises-5"><i class="fa fa-check"></i><b>6.5.3</b> Exercises</a></li>
+<li class="chapter" data-level="6.5.4" data-path="statistics-chapter-review.html"><a href="statistics-chapter-review.html#questions-for-discussion-5"><i class="fa fa-check"></i><b>6.5.4</b> Questions for discussion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i>Glossary</a></li>
+<li class="appendix"><span><b>Appendices</b></span></li>
+<li class="chapter" data-level="A" data-path="formula-reference.html"><a href="formula-reference.html"><i class="fa fa-check"></i><b>A</b> Formula Reference</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="formula-algebra-geometry.html"><a href="formula-algebra-geometry.html"><i class="fa fa-check"></i><b>A.1</b> Algebra and geometry</a></li>
+<li class="chapter" data-level="A.2" data-path="formula-functions-rates.html"><a href="formula-functions-rates.html"><i class="fa fa-check"></i><b>A.2</b> Functions and rates</a></li>
+<li class="chapter" data-level="A.3" data-path="formula-exponential-logarithmic.html"><a href="formula-exponential-logarithmic.html"><i class="fa fa-check"></i><b>A.3</b> Exponential and logarithmic models</a></li>
+<li class="chapter" data-level="A.4" data-path="formula-trigonometry.html"><a href="formula-trigonometry.html"><i class="fa fa-check"></i><b>A.4</b> Trigonometry</a></li>
+<li class="chapter" data-level="A.5" data-path="formula-statistics.html"><a href="formula-statistics.html"><i class="fa fa-check"></i><b>A.5</b> Descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li class="toc-footer">
+  <a href="https://github.com/USERNAME/REPOSITORY">
+    Foundational Mathematics for Water Engineering
+  </a><br>
+  <span>Fall 2026 Edition</span><br>
+  <span>Joya Danyluk and Joe Hobart</span>
+</li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Foundational Mathematics for Water Engineering</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="function-language-domain-range" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Function language, evaluation, domain, and range<a href="function-language-domain-range.html#function-language-domain-range" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A function formalizes a dependable input-output relationship. Each allowable input must produce exactly one output, although different inputs may produce the same output.</p>
+<div class="definition-box">
+<p><strong>Function.</strong> A rule that assigns exactly one output to every input in its domain.</p>
+</div>
+<p>If a function maps a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, write <span class="math inline">\(f:A\to B\)</span>. The set <span class="math inline">\(A\)</span> is the domain and <span class="math inline">\(B\)</span> is the codomain. The value assigned to <span class="math inline">\(x\)</span> is <span class="math inline">\(f(x)\)</span>, read “<span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span>.” The set of outputs actually produced is the range. The range is contained in the codomain but does not always equal it.</p>
+<div id="evaluating-functions-and-recognizing-graphs" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Evaluating functions and recognizing graphs<a href="function-language-domain-range.html#evaluating-functions-and-recognizing-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To evaluate a function, replace every occurrence of its variable with the specified input. Parentheses are essential when the input is negative or algebraic. For <span class="math inline">\(f(x)=x^2-3x\)</span>, for example,</p>
+<p><span class="math display">\[f(-2)=(-2)^2-3(-2)=10.\]</span></p>
+<p>An input <span class="math inline">\(a\)</span> produces the point <span class="math inline">\((a,f(a))\)</span> on the graph. A graph represents a function of <span class="math inline">\(x\)</span> exactly when every vertical line intersects it at most once. This vertical line test checks whether one input has been assigned more than one output. A circle fails the test, while a vertical parabola such as <span class="math inline">\(y=x^2\)</span> passes.</p>
+<div class="worked-example">
+<p><span class="worked-example-title"><strong>Worked Example: Evaluating a flow function</strong></span></p>
+<p>The flow through a control setting is modelled by <span class="math inline">\(Q(s)=2.5s^2+4\)</span>, where <span class="math inline">\(Q\)</span> is in litres per second. At <span class="math inline">\(s=3\)</span>,</p>
+<p><span class="math display">\[Q(3)=2.5(3)^2+4=26.5\ \text{L/s}.\]</span></p>
+<p>The ordered pair <span class="math inline">\((3,26.5)\)</span> lies on the graph.</p>
+</div>
+<div class="try-it">
+<strong>Try It.</strong> Evaluate <span class="math inline">\(Q(-2)\)</span> for the same algebraic rule.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(Q(-2)=2.5(-2)^2+4=14\)</span> L/s. Whether a negative setting is physically permitted is a separate domain question.
+</details>
+</div>
+<div class="worked-example">
+<p><span class="worked-example-title"><strong>Worked Example: Evaluating a difference quotient input</strong></span></p>
+<p>For <span class="math inline">\(f(x)=1/(x+1)^2\)</span>,</p>
+<p><span class="math display">\[f(x+h)=\frac{1}{(x+h+1)^2}.\]</span></p>
+<p>The entire expression <span class="math inline">\(x+h\)</span> replaces the original input variable.</p>
+</div>
+<div class="try-it">
+<strong>Try It.</strong> If <span class="math inline">\(g(x)=3x^2-1\)</span>, find <span class="math inline">\(g(a+h)\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(g(a+h)=3(a+h)^2-1\)</span>.
+</details>
+</div>
+</div>
+<div id="domain-codomain-and-range" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Domain, codomain, and range<a href="function-language-domain-range.html#domain-codomain-and-range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition-box">
+<p><strong>Domain.</strong> The set of inputs for which a function is defined.</p>
+</div>
+<div class="definition-box">
+<p><strong>Range.</strong> The set of outputs a function actually produces.</p>
+</div>
+<p>The algebraic domain is found by excluding operations that are undefined over the real numbers. A denominator cannot equal zero. The radicand of an even root must be nonnegative, and it must be positive when that root appears in a denominator. Logarithmic inputs, introduced later, must be positive. Physical models may add restrictions such as <span class="math inline">\(t\ge0\)</span>, <span class="math inline">\(Q\ge0\)</span>, or a maximum equipment setting.</p>
+<p>Range is often easiest to determine from a graph. The function <span class="math inline">\(g(x)=|x|\)</span> has domain <span class="math inline">\(\mathbb R\)</span> and range <span class="math inline">\([0,\infty)\)</span>. A quadratic opening upward has a minimum output at its vertex. A reciprocal function may exclude a horizontal value. State range restrictions on outputs, not inputs.</p>
+<div class="worked-example">
+<p><span class="worked-example-title"><strong>Worked Example: Finding a radical domain</strong></span></p>
+<p>For</p>
+<p><span class="math display">\[h(x)=\frac{2+x}{\sqrt{x(x+3)}},\]</span></p>
+<p>the denominator requires <span class="math inline">\(x(x+3)&gt;0\)</span>. A sign chart gives <span class="math inline">\(x&lt;-3\)</span> or <span class="math inline">\(x&gt;0\)</span>, so the domain is <span class="math inline">\((-\infty,-3)\cup(0,\infty)\)</span>.</p>
+</div>
+<div class="try-it">
+<strong>Try It.</strong> Find the domain of <span class="math inline">\(k(x)=1/\sqrt{x-5}\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+The denominator requires <span class="math inline">\(x-5&gt;0\)</span>, so the domain is <span class="math inline">\((5,\infty)\)</span>.
+</details>
+</div>
+<div class="worked-example">
+<p><span class="worked-example-title"><strong>Worked Example: Interpreting the range of a storage model</strong></span></p>
+<p>A tank-depth model is <span class="math inline">\(D(t)=4-0.2t\)</span> for <span class="math inline">\(0\le t\le20\)</span> min. The depth decreases from 4 m to 0 m. Its physical domain is <span class="math inline">\([0,20]\)</span> and its range is <span class="math inline">\([0,4]\)</span> m.</p>
+</div>
+<div class="try-it">
+<strong>Try It.</strong> Find the range of <span class="math inline">\(V(t)=10+3t\)</span> for <span class="math inline">\(0\le t\le8\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(V\)</span> increases from 10 to 34, so the range is <span class="math inline">\([10,34]\)</span>.
+</details>
+</div>
+<div class="applied-problem">
+<p><strong>Applied Problem: Restricting a reservoir model.</strong> Reservoir volume is modelled by <span class="math inline">\(V(t)=120-4.5t\)</span> megalitres, where <span class="math inline">\(t\)</span> is measured in days. Determine the largest physical domain for which time and volume are nonnegative, and state the corresponding range.</p>
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+Require <span class="math inline">\(t\ge0\)</span> and <span class="math inline">\(120-4.5t\ge0\)</span>. Thus <span class="math inline">\(0\le t\le120/4.5=26.67\)</span> days. The physical domain is approximately <span class="math inline">\([0,26.67]\)</span> days and the range is <span class="math inline">\([0,120]\)</span> ML.
+</details>
+</div>
+</div>
+<div id="practice-problems-14" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Practice Problems<a href="function-language-domain-range.html#practice-problems-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>For <span class="math inline">\(f(x)=x^2-4x+1\)</span>, find <span class="math inline">\(f(3)\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(f(3)=9-12+1=-2\)</span>.
+</details></li>
+<li>If <span class="math inline">\(g(x)=2/(x-1)\)</span>, find <span class="math inline">\(g(a+h)\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(g(a+h)=2/(a+h-1)\)</span>.
+</details></li>
+<li>Does <span class="math inline">\(x=y^2\)</span> define <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(x\)</span> over all real values?
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+No. For most positive <span class="math inline">\(x\)</span>, the relation has two outputs, <span class="math inline">\(y=\pm\sqrt{x}\)</span>.
+</details></li>
+<li>Find the domain of <span class="math inline">\(\sqrt{12-3x}\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(12-3x\ge0\)</span>, so <span class="math inline">\(x\le4\)</span>.
+</details></li>
+<li>State the domain and range of <span class="math inline">\(f(x)=(x-2)^2+1\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+Domain <span class="math inline">\(\mathbb R\)</span>; range <span class="math inline">\([1,\infty)\)</span>.
+</details></li>
+<li>A flow model is <span class="math inline">\(Q(v)=0.8v+6\)</span>. Find <span class="math inline">\(Q(25)\)</span> and interpret it if <span class="math inline">\(Q\)</span> is measured in L/s.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(Q(25)=26\)</span> L/s.
+</details></li>
+<li>A water-depth function is <span class="math inline">\(d(t)=3.6-0.12t\)</span> for <span class="math inline">\(0\le t\le30\)</span>. State its range.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+The depth falls from 3.6 m to 0 m, so the range is <span class="math inline">\([0,3.6]\)</span> m.
+</details></li>
+<li>Find the physical domain of <span class="math inline">\(A(d)=\sqrt{25-d^2}\)</span> when <span class="math inline">\(d\)</span> is a nonnegative pipe dimension.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+<span class="math inline">\(25-d^2\ge0\)</span> and <span class="math inline">\(d\ge0\)</span>, giving <span class="math inline">\(0\le d\le5\)</span>.
+</details></li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="parent-piecewise-rates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

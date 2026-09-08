@@ -1,0 +1,374 @@
+# Statistics {#statistics}
+
+Statistics turns measurements into evidence. Water professionals collect flow, pressure, turbidity, concentration, rainfall, and equipment data, then summarize patterns and judge whether the observations support a practical conclusion. This chapter develops statistics as a full component of the book. It follows the MATH 128 sequence from data matrices and study design through numerical summaries, variability, quartiles, boxplots, outliers, skewness, and the choice of appropriate measures. The central distinction is between describing the data that were observed and making claims that the data-collection method can support. The statistical framework is consistent with the OpenIntro material used in the source notes [@diez2019].
+
+::: {.learning-outcomes}
+**Learning outcomes.** By the end of this chapter, you should be able to:
+
+- identify cases, variables, and variable types in a data matrix;
+- distinguish populations, samples, parameters, and statistics;
+- recognize sampling bias and compare sampling methods;
+- distinguish observational studies from experiments and evaluate design principles;
+- calculate and interpret measures of centre and variability;
+- construct five-number summaries and identify potential outliers; and
+- describe distribution shape and select appropriate numerical summaries.
+:::
+
+## Data, variables, populations, and samples {#data-variables-populations-samples}
+
+Statistical work begins by deciding what each row represents, what has been measured, and which larger group the study is intended to describe.
+
+### Data matrices and variable types
+
+::: {.definition-box}
+**Data matrix.** A rectangular arrangement in which rows represent cases and columns represent variables.
+:::
+
+::: {.definition-box}
+**Variable.** A recorded characteristic that can differ from one case to another.
+:::
+
+Numerical variables arise from measurement or counting, so arithmetic such as differences and averages can be meaningful. Categorical variables place cases into groups or labels. Numerical variables may be continuous, such as flow, or discrete, such as the number of pump failures.
+
+::: {.worked-example}
+[**Worked Example: Reading a water-quality data matrix**]{.worked-example-title}
+
+Suppose each row represents a sampling date and columns record site, turbidity, temperature, and alarm status. Sampling date is the case identifier, site and alarm status are categorical variables, and turbidity and temperature are numerical variables.
+:::
+
+::: {.try-it}
+**Try It.** Classify pipe material, pipe diameter, and break count by variable type.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Material is categorical, diameter is numerical continuous, and break count is numerical discrete.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Identifying cases and variables**]{.worked-example-title}
+
+A table contains 60 rows, each representing one filter run, and columns for run time, terminal head loss, and media type. There are 60 cases and three measured variables.
+:::
+
+::: {.try-it}
+**Try It.** A file has one row for each of 24 wells and columns for depth, yield, and aquifer class. Identify cases and variables.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The 24 wells are cases. Depth and yield are numerical; aquifer class is categorical.</details>
+:::
+
+### Populations, samples, parameters, and statistics
+
+::: {.definition-box}
+**Population.** The complete collection of cases about which a study seeks information.
+:::
+
+::: {.definition-box}
+**Sample.** The subset of the population from which data are collected.
+:::
+
+A parameter describes a population, while a statistic is calculated from a sample. The sample mean $\bar x$ estimates the population mean $\mu$. A useful research question identifies the target population, variables, and time or setting of interest.
+
+::: {.worked-example}
+[**Worked Example: Identifying a target population**]{.worked-example-title}
+
+To estimate average summer turbidity in a watershed, technicians collect weekly samples at selected sites. The population is all relevant summer turbidity measurements in the watershed, and the collected readings form the sample.
+:::
+
+::: {.try-it}
+**Try It.** Identify the population and sample when 40 of 600 service connections are tested for lead.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The 600 connections form the population; the 40 tested connections form the sample.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Distinguishing a statistic from a parameter**]{.worked-example-title}
+
+The mean of 30 sampled chlorine residuals is 0.72 mg/L. This value is a statistic. The unknown mean residual across all relevant times and locations is a parameter.
+:::
+
+::: {.try-it}
+**Try It.** Is the failure rate calculated from every pump owned by a facility a statistic or parameter?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It is a parameter for that complete facility pump population.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Designing a monitoring table.** A utility wants to compare raw and treated water at 12 dates. For each date it records source, turbidity before treatment, turbidity after treatment, temperature, and whether an alarm occurred. Identify the cases and classify every variable.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The 12 dates are cases. Source and alarm status are categorical. Both turbidity measurements and temperature are numerical continuous variables.</details>
+:::
+
+### Practice Problems
+
+1. Define a case in a data matrix. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The observational unit represented by one row.</details>
+2. Classify colour as numerical or categorical. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Categorical.</details>
+3. Classify the number of valve failures. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Numerical discrete.</details>
+4. Distinguish $\bar x$ from $\mu$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$\bar x$ is a sample mean; $\mu$ is a population mean.</details>
+5. Why is a sample used? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Measuring an entire population may be impractical, costly, destructive, or impossible.</details>
+6. A sample contains 25 daily flow values from a year. Identify population and sample. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Population: all daily flows in the year; sample: the 25 selected days.</details>
+7. Classify pH, treatment plant, and complaint count. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>pH numerical continuous; plant categorical; complaint count numerical discrete.</details>
+8. The mean pressure of every hydrant in a network is calculated. Is it a statistic or parameter? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>A parameter for that network.</details>
+
+## Sampling, observational studies, and experiments {#sampling-studies-experiments}
+
+The way data are collected determines which conclusions are defensible. A large biased sample can be less useful than a smaller well-designed sample.
+
+### Bias and sampling methods
+
+::: {.definition-box}
+**Sampling bias.** A systematic tendency for a sampling method to overrepresent or underrepresent parts of the population.
+:::
+
+Convenience samples select cases that are easy to reach. Non-response bias occurs when respondents differ systematically from nonrespondents. Simple random sampling gives each case an equal selection opportunity. Stratified sampling draws from each relatively similar subgroup. Cluster sampling selects whole mixed groups, while multistage sampling combines selection stages.
+
+::: {.worked-example}
+[**Worked Example: Recognizing convenience bias**]{.worked-example-title}
+
+Testing only taps nearest the treatment plant may not represent the full distribution network. Distance, pipe age, and residence time may differ elsewhere, creating convenience sampling bias.
+:::
+
+::: {.try-it}
+**Try It.** Why might a voluntary online water-taste survey be biased?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>People with unusually strong opinions may be more likely to respond.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Choosing a stratified sample**]{.worked-example-title}
+
+To compare pipe conditions across three material types, divide connections into material strata and randomly sample within each. This ensures that every material is represented.
+:::
+
+::: {.try-it}
+**Try It.** Suggest strata for sampling water quality across a city with four pressure zones.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Use the four pressure zones as strata and randomly select locations within each.</details>
+:::
+
+### Observational studies and experiments
+
+::: {.definition-box}
+**Observational study.** A study that records naturally occurring variables without assigning treatments.
+:::
+
+Observational studies can establish association but not causation because confounding variables may explain the pattern. Experiments assign treatments and can support causal conclusions when well designed. Core principles are comparison, random assignment, replication, and blocking. Blinding reduces behavioural and measurement effects.
+
+::: {.worked-example}
+[**Worked Example: Distinguishing study types**]{.worked-example-title}
+
+Comparing historical filter records for two coagulants is observational if operators chose the coagulant. Randomly assigning comparable filter runs to the two coagulants would create an experiment.
+:::
+
+::: {.try-it}
+**Try It.** Is recording rainfall and overflow events observational or experimental?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Observational. Rainfall is not assigned by the researchers.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Blocking a treatment experiment**]{.worked-example-title}
+
+If raw-water temperature may affect removal, group test runs into low- and high-temperature blocks, then randomly assign coagulant doses within each block.
+:::
+
+::: {.try-it}
+**Try It.** Suggest a blocking variable for testing pump efficiency across old and new pumps.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Pump age or model could define blocks before treatments are randomized.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Evaluating a filter-media study.** A facility installs new media in its newest filter and compares its turbidity with an older filter using standard media. Can the result establish that media caused any difference? Identify a confounder and propose a stronger design.
+<details class="answer-dropdown"><summary><strong>One Possible Answer</strong></summary>No. Filter age or condition is confounded with media type. A stronger design would use several comparable filters, randomly assign media where feasible, replicate runs, and block by relevant conditions such as raw-water turbidity.</details>
+:::
+
+### Practice Problems
+
+1. Define convenience sampling. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Selecting cases mainly because they are easy to reach.</details>
+2. What is simple random sampling? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>A random method giving each population case an equal selection opportunity.</details>
+3. Distinguish strata from clusters. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Strata are internally similar and sampled within; clusters should each resemble the population and selected clusters are sampled.</details>
+4. Can an observational association prove causation? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>No.</details>
+5. Name the four experiment principles. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Comparison, randomization, replication, and blocking.</details>
+6. Sampling only daytime flows creates what concern? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Time-of-day sampling bias.</details>
+7. A utility randomly samples within each pressure zone. Name the method. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Stratified sampling.</details>
+8. Operators randomly assign two coagulant doses within high- and low-turbidity blocks. Identify randomization and blocking. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Dose is randomly assigned; raw-water turbidity defines the blocks.</details>
+
+## Measures of centre and variability {#centre-variability}
+
+Centre describes a typical value, while variability describes how widely observations differ. Both are needed to characterize numerical data.
+
+### Mean, median, and mode
+
+::: {.definition-box}
+**Sample mean.** The arithmetic average $\bar x=(\sum_{i=1}^n x_i)/n$.
+:::
+
+The median is the middle ordered value, or the average of the two middle values when $n$ is even. The mode is the most frequent value. Mean uses every observation and is sensitive to extremes; median depends mainly on order and is resistant.
+
+::: {.worked-example}
+[**Worked Example: Calculating centre**]{.worked-example-title}
+
+For turbidity values $0.20,0.24,0.25,0.31,0.80$, the mean is $1.80/5=0.36$ NTU and the median is 0.25 NTU. The high value pulls the mean upward.
+:::
+
+::: {.try-it}
+**Try It.** Find mean and median of $2,3,3,4,8$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Mean 4; median 3.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Updating a mean**]{.worked-example-title}
+
+Five readings have mean 12, so their sum is 60. Adding a sixth reading of 18 gives new mean $(60+18)/6=13$.
+:::
+
+::: {.try-it}
+**Try It.** Four values have mean 9. Add a fifth value of 14 and find the new mean.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Original sum 36; new mean $50/5=10$.</details>
+:::
+
+### Variance and standard deviation
+
+::: {.definition-box}
+**Sample standard deviation.** The square root of sample variance,
+$$s=\sqrt{\frac{\sum_{i=1}^n(x_i-\bar x)^2}{n-1}}.$$
+:::
+
+Variance uses squared deviations and has squared units. Standard deviation returns to the original measurement units and describes typical distance from the mean. Population variance uses divisor $N$ instead of $n-1$.
+
+::: {.worked-example}
+[**Worked Example: Computing sample variability**]{.worked-example-title}
+
+For $2,4,6$, the mean is 4. Squared deviations are 4, 0, and 4. Thus $s^2=8/(3-1)=4$ and $s=2$.
+:::
+
+::: {.try-it}
+**Try It.** Find the sample standard deviation of $5,5,5$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>All deviations are zero, so $s=0$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Comparing consistency**]{.worked-example-title}
+
+Two sensors both average 1.0 mg/L. Sensor A has $s=0.03$ mg/L and Sensor B has $s=0.18$ mg/L. Sensor A's readings are more tightly clustered around their mean.
+:::
+
+::: {.try-it}
+**Try It.** Which is more consistent: $s=2.1$ kPa or $s=0.8$ kPa?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The readings with $s=0.8$ kPa.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Comparing two turbidity periods.** Period A readings are $0.20,0.25,0.30$ NTU. Period B readings are $0.10,0.25,0.40$ NTU. Calculate each mean and sample standard deviation, then compare centre and consistency.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both means are 0.25 NTU. For A, $s=0.05$ NTU. For B, $s=0.15$ NTU. The periods have equal centres, but A is more consistent.</details>
+:::
+
+### Practice Problems
+
+1. Find the mean of $4,6,8$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>6.</details>
+2. Find the median of $2,5,7,11$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>6.</details>
+3. Find the mode of $1,2,2,4$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>2.</details>
+4. Find sample variance and standard deviation of $1,3,5$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$s^2=4$, $s=2$.</details>
+5. Which has the same units as the data, variance or standard deviation? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Standard deviation.</details>
+6. Find the mean flow of 18, 20, 22, and 24 L/s. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>21 L/s.</details>
+7. Chlorine readings are 0.6, 0.6, 0.7, 0.8, 2.1. Which centre is more resistant? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The median, 0.7 mg/L.</details>
+8. Two pressure datasets have equal mean, with standard deviations 4 kPa and 11 kPa. Which is more variable? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The dataset with 11 kPa.</details>
+
+## Quartiles, outliers, and distribution shape {#quartiles-outliers-shape}
+
+Ordered summaries show how data are distributed and provide measures that remain useful when observations are skewed or include extremes.
+
+### Five-number summaries and boxplots
+
+::: {.definition-box}
+**Interquartile range.** The spread of the middle half of the data, $IQR=Q_3-Q_1$.
+:::
+
+The five-number summary is minimum, $Q_1$, median, $Q_3$, maximum. A boxplot displays these values. Potential outliers lie below $Q_1-1.5IQR$ or above $Q_3+1.5IQR$. A flagged point should be investigated, not automatically deleted.
+
+::: {.worked-example}
+[**Worked Example: Finding outlier fences**]{.worked-example-title}
+
+If $Q_1=12$ and $Q_3=20$, then $IQR=8$. The fences are $12-12=0$ and $20+12=32$. Values below 0 or above 32 are potential outliers.
+:::
+
+::: {.try-it}
+**Try It.** Find fences when $Q_1=4$ and $Q_3=10$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$IQR=6$; fences are $-5$ and 19.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Constructing a five-number summary**]{.worked-example-title}
+
+For $2,4,5,7,9,12,15$, the median is 7, $Q_1=4$, and $Q_3=12$. The five-number summary is $(2,4,7,12,15)$.
+:::
+
+::: {.try-it}
+**Try It.** Find the five-number summary of $1,3,4,6,8$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Using medians of the halves excluding the overall median: $(1,2,4,7,8)$.</details>
+:::
+
+### Skewness and choosing summaries
+
+::: {.definition-box}
+**Skewed distribution.** A distribution with a longer tail on one side than the other.
+:::
+
+Right-skewed distributions usually have mean greater than median; left-skewed distributions usually have mean less than median. For roughly symmetric data without strong outliers, use mean and standard deviation. For skewed data or data with outliers, use median and IQR.
+
+::: {.worked-example}
+[**Worked Example: Choosing resistant summaries**]{.worked-example-title}
+
+Most repair times are under 4 h, but one major failure requires 38 h. The distribution is right-skewed, so median and IQR better describe a typical repair time and spread.
+:::
+
+::: {.try-it}
+**Try It.** Which summaries suit a symmetric set with no outliers?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Mean and standard deviation.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Predicting the effect of an extreme value**]{.worked-example-title}
+
+Increasing the largest observation from 64,401 to 150,000 raises the mean and standard deviation substantially. The median and IQR may remain unchanged because the ordered middle positions do not move.
+:::
+
+::: {.try-it}
+**Try It.** What happens to the mean if an unusually large value is added?
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It generally increases, often noticeably.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Summarizing filter run times.** Run times in hours are $18,19,20,20,21,22,23,24,25,52$. Describe the likely shape and choose appropriate measures of centre and spread. Explain the effect of 52.
+<details class="answer-dropdown"><summary><strong>One Possible Answer</strong></summary>The value 52 creates a long right tail, so the distribution is right-skewed. Median and IQR are preferable. The value 52 raises the mean and standard deviation much more than it affects the median and IQR and should be investigated as a possible unusual operating event.</details>
+:::
+
+### Practice Problems
+
+1. Name the five values in a five-number summary. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Minimum, $Q_1$, median, $Q_3$, maximum.</details>
+2. Find the IQR if $Q_1=14$ and $Q_3=29$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>15.</details>
+3. Find the upper fence for $Q_1=10$, $Q_3=18$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$IQR=8$, so upper fence $=30$.</details>
+4. Which is more resistant, mean or median? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Median.</details>
+5. For right skew, which is usually larger, mean or median? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Mean.</details>
+6. Pressure data contain one sensor error of 900 kPa among values near 400 kPa. Which summaries should be reported initially? <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Median and IQR, with the extreme value investigated.</details>
+7. Flow quartiles are 12 and 28 L/s. Find IQR and outlier fences. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$IQR=16$; the fences are $-12$ L/s and 52 L/s.</details>
+8. Repair times have a long right tail. Choose centre and spread. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Median and IQR.</details>
+
+## Chapter Review {#statistics-chapter-review}
+
+### Chapter summary
+
+A data matrix organizes cases and variables. Samples provide statistics that estimate population parameters, but sampling methods determine representativeness. Observational studies establish association, while randomized experiments can support causal conclusions. Mean and standard deviation suit symmetric data; median and IQR resist skewness and outliers. Potential outliers should be investigated in context.
+
+### Common mistakes
+
+- Treating an identifier as a measured variable.
+- Generalizing from a convenience sample without qualification.
+- Claiming causation from an observational association.
+- Using the population variance formula for a sample.
+- Removing a potential outlier without investigation.
+- Reporting mean and standard deviation for strongly skewed data without explanation.
+
+### Exercises
+
+1. Classify flow rate and pipe material. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Flow rate is numerical continuous; pipe material is categorical.</details>
+2. Explain why sampling only one neighbourhood may be biased. <details class="answer-dropdown"><summary><strong>One Possible Answer</strong></summary>The neighbourhood may differ from others in pipe age, pressure zone, or water residence time.</details>
+3. Find mean and median of $3,4,4,5,19$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Mean 7; median 4.</details>
+4. Find sample standard deviation of $2,4,6$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>2.</details>
+5. Find fences when $Q_1=20$ and $Q_3=32$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$IQR=12$; fences 2 and 50.</details>
+6. Choose summaries for strongly right-skewed overflow volumes. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Median and IQR.</details>
+
+### Questions for discussion
+
+1. What practical conditions can make a water-quality sample unrepresentative?
+2. When would a randomized water-treatment experiment be unethical or impractical?
+3. Why should an apparent outlier be investigated before it is removed?
