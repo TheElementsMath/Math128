@@ -1,6 +1,8 @@
 # Functions {#functions}
 
-Functions provide a precise way to describe how one quantity depends on another. In water engineering, a function may connect time to tank volume, flow to pressure loss, concentration to sensor output, or pipe diameter to cross-sectional area. A function is more than a formula. Its domain states which inputs are permitted, its range states which outputs occur, and its graph shows how the output changes. This chapter follows the progression of the MATH 128 notes from function notation and graphs through rates of change, transformations, combinations, composition, one-to-one and onto behaviour, and inverse functions. Throughout the chapter, units and physical restrictions are treated as part of the model.
+Functions provide a precise way to describe how one quantity depends on another. In water engineering, a function may connect time to tank volume, flow to pressure loss, concentration to sensor output, or pipe diameter to cross-sectional area. A function is more than a formula. Its domain states which inputs are permitted, its range states which outputs occur, and its graph shows how the output changes. 
+
+This chapter progresses from function notation and graphs through rates of change, transformations, combinations, composition, one-to-one and onto behaviour, and inverse functions. Throughout the chapter, units and physical restrictions are treated as part of the model.
 
 ::: {.learning-outcomes}
 **Learning outcomes.** By the end of this chapter, you should be able to:
@@ -68,13 +70,11 @@ The entire expression $x+h$ replaces the original input variable.
 **Domain.** The set of inputs for which a function is defined.
 :::
 
-::: {.definition-box}
-**Range.** The set of outputs a function actually produces.
-:::
+
 
 The algebraic domain is found by excluding operations that are undefined over the real numbers. A denominator cannot equal zero. The radicand of an even root must be nonnegative, and it must be positive when that root appears in a denominator. Logarithmic inputs, introduced later, must be positive. Physical models may add restrictions such as $t\ge0$, $Q\ge0$, or a maximum equipment setting.
 
-Range is often easiest to determine from a graph. The function $g(x)=|x|$ has domain $\mathbb R$ and range $[0,\infty)$. A quadratic opening upward has a minimum output at its vertex. A reciprocal function may exclude a horizontal value. State range restrictions on outputs, not inputs.
+
 
 ::: {.worked-example}
 [**Worked Example: Finding a radical domain**]{.worked-example-title}
@@ -90,6 +90,18 @@ the denominator requires $x(x+3)>0$. A sign chart gives $x<-3$ or $x>0$, so the 
 **Try It.** Find the domain of $k(x)=1/\sqrt{x-5}$.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The denominator requires $x-5>0$, so the domain is $(5,\infty)$.</details>
 :::
+
+
+
+
+::: {.definition-box}
+**Range.** The set of outputs a function actually produces.
+:::
+
+
+Range is often easiest to determine from a graph. The function $g(x)=|x|$ has domain $\mathbb R$ and range $[0,\infty)$. A quadratic opening upward has a minimum output at its vertex. A reciprocal function may exclude a horizontal value. State range restrictions on outputs, not inputs.
+
+
 
 ::: {.worked-example}
 [**Worked Example: Interpreting the range of a storage model**]{.worked-example-title}
@@ -131,6 +143,25 @@ Familiar parent graphs make it possible to recognize new functions quickly. Piec
 
 Important parent functions include constant and linear functions, powers such as $x^2$ and $x^3$, roots such as $\sqrt{x}$ and $\sqrt[3]{x}$, reciprocal functions such as $1/x$ and $1/x^2$, and the absolute-value function $|x|$. For each, know the general shape, domain, range, intercepts, symmetry, and asymptotes.
 
+
+
+![](images/basic-function-shapes.png)
+
+
+
+::: {.worked-example}
+[**Worked Example: Recognizing an absolute-value response**]{.worked-example-title}
+
+The function $E(x)=|x-7|$ measures distance from the target 7. Its graph is V-shaped, has vertex $(7,0)$, domain $\mathbb R$, and range $[0,\infty)$.
+:::
+
+::: {.try-it}
+**Try It.** State the vertex and range of $y=|x+3|$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The vertex is $(-3,0)$ and the range is $[0,\infty)$.</details>
+:::
+
+
+
 A piecewise function uses different rules on different parts of its domain. Endpoint symbols determine which rule applies. A solid point represents an included endpoint, while an open point represents an excluded endpoint. Evaluate a boundary input using the rule whose condition includes equality.
 
 ::: {.worked-example}
@@ -148,16 +179,7 @@ Then $P(4)=48$ and $P(5)=60$. The second rule is used at $t=5$ because it includ
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$P(7)=60+8(7-5)=76$.</details>
 :::
 
-::: {.worked-example}
-[**Worked Example: Recognizing an absolute-value response**]{.worked-example-title}
 
-The function $E(x)=|x-7|$ measures distance from the target 7. Its graph is V-shaped, has vertex $(7,0)$, domain $\mathbb R$, and range $[0,\infty)$.
-:::
-
-::: {.try-it}
-**Try It.** State the vertex and range of $y=|x+3|$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The vertex is $(-3,0)$ and the range is $[0,\infty)$.</details>
-:::
 
 ### Net change, average rate of change, and difference quotients
 
@@ -169,11 +191,7 @@ Between inputs $a$ and $b$, net change is $f(b)-f(a)$ and average rate of change
 
 $$\frac{f(b)-f(a)}{b-a}.$$
 
-Its units are output units per input unit. For inputs $a$ and $a+h$, this becomes the difference quotient
-
-$$\frac{f(a+h)-f(a)}{h},\qquad h\ne0.$$
-
-For a linear function, the average rate of change is constant and equals its slope. For nonlinear functions, it depends on the interval.
+Its units are output units per input unit. 
 
 ::: {.worked-example}
 [**Worked Example: Finding an average inflow rate**]{.worked-example-title}
@@ -187,6 +205,15 @@ $$\frac{57-42}{7-2}=3\ \text{ML/h}.$$
 **Try It.** Volume rises from 18 m³ at 4 min to 30 m³ at 10 min. Find the average rate.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(30-18)/(10-4)=2$ m³/min.</details>
 :::
+
+
+For inputs $a$ and $a+h$, the average value becomes the difference quotient
+
+$$\frac{f(a+h)-f(a)}{h},\qquad h\ne0.$$
+
+For a linear function, the average rate of change is constant and equals its slope. For nonlinear functions, it depends on the interval.
+
+
 
 ::: {.worked-example}
 [**Worked Example: Simplifying a difference quotient**]{.worked-example-title}
@@ -226,15 +253,7 @@ Graphs support both qualitative interpretation and numerical problem solving. Th
 
 The solutions of $f(x)=g(x)$ are the $x$-coordinates where their graphs intersect. The inequality $f(x)<g(x)$ holds where the graph of $f$ lies below the graph of $g$. Include intersection points only when equality is part of the comparison.
 
-::: {.definition-box}
-**Increasing function.** A function whose outputs rise as inputs increase on a specified interval.
-:::
 
-::: {.definition-box}
-**Local extremum.** A local maximum or minimum value compared with nearby function values.
-:::
-
-An interval of increase or decrease is described with input values. A turning point may be a local maximum or minimum. A graph can have several local extrema, and a local extremum need not be the greatest or least value on the entire domain.
 
 ::: {.worked-example}
 [**Worked Example: Solving an equation graphically**]{.worked-example-title}
@@ -246,6 +265,22 @@ To solve $x^2-1=8-x^2$, graph $y=x^2-1$ and $y=8-x^2$. Their intersections satis
 **Try It.** Find the intersection inputs of $y=x^2$ and $y=4$.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=-2$ and $x=2$.</details>
 :::
+
+
+![](images/function-behaviour.png)
+
+::: {.definition-box}
+**Increasing function.** A function whose outputs rise as inputs increase on a specified interval.
+:::
+
+::: {.definition-box}
+**Local extremum.** A local maximum or minimum value compared with nearby function values.
+:::
+
+An interval of increase or decrease is described with input values. A turning point may be a local maximum or minimum. A graph can have several local extrema, and a local extremum need not be the greatest or least value on the entire domain.
+
+
+
 
 ::: {.worked-example}
 [**Worked Example: Describing a quadratic's behaviour**]{.worked-example-title}
@@ -261,6 +296,9 @@ For $f(x)=-(x-3)^2+8$, the vertex $(3,8)$ is a maximum. The function increases o
 ### Transforming parent graphs
 
 If $c>0$, $f(x)+c$ shifts upward and $f(x)-c$ shifts downward. The graph of $f(x-c)$ shifts right, while $f(x+c)$ shifts left. The graph of $-f(x)$ reflects across the $x$-axis, and $f(-x)$ reflects across the $y$-axis. Multiplying by $a$ changes vertical scale by $|a|$ and reflects vertically when $a<0$. Replacing $x$ by $kx$ changes horizontal scale by $1/|k|$.
+
+
+![](images/function-transformations.png)
 
 Order matters. Work from inside to outside: horizontal scale, horizontal shift, vertical scale or reflection, then vertical shift. Track a small set of key points rather than producing a new table from scratch.
 
@@ -361,12 +399,6 @@ The composition converts time directly to area.
 
 The horizontal line test identifies one-to-one graphs. Algebraically, assume $f(a)=f(b)$ and show that $a=b$. To prove that a function is not one-to-one, one counterexample with two inputs sharing an output is enough.
 
-::: {.definition-box}
-**Onto function.** A function whose range equals its stated codomain.
-:::
-
-Onto depends on the codomain. The rule $f(x)=x^2$ from $\mathbb R$ to $\mathbb R$ is not onto because it produces no negative outputs. The same rule from $\mathbb R$ to $[0,\infty)$ is onto.
-
 ::: {.worked-example}
 [**Worked Example: Testing one-to-one behaviour**]{.worked-example-title}
 
@@ -377,6 +409,16 @@ For $f(x)=5(x-2)^5-7$, suppose $f(a)=f(b)$. Then $(a-2)^5=(b-2)^5$, so $a-2=b-2$
 **Try It.** Is $h(x)=x^2-3x$ one-to-one on $\mathbb R$?
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>No. For example, $h(0)=0$ and $h(3)=0$.</details>
 :::
+
+
+
+::: {.definition-box}
+**Onto function.** A function whose range equals its stated codomain.
+:::
+
+Onto depends on the codomain. The rule $f(x)=x^2$ from $\mathbb R$ to $\mathbb R$ is not onto because it produces no negative outputs. The same rule from $\mathbb R$ to $[0,\infty)$ is onto.
+
+
 
 ### Inverse functions
 

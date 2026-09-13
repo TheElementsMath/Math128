@@ -376,11 +376,11 @@ div.csl-indent {
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="formula-reference.html"><a href="formula-reference.html"><i class="fa fa-check"></i><b>A</b> Formula Reference</a>
 <ul>
-<li class="chapter" data-level="A.1" data-path="formula-algebra-geometry.html"><a href="formula-algebra-geometry.html"><i class="fa fa-check"></i><b>A.1</b> Algebra and geometry</a></li>
-<li class="chapter" data-level="A.2" data-path="formula-functions-rates.html"><a href="formula-functions-rates.html"><i class="fa fa-check"></i><b>A.2</b> Functions and rates</a></li>
-<li class="chapter" data-level="A.3" data-path="formula-exponential-logarithmic.html"><a href="formula-exponential-logarithmic.html"><i class="fa fa-check"></i><b>A.3</b> Exponential and logarithmic models</a></li>
-<li class="chapter" data-level="A.4" data-path="formula-trigonometry.html"><a href="formula-trigonometry.html"><i class="fa fa-check"></i><b>A.4</b> Trigonometry</a></li>
-<li class="chapter" data-level="A.5" data-path="formula-statistics.html"><a href="formula-statistics.html"><i class="fa fa-check"></i><b>A.5</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#algebra-and-geometry"><i class="fa fa-check"></i>Algebra and geometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#functions-and-rates"><i class="fa fa-check"></i>Functions and rates</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#exponential-and-logarithmic-models"><i class="fa fa-check"></i>Exponential and logarithmic models</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#trigonometry"><i class="fa fa-check"></i>Trigonometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive statistics</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -418,6 +418,7 @@ div.csl-indent {
 <p><strong>Interquartile range.</strong> The spread of the middle half of the data, <span class="math inline">\(IQR=Q_3-Q_1\)</span>.</p>
 </div>
 <p>The five-number summary is minimum, <span class="math inline">\(Q_1\)</span>, median, <span class="math inline">\(Q_3\)</span>, maximum. A boxplot displays these values. Potential outliers lie below <span class="math inline">\(Q_1-1.5IQR\)</span> or above <span class="math inline">\(Q_3+1.5IQR\)</span>. A flagged point should be investigated, not automatically deleted.</p>
+<p><img src="images/five-number-summary-boxplot-outliers.png" /></p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Finding outlier fences</strong></span></p>
 <p>If <span class="math inline">\(Q_1=12\)</span> and <span class="math inline">\(Q_3=20\)</span>, then <span class="math inline">\(IQR=8\)</span>. The fences are <span class="math inline">\(12-12=0\)</span> and <span class="math inline">\(20+12=32\)</span>. Values below 0 or above 32 are potential outliers.</p>
@@ -450,6 +451,7 @@ Using medians of the halves excluding the overall median: <span class="math inli
 <div class="definition-box">
 <p><strong>Skewed distribution.</strong> A distribution with a longer tail on one side than the other.</p>
 </div>
+<p><img src="images/skewness-mean-median-boxplots.png" /></p>
 <p>Right-skewed distributions usually have mean greater than median; left-skewed distributions usually have mean less than median. For roughly symmetric data without strong outliers, use mean and standard deviation. For skewed data or data with outliers, use median and IQR.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Choosing resistant summaries</strong></span></p>

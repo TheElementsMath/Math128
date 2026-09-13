@@ -376,11 +376,11 @@ div.csl-indent {
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="formula-reference.html"><a href="formula-reference.html"><i class="fa fa-check"></i><b>A</b> Formula Reference</a>
 <ul>
-<li class="chapter" data-level="A.1" data-path="formula-algebra-geometry.html"><a href="formula-algebra-geometry.html"><i class="fa fa-check"></i><b>A.1</b> Algebra and geometry</a></li>
-<li class="chapter" data-level="A.2" data-path="formula-functions-rates.html"><a href="formula-functions-rates.html"><i class="fa fa-check"></i><b>A.2</b> Functions and rates</a></li>
-<li class="chapter" data-level="A.3" data-path="formula-exponential-logarithmic.html"><a href="formula-exponential-logarithmic.html"><i class="fa fa-check"></i><b>A.3</b> Exponential and logarithmic models</a></li>
-<li class="chapter" data-level="A.4" data-path="formula-trigonometry.html"><a href="formula-trigonometry.html"><i class="fa fa-check"></i><b>A.4</b> Trigonometry</a></li>
-<li class="chapter" data-level="A.5" data-path="formula-statistics.html"><a href="formula-statistics.html"><i class="fa fa-check"></i><b>A.5</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#algebra-and-geometry"><i class="fa fa-check"></i>Algebra and geometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#functions-and-rates"><i class="fa fa-check"></i>Functions and rates</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#exponential-and-logarithmic-models"><i class="fa fa-check"></i>Exponential and logarithmic models</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#trigonometry"><i class="fa fa-check"></i>Trigonometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive statistics</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -418,6 +418,20 @@ div.csl-indent {
 <p><strong>Parent function.</strong> A basic function whose graph provides a starting shape for a family of related functions.</p>
 </div>
 <p>Important parent functions include constant and linear functions, powers such as <span class="math inline">\(x^2\)</span> and <span class="math inline">\(x^3\)</span>, roots such as <span class="math inline">\(\sqrt{x}\)</span> and <span class="math inline">\(\sqrt[3]{x}\)</span>, reciprocal functions such as <span class="math inline">\(1/x\)</span> and <span class="math inline">\(1/x^2\)</span>, and the absolute-value function <span class="math inline">\(|x|\)</span>. For each, know the general shape, domain, range, intercepts, symmetry, and asymptotes.</p>
+<p><img src="images/basic-function-shapes.png" /></p>
+<div class="worked-example">
+<p><span class="worked-example-title"><strong>Worked Example: Recognizing an absolute-value response</strong></span></p>
+<p>The function <span class="math inline">\(E(x)=|x-7|\)</span> measures distance from the target 7. Its graph is V-shaped, has vertex <span class="math inline">\((7,0)\)</span>, domain <span class="math inline">\(\mathbb R\)</span>, and range <span class="math inline">\([0,\infty)\)</span>.</p>
+</div>
+<div class="try-it">
+<strong>Try It.</strong> State the vertex and range of <span class="math inline">\(y=|x+3|\)</span>.
+<details class="answer-dropdown">
+<summary>
+<strong>Check Your Work</strong>
+</summary>
+The vertex is <span class="math inline">\((-3,0)\)</span> and the range is <span class="math inline">\([0,\infty)\)</span>.
+</details>
+</div>
 <p>A piecewise function uses different rules on different parts of its domain. Endpoint symbols determine which rule applies. A solid point represents an included endpoint, while an open point represents an excluded endpoint. Evaluate a boundary input using the rule whose condition includes equality.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Evaluating a piecewise pump rule</strong></span></p>
@@ -434,19 +448,6 @@ div.csl-indent {
 <span class="math inline">\(P(7)=60+8(7-5)=76\)</span>.
 </details>
 </div>
-<div class="worked-example">
-<p><span class="worked-example-title"><strong>Worked Example: Recognizing an absolute-value response</strong></span></p>
-<p>The function <span class="math inline">\(E(x)=|x-7|\)</span> measures distance from the target 7. Its graph is V-shaped, has vertex <span class="math inline">\((7,0)\)</span>, domain <span class="math inline">\(\mathbb R\)</span>, and range <span class="math inline">\([0,\infty)\)</span>.</p>
-</div>
-<div class="try-it">
-<strong>Try It.</strong> State the vertex and range of <span class="math inline">\(y=|x+3|\)</span>.
-<details class="answer-dropdown">
-<summary>
-<strong>Check Your Work</strong>
-</summary>
-The vertex is <span class="math inline">\((-3,0)\)</span> and the range is <span class="math inline">\([0,\infty)\)</span>.
-</details>
-</div>
 </div>
 <div id="net-change-average-rate-of-change-and-difference-quotients" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Net change, average rate of change, and difference quotients<a href="parent-piecewise-rates.html#net-change-average-rate-of-change-and-difference-quotients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -455,9 +456,7 @@ The vertex is <span class="math inline">\((-3,0)\)</span> and the range is <span
 </div>
 <p>Between inputs <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, net change is <span class="math inline">\(f(b)-f(a)\)</span> and average rate of change is</p>
 <p><span class="math display">\[\frac{f(b)-f(a)}{b-a}.\]</span></p>
-<p>Its units are output units per input unit. For inputs <span class="math inline">\(a\)</span> and <span class="math inline">\(a+h\)</span>, this becomes the difference quotient</p>
-<p><span class="math display">\[\frac{f(a+h)-f(a)}{h},\qquad h\ne0.\]</span></p>
-<p>For a linear function, the average rate of change is constant and equals its slope. For nonlinear functions, it depends on the interval.</p>
+<p>Its units are output units per input unit.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Finding an average inflow rate</strong></span></p>
 <p>A reservoir contains 42 ML at hour 2 and 57 ML at hour 7. The net change is <span class="math inline">\(57-42=15\)</span> ML, and the average rate is</p>
@@ -472,6 +471,9 @@ The vertex is <span class="math inline">\((-3,0)\)</span> and the range is <span
 <span class="math inline">\((30-18)/(10-4)=2\)</span> m³/min.
 </details>
 </div>
+<p>For inputs <span class="math inline">\(a\)</span> and <span class="math inline">\(a+h\)</span>, the average value becomes the difference quotient</p>
+<p><span class="math display">\[\frac{f(a+h)-f(a)}{h},\qquad h\ne0.\]</span></p>
+<p>For a linear function, the average rate of change is constant and equals its slope. For nonlinear functions, it depends on the interval.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Simplifying a difference quotient</strong></span></p>
 <p>For <span class="math inline">\(f(x)=x-3x^2\)</span>,</p>

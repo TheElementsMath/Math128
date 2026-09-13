@@ -171,8 +171,3 @@ common-mistakes-5
 exercises-5
 questions-for-discussion-5
 formula-reference
-formula-algebra-geometry
-formula-functions-rates
-formula-exponential-logarithmic
-formula-trigonometry
-formula-statistics

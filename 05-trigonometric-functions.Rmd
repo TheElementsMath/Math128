@@ -1,6 +1,6 @@
 # Trigonometric Functions {#trigonometric-functions}
 
-Trigonometry connects angles, lengths, coordinates, and periodic change. Water Engineering Technology applications include surveying, pipe slopes, tank geometry, channel measurements, rotating equipment, and seasonal or cyclic signals. This chapter follows the MATH 128 notes from angle measure and right triangles through special angles, reference angles, the unit circle, trigonometric graphs, transformations, inverse functions, and identities. Exact values are retained when they clarify structure, while decimal approximations are used when a measured length or angle is required.
+Trigonometry connects angles, lengths, coordinates, and periodic change. Water Engineering Technology applications include surveying, pipe slopes, tank geometry, channel measurements, rotating equipment, and seasonal or cyclic signals. This chapter begins with angle measure and right triangles and develops topics including special angles, reference angles, the unit circle, trigonometric graphs, transformations, inverse functions, and identities. Exact values are retained when they clarify structure, while decimal approximations are used when a measured length or angle is required.
 
 ::: {.learning-outcomes}
 **Learning outcomes.** By the end of this chapter, you should be able to:
@@ -50,7 +50,15 @@ $-116^\circ+360^\circ=244^\circ$, so $244^\circ$ is a positive coterminal angle.
 
 ### Right-triangle ratios
 
-For an acute angle $\theta$, $\sin\theta=$ opposite/hypotenuse, $\cos\theta=$ adjacent/hypotenuse, and $\tan\theta=$ opposite/adjacent. Their reciprocals are cosecant, secant, and cotangent.
+For an acute angle $\theta$, $$\sin\theta= \frac{opposite}{hypotenuse},$$ $$\cos\theta= \frac{adjacent}{hypotenuse},$$ $$\tan\theta= \frac{opposite}{adjacent}.$$ 
+
+
+![](images/right-triangle-trig-ratios.png)
+
+The reciprocal functions are cosecant, secant, and cotangent with
+$$\csc \theta = \frac{1}{\sin \theta}$$
+$$\sec \theta = \frac{1}{\cos \theta}$$
+$$\cot \theta = \frac{1}{\tan \theta}$$
 
 ::: {.worked-example}
 [**Worked Example: Recovering all six ratios**]{.worked-example-title}
@@ -98,7 +106,18 @@ Special triangles and the unit circle provide exact trigonometric values without
 
 ### Special triangles and reference angles
 
-The $45^\circ$-$45^\circ$-$90^\circ$ triangle has side ratio $1:1:\sqrt2$. The $30^\circ$-$60^\circ$-$90^\circ$ triangle has ratio $1:\sqrt3:2$. A reference angle is the acute angle between a terminal side and the $x$-axis.
+The $45^\circ$-$45^\circ$-$90^\circ$ triangle has side ratio $1:1:\sqrt2$. The $30^\circ$-$60^\circ$-$90^\circ$ triangle has ratio $1:\sqrt3:2$. 
+
+
+
+![](images/special-right-triangles-trig.png)
+
+
+A reference angle is the acute angle between a terminal side and the $x$-axis.
+
+![](images/reference-angle-quadrants.png)
+
+
 
 ::: {.worked-example}
 [**Worked Example: Evaluating a special angle**]{.worked-example-title}
@@ -110,6 +129,10 @@ From the $30^\circ$-$60^\circ$-$90^\circ$ triangle, $\sin60^\circ=\sqrt3/2$, $\c
 **Try It.** Give the exact values of sine and cosine at $45^\circ$.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Both equal $\sqrt2/2$.</details>
 :::
+
+
+
+
 
 ::: {.worked-example}
 [**Worked Example: Finding a reference angle**]{.worked-example-title}
@@ -124,7 +147,12 @@ The angle $240^\circ$ lies in quadrant III, so its reference angle is $240^\circ
 
 ### Trigonometric functions of any angle
 
-For a point $(x,y)$ on a terminal side with $r=\sqrt{x^2+y^2}$, $\sin\theta=y/r$, $\cos\theta=x/r$, and $\tan\theta=y/x$. On the unit circle, the point is $(\cos\theta,\sin\theta)$. Signs follow the quadrant.
+For a point $(x,y)$ on a terminal side with $$r=\sqrt{x^2+y^2} \qquad \sin\theta= \frac{y}{r}, \qquad \cos\theta= \frac{x}{r}, \qquad \tan\theta= \frac{y}{x}.$$ 
+
+On the unit circle, the point is $(\cos\theta,\sin\theta)$ (since $r = 1$). Signs follow the quadrant.
+
+
+![](images/coordinate-trigonometry-unit-circle.png)
 
 ::: {.worked-example}
 [**Worked Example: Evaluating with a reference angle**]{.worked-example-title}
@@ -172,6 +200,9 @@ Sine and cosine model smooth periodic change, while tangent models ratios with r
 
 Sine and cosine have domain $\mathbb R$, range $[-1,1]$, and period $2\pi$. Tangent has period $\pi$, zeros at $k\pi$, and is undefined at $\pi/2+k\pi$. Cosecant, secant, and cotangent inherit exclusions from their reciprocal definitions.
 
+
+![](images/sine-cosine-tangent-parent-graphs.png)
+
 ::: {.worked-example}
 [**Worked Example: Reading the sine graph**]{.worked-example-title}
 
@@ -197,6 +228,13 @@ $\tan x=\sin x/\cos x$ is undefined wherever $\cos x=0$, so $x=\pi/2+k\pi$ is ex
 ### Amplitude, period, and phase shift
 
 For $y=a\sin(kx-b)+d$ or $a\cos(kx-b)+d$, amplitude is $|a|$, period is $2\pi/|k|$, phase shift is $b/k$, and midline is $y=d$. Apply horizontal changes before vertical changes.
+
+
+
+![](images/sinusoidal-transformations-amplitude-period-phase.png)
+
+
+
 
 ::: {.worked-example}
 [**Worked Example: Analyzing a transformed sine curve**]{.worked-example-title}

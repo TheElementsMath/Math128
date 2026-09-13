@@ -1,6 +1,10 @@
 # Polynomial and Rational Functions {#polynomial-rational-functions}
 
-Polynomial and rational functions describe curved relationships that linear models cannot capture. Quadratic models represent areas and trajectories, higher-degree polynomials can model responses with several turning points, and rational functions describe ratios whose behaviour may change sharply near excluded inputs. This chapter develops the graphical features emphasized in the MATH 128 notes: vertex form, completing the square, intercepts, local extrema, end behaviour, zeros and multiplicity, asymptotes, holes, and systematic graphing. Water-engineering examples include basin dimensions, pump-response curves, and models whose denominators represent operational limits. Algebraic work is connected continually to graph shape and physical interpretation.
+Polynomial and rational functions describe curved relationships that linear models cannot capture. Quadratic models represent areas and trajectories, higher-degree polynomials can model responses with several turning points, and rational functions describe ratios whose behaviour may change sharply near excluded inputs. 
+
+This chapter develops graphical features of curves: vertex form, completing the square, intercepts, local extrema, end behaviour, zeros and multiplicity, asymptotes, holes, and systematic graphing. 
+
+Water-engineering examples include basin dimensions, pump-response curves, and models whose denominators represent operational limits. Algebraic work is connected continually to graph shape and physical interpretation.
 
 ::: {.learning-outcomes}
 **Learning outcomes.** By the end of this chapter, you should be able to:
@@ -23,11 +27,16 @@ A quadratic function has a parabolic graph whose direction, width, vertex, and i
 
 ### Vertex form and intercepts
 
-In vertex form,
+In vertex form, a quadratic has the form:
 
-$$f(x)=a(x-h)^2+k,$$
+$$f(x)=a(x-h)^2+k.$$
 
-the vertex is $(h,k)$. The graph opens upward when $a>0$ and downward when $a<0$. If $a>0$, the vertex gives the minimum value $k$; if $a<0$, it gives the maximum. The magnitude $|a|$ controls vertical stretch or compression. Find $y$-intercepts by setting $x=0$ and $x$-intercepts by solving $f(x)=0$.
+The vertex is $(h,k)$. The graph opens upward when $a>0$ and downward when $a<0$. If $a>0$, the vertex gives the minimum value $k$; if $a<0$, it gives the maximum. The magnitude $|a|$ controls vertical stretch or compression. Find $y$-intercepts by setting $x=0$ and $x$-intercepts by solving $f(x)=0$.
+
+
+![](images/vertex-form-parabola.png)
+
+
 
 ::: {.worked-example}
 [**Worked Example: Graphing from vertex form**]{.worked-example-title}
@@ -87,7 +96,7 @@ The vertex is $(-5,-18)$.
 
 For $2x^2-12x+5$,
 
-$$2(x^2-6x)+5=2[(x-3)^2-9]+5=2(x-3)^2-13.$$
+$$2(x^2-6x)+5= 2[(x-3)^2-9]+5=2(x-3)^2-13.$$
 
 The vertex is $(3,-13)$.
 :::
@@ -137,6 +146,9 @@ For $P(x)=2x^3-5x^2+x+1$, the leading term is $2x^3$. Therefore, $P(x)\to\infty$
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>As $x\to\infty$, $P(x)\to-\infty$; as $x\to-\infty$, $P(x)\to\infty$.</details>
 :::
 
+
+![](images/polynomial-end-behaviour.png)
+
 ::: {.worked-example}
 [**Worked Example: Bounding the number of turns**]{.worked-example-title}
 
@@ -159,13 +171,19 @@ At a zero of odd multiplicity, a polynomial changes sign and crosses the axis. A
 ::: {.worked-example}
 [**Worked Example: Sketching a factored cubic**]{.worked-example-title}
 
-For $P(x)=5(x+2)(x-1)(x-3)$, the zeros $-2$, 1, and 3 all have multiplicity 1, so the graph crosses at each. The $y$-intercept is 30. Positive cubic end behaviour runs from lower left to upper right.
+For $P(x)=5(x+2)(x-1)(x-3)$, the zeros $-2$, $1$, and $3$ all have multiplicity 1, so the graph crosses at each. The $y$-intercept is 30. Positive cubic end behaviour runs from lower left to upper right.
 :::
 
 ::: {.try-it}
 **Try It.** Describe the intercept behaviour of $x(x-4)^2$.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It crosses at $x=0$ and touches without crossing at $x=4$.</details>
 :::
+
+
+
+
+
+
 
 ::: {.worked-example}
 [**Worked Example: Interpreting repeated process thresholds**]{.worked-example-title}
@@ -178,11 +196,18 @@ For $R(q)=-q^2(2q+3)(q-1)$, the zero at $q=0$ has multiplicity 2, so the graph t
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It touches at $x=-1$, crosses at $x=3$, and has positive odd-degree behaviour from lower left to upper right.</details>
 :::
 
+
+
+
+
 ::: {.applied-problem}
 **Applied Problem: Analyzing a treatment-response polynomial.** A dimensionless response is $R(q)=-0.01q(q-20)^2(q-50)$. Identify the zeros and their multiplicities, state where the graph crosses or touches the axis, and describe its end behaviour.
 
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The zeros are 0 and 50 with multiplicity 1, and 20 with multiplicity 2. The graph crosses at 0 and 50 and touches at 20. The degree is 4 and the leading coefficient is negative, so both ends approach $-\infty$.</details>
 :::
+
+
+![](images/polynomial-zeros-multiplicity.png)
 
 ### Practice Problems
 
@@ -225,6 +250,12 @@ the domain excludes $x=1,-2$. There is a hole at $(1,2/3)$ and a vertical asympt
 **Try It.** Analyze $(x^2-4)/(x^2-x-6)$ for holes and vertical asymptotes.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>It simplifies to $(x-2)/(x-3)$ with $x\ne-2,3$. There is a hole at $(-2,4/5)$ and a vertical asymptote at $x=3$.</details>
 :::
+
+
+
+![](images/rational-function-hole-asymptote.png)
+
+
 
 ::: {.worked-example}
 [**Worked Example: One-sided behaviour near an operating limit**]{.worked-example-title}

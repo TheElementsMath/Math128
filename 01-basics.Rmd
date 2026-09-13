@@ -1,6 +1,6 @@
 # The Basics {#the-basics}
 
-Water engineering calculations depend on reliable algebra. Flow, storage, concentration, pressure, and treatment problems all require careful work with numbers, expressions, equations, and inequalities. This chapter begins with real numbers and arithmetic, then develops sets, exponents, roots, polynomials, equations, lines, rational expressions, and inequalities. Units and physical restrictions remain part of every calculation. A solution is complete only when its algebra is correct, its units are appropriate, and its meaning is reasonable in context.
+Water engineering calculations depend on reliable algebra. Flow, storage, concentration, pressure, and treatment problems all require careful work with numbers, expressions, equations, and inequalities. This chapter begins with real numbers and arithmetic, then develops sets, exponents, roots, polynomials, equations, lines, rational expressions, and inequalities. Units and physical restrictions remain part of every calculation. A solution is complete only when its algebra is correct, its units are appropriate, and its meaning is reasonable in context. 
 
 ::: {.learning-outcomes}
 **Learning outcomes.** 

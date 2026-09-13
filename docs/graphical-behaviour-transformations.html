@@ -376,11 +376,11 @@ div.csl-indent {
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="formula-reference.html"><a href="formula-reference.html"><i class="fa fa-check"></i><b>A</b> Formula Reference</a>
 <ul>
-<li class="chapter" data-level="A.1" data-path="formula-algebra-geometry.html"><a href="formula-algebra-geometry.html"><i class="fa fa-check"></i><b>A.1</b> Algebra and geometry</a></li>
-<li class="chapter" data-level="A.2" data-path="formula-functions-rates.html"><a href="formula-functions-rates.html"><i class="fa fa-check"></i><b>A.2</b> Functions and rates</a></li>
-<li class="chapter" data-level="A.3" data-path="formula-exponential-logarithmic.html"><a href="formula-exponential-logarithmic.html"><i class="fa fa-check"></i><b>A.3</b> Exponential and logarithmic models</a></li>
-<li class="chapter" data-level="A.4" data-path="formula-trigonometry.html"><a href="formula-trigonometry.html"><i class="fa fa-check"></i><b>A.4</b> Trigonometry</a></li>
-<li class="chapter" data-level="A.5" data-path="formula-statistics.html"><a href="formula-statistics.html"><i class="fa fa-check"></i><b>A.5</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#algebra-and-geometry"><i class="fa fa-check"></i>Algebra and geometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#functions-and-rates"><i class="fa fa-check"></i>Functions and rates</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#exponential-and-logarithmic-models"><i class="fa fa-check"></i>Exponential and logarithmic models</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#trigonometry"><i class="fa fa-check"></i>Trigonometry</a></li>
+<li class="chapter" data-level="" data-path="formula-reference.html"><a href="formula-reference.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive statistics</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -415,13 +415,6 @@ div.csl-indent {
 <div id="graphical-equations-inequalities-and-extrema" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Graphical equations, inequalities, and extrema<a href="graphical-behaviour-transformations.html#graphical-equations-inequalities-and-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The solutions of <span class="math inline">\(f(x)=g(x)\)</span> are the <span class="math inline">\(x\)</span>-coordinates where their graphs intersect. The inequality <span class="math inline">\(f(x)&lt;g(x)\)</span> holds where the graph of <span class="math inline">\(f\)</span> lies below the graph of <span class="math inline">\(g\)</span>. Include intersection points only when equality is part of the comparison.</p>
-<div class="definition-box">
-<p><strong>Increasing function.</strong> A function whose outputs rise as inputs increase on a specified interval.</p>
-</div>
-<div class="definition-box">
-<p><strong>Local extremum.</strong> A local maximum or minimum value compared with nearby function values.</p>
-</div>
-<p>An interval of increase or decrease is described with input values. A turning point may be a local maximum or minimum. A graph can have several local extrema, and a local extremum need not be the greatest or least value on the entire domain.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Solving an equation graphically</strong></span></p>
 <p>To solve <span class="math inline">\(x^2-1=8-x^2\)</span>, graph <span class="math inline">\(y=x^2-1\)</span> and <span class="math inline">\(y=8-x^2\)</span>. Their intersections satisfy <span class="math inline">\(2x^2=9\)</span>, so the intersection inputs are <span class="math inline">\(x=\pm3/\sqrt2\approx\pm2.12\)</span>.</p>
@@ -435,6 +428,14 @@ div.csl-indent {
 <span class="math inline">\(x=-2\)</span> and <span class="math inline">\(x=2\)</span>.
 </details>
 </div>
+<p><img src="images/function-behaviour.png" /></p>
+<div class="definition-box">
+<p><strong>Increasing function.</strong> A function whose outputs rise as inputs increase on a specified interval.</p>
+</div>
+<div class="definition-box">
+<p><strong>Local extremum.</strong> A local maximum or minimum value compared with nearby function values.</p>
+</div>
+<p>An interval of increase or decrease is described with input values. A turning point may be a local maximum or minimum. A graph can have several local extrema, and a local extremum need not be the greatest or least value on the entire domain.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Describing a quadratic’s behaviour</strong></span></p>
 <p>For <span class="math inline">\(f(x)=-(x-3)^2+8\)</span>, the vertex <span class="math inline">\((3,8)\)</span> is a maximum. The function increases on <span class="math inline">\((-\infty,3)\)</span> and decreases on <span class="math inline">\((3,\infty)\)</span>.</p>
@@ -452,6 +453,7 @@ It decreases on <span class="math inline">\((-\infty,-1)\)</span> and increases 
 <div id="transforming-parent-graphs" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Transforming parent graphs<a href="graphical-behaviour-transformations.html#transforming-parent-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If <span class="math inline">\(c&gt;0\)</span>, <span class="math inline">\(f(x)+c\)</span> shifts upward and <span class="math inline">\(f(x)-c\)</span> shifts downward. The graph of <span class="math inline">\(f(x-c)\)</span> shifts right, while <span class="math inline">\(f(x+c)\)</span> shifts left. The graph of <span class="math inline">\(-f(x)\)</span> reflects across the <span class="math inline">\(x\)</span>-axis, and <span class="math inline">\(f(-x)\)</span> reflects across the <span class="math inline">\(y\)</span>-axis. Multiplying by <span class="math inline">\(a\)</span> changes vertical scale by <span class="math inline">\(|a|\)</span> and reflects vertically when <span class="math inline">\(a&lt;0\)</span>. Replacing <span class="math inline">\(x\)</span> by <span class="math inline">\(kx\)</span> changes horizontal scale by <span class="math inline">\(1/|k|\)</span>.</p>
+<p><img src="images/function-transformations.png" /></p>
 <p>Order matters. Work from inside to outside: horizontal scale, horizontal shift, vertical scale or reflection, then vertical shift. Track a small set of key points rather than producing a new table from scratch.</p>
 <div class="worked-example">
 <p><span class="worked-example-title"><strong>Worked Example: Transforming a quadratic</strong></span></p>

@@ -1,6 +1,6 @@
 # Statistics {#statistics}
 
-Statistics turns measurements into evidence. Water professionals collect flow, pressure, turbidity, concentration, rainfall, and equipment data, then summarize patterns and judge whether the observations support a practical conclusion. This chapter develops statistics as a full component of the book. It follows the MATH 128 sequence from data matrices and study design through numerical summaries, variability, quartiles, boxplots, outliers, skewness, and the choice of appropriate measures. The central distinction is between describing the data that were observed and making claims that the data-collection method can support. The statistical framework is consistent with the OpenIntro material used in the source notes [@diez2019].
+Statistics turns measurements into evidence. Water professionals collect flow, pressure, turbidity, concentration, rainfall, and equipment data, then summarize patterns and judge whether the observations support a practical conclusion. This chapter develops statistics as a full component of the book. It begins with data matrices and study design and proceeds through numerical summaries, variability, quartiles, boxplots, outliers, skewness, and the choice of appropriate measures. The central distinction is between describing the data that were observed and making claims that the data-collection method can support. The statistical framework is consistent with the OpenIntro material used in the source notes [@diez2019].
 
 ::: {.learning-outcomes}
 **Learning outcomes.** By the end of this chapter, you should be able to:
@@ -189,7 +189,7 @@ Centre describes a typical value, while variability describes how widely observa
 ### Mean, median, and mode
 
 ::: {.definition-box}
-**Sample mean.** The arithmetic average $\bar x=(\sum_{i=1}^n x_i)/n$.
+**Sample mean.** The arithmetic average $\bar x=\frac{\sum_{i=1}^n x_i}{n}$.
 :::
 
 The median is the middle ordered value, or the average of the two middle values when $n$ is even. The mode is the most frequent value. Mean uses every observation and is sensitive to extremes; median depends mainly on order and is resistant.
@@ -275,6 +275,9 @@ Ordered summaries show how data are distributed and provide measures that remain
 
 The five-number summary is minimum, $Q_1$, median, $Q_3$, maximum. A boxplot displays these values. Potential outliers lie below $Q_1-1.5IQR$ or above $Q_3+1.5IQR$. A flagged point should be investigated, not automatically deleted.
 
+
+![](images/five-number-summary-boxplot-outliers.png)
+
 ::: {.worked-example}
 [**Worked Example: Finding outlier fences**]{.worked-example-title}
 
@@ -302,6 +305,9 @@ For $2,4,5,7,9,12,15$, the median is 7, $Q_1=4$, and $Q_3=12$. The five-number s
 ::: {.definition-box}
 **Skewed distribution.** A distribution with a longer tail on one side than the other.
 :::
+
+
+![](images/skewness-mean-median-boxplots.png)
 
 Right-skewed distributions usually have mean greater than median; left-skewed distributions usually have mean less than median. For roughly symmetric data without strong outliers, use mean and standard deviation. For skewed data or data with outliers, use median and IQR.
 

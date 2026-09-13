@@ -6,6 +6,8 @@ date: "Draft 1 Published Fall 2026"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [references.bib]
+nocite: |
+  @*
 link-citations: true
 description: "[Brief description to be confirmed.]"
 ---

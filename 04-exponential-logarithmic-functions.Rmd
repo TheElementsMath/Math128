@@ -1,6 +1,6 @@
 # Exponential and Logarithmic Functions {#exponential-logarithmic-functions}
 
-Exponential and logarithmic functions describe change governed by multiplication rather than constant addition. They arise in population growth, contaminant decay, compound processes, saturating systems, pH and other logarithmic measurements, and graphs spanning several orders of magnitude. This chapter follows the MATH 128 notes from exponential definitions and transformations through growth models, logarithmic functions, logarithm laws, equation solving, change of base, logarithmic scales, and flow-duration analysis. The emphasis is on translating among formulas, graphs, and practical interpretations while checking domain restrictions and units.
+Exponential and logarithmic functions describe change governed by multiplication rather than constant addition. They arise in population growth, contaminant decay, compound processes, saturating systems, pH and other logarithmic measurements, and graphs spanning several orders of magnitude. This chapter examines exponential and logarithmic models including growth models, logarithmic functions, logarithm laws, equation solving, change of base, logarithmic scales, and flow-duration analysis. The emphasis is on translating among formulas, graphs, and practical interpretations while checking domain restrictions and units.
 
 ::: {.learning-outcomes}
 **Learning outcomes.** By the end of this chapter, you should be able to:
@@ -52,6 +52,9 @@ For $C(t)=12(0.80)^t$, the initial concentration is $C(0)=12$. Each time unit mu
 
 The transformation rules developed in the functions chapter apply. In $y=ab^{k(x-h)}+d$, $h$ shifts horizontally, $d$ shifts vertically, $a$ changes vertical scale and may reflect the graph, and $k$ changes horizontal scale. The horizontal asymptote moves from $y=0$ to $y=d$.
 
+
+![](images/exponential-transformations.png)
+
 ::: {.worked-example}
 [**Worked Example: Transforming an exponential graph**]{.worked-example-title}
 
@@ -101,7 +104,12 @@ The form $A(t)=A_0(1+r)^t$ represents a constant proportional change of $r$ per 
 
 $$A(t)=A_0e^{kt},$$
 
-where the sign of $k$ determines growth or decay. Compound interest is
+where the sign of $k$ determines growth or decay. 
+
+
+![](images/exponential-growth-decay.png)
+
+Compound interest is
 
 $$A(t)=P\left(1+\frac rn\right)^{nt},$$
 
@@ -138,6 +146,9 @@ $$A(10)=600e^{0.25}\approx770.42.$$
 ::: {.definition-box}
 **Logistic model.** A growth model that approaches a limiting carrying capacity, commonly written $P(t)=d/(1+ke^{-ct})$ for positive constants $c$, $d$, and $k$.
 :::
+
+
+![](images/logistic-growth-shape.png)
 
 The parameter $d$ is the long-term limiting population. At $t=0$, $P(0)=d/(1+k)$. Logistic growth is initially close to exponential but slows as limited space or resources become important.
 
@@ -199,6 +210,11 @@ Logarithms answer exponent questions and provide the inverse operation needed to
 :::
 
 The logarithm's input must be positive. The graph of $y=\log_bx$ has domain $(0,\infty)$, range $\mathbb R$, $x$-intercept $(1,0)$, and vertical asymptote $x=0$. It is the reflection of $y=b^x$ across $y=x$. Natural logarithm uses base $e$ and is written $\ln x$.
+
+
+![](images/exp-log-inverse-graphs.png)
+
+
 
 ::: {.worked-example}
 [**Worked Example: Converting forms**]{.worked-example-title}
@@ -401,6 +417,10 @@ orders of magnitude.
 ::: {.definition-box}
 **Log-log graph.** A graph with logarithmic scales on both axes.
 :::
+
+
+![](images/semilog-loglog-water-models.png)
+
 
 Exponential data become approximately linear when the response is logged and plotted against a linear input. Power-law data become linear when both variables are logged. A flow-duration curve plots discharge against the percentage of time that flow is equalled or exceeded. It helps characterize dependable flow and compare discharge magnitudes across a wide range.
 
