@@ -2089,6 +2089,12 @@ Use a square bracket only when an endpoint is defined and satisfies a non-strict
 
 Solve $1/(x-3)>0$. The expression is undefined at 3. 
 
+
+```{r , echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("images/Sign-chart-1.png")
+```
+
+
 ```{r, echo=FALSE, fig.align='center', out.width='80%', fig.width=8, fig.height=1.8}
 
 # Edit these values for the function you are analyzing.
@@ -2154,6 +2160,11 @@ Its numerator is positive, so the fraction is positive exactly when $x-3>0$. The
 Solve $(x+2)(x-1)(x-4)>0$. 
 
 Create a number line, then select any number between the zeros of the polynomial.  Since the zeros are $x = -2, 1, 4$, we can select test points $x = -5, 0, 2$.  Testing these points to determine the sign of the polynomial will tell you the polynomial sign for the entire interval.
+
+
+```{r , echo=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics("images/Sign-chart-2.png")
+```
 
 ```{r, echo=FALSE, fig.align='center', out.width='75%',  fig.width=8, fig.height=1.8}
 

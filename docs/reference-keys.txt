@@ -171,3 +171,4 @@ common-mistakes-5
 exercises-5
 questions-for-discussion-5
 formula-reference
+fig:unnamed-chunk-1
