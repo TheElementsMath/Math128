@@ -2144,13 +2144,8 @@ text(right_end, -0.35, x_label, pos = 4, cex = 1.05)
 ```
 
 
-We have included the sign chart below.  The function's numerator is positive, so the fraction is positive exactly when $x-3>0$. Therefore, $x>3$, or $(3,\infty)$.
+The function's numerator is positive, so the fraction is positive exactly when $x-3>0$. Therefore, $x>3$, or $(3,\infty)$.
 :::
-
-
-```{r , echo=FALSE, fig.align='center', out.width='80%'}
-knitr::include_graphics("images/Sign-chart-1.png")
-```
 
 
 ::: {.try-it}
@@ -2221,71 +2216,8 @@ text(right_end, -0.35, x_label, pos = 4, cex = 1.05)
 ```
 
 
-Looking at the sign chart below, the polynomial is positive exactly when $x<-2$ and $1 < x < 4$. Therefore, the polynomial is positive on $(-\infty, -2) \cup (1,4)$.
+Looking at the sign chart, the polynomial is positive exactly when $x<-2$ and $1 < x < 4$. Therefore, the polynomial is positive on $(-\infty, -2) \cup (1,4)$.
 :::
-
-```{r, echo=FALSE, fig.align='center', out.width='75%',  fig.width=8, fig.height=1.8}
-
-# Edit these values for the function you are analyzing.
-zeros <- c(-2, 1, 4)  
-zero_labels <- c("-2", "1", "4")
-
-# One sign for each interval: before, between, and after the zeros.
-signs <- c("+", "-", "+", "-")
-
-# Optional labels for the factors or functions being tracked.
-function_label <- "f(x)"
-x_label <- "x"
-
-left_end <- min(zeros) - 1.5
-right_end <- max(zeros) + 1.5
-bounds <- c(left_end, zeros, right_end)
-midpoints <- (bounds[-1] + bounds[-length(bounds)]) / 2
-
-par(mar = c(1.2, 1.2, 0.4, 1.2))
-plot(
-  NA,
-  xlim = c(left_end, right_end),
-  ylim = c(-1, 1),
-  axes = FALSE,
-  xlab = "",
-  ylab = ""
-)
-
-# Number line and arrow.
-segments(left_end, 0, right_end, 0, lwd = 1.6, col = "#123c5a")
-arrows(right_end - 0.02, 0, right_end, 0,
-       length = 0.09, lwd = 1.6, col = "#123c5a")
-
-# Critical values.
-points(zeros, rep(0, length(zeros)), pch = 21, bg = "white",
-       col = "#123c5a", cex = 1.25, lwd = 1.5)
-
-text(zeros, rep(-0.35, length(zeros)), zero_labels, cex = 1.05)
-
-# Signs on the intervals.
-text(midpoints, rep(0.42, length(signs)), signs,
-     col = "#0b6b73", cex = 1.5, font = 2)
-
-# Labels.
-text(left_end, 0.42, function_label, pos = 3, cex = 1.05)
-text(right_end, -0.35, x_label, pos = 4, cex = 1.05)
-```
-
-::: {.try-it}
-**Try It.** Solve $x(x-1)(x-3)(x-5)<0$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The polynomial is negative on $(0,1) \cup (3,5)$.</details>
-:::
-
-
-
-
-
-
-
-
-
-
 
 
 ::: {.worked-example}
