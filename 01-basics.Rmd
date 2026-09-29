@@ -951,6 +951,109 @@ $$
 
 
 
+## Equations and an initial look at inequalities {#equations-initial-inequalities}
+
+Quantitative problems often state that two expressions represent the same quantity and ask which input makes that statement true.
+
+::: {.definition-box}
+**Equation.** A statement that two expressions have equal values.
+:::
+
+An equation states that two expressions are equal. Solving means finding every value that makes the original equation true. Whatever operation is applied to one side must also be applied to the other. A solution is checked by substituting it into the original statement. If simplification produces an identity such as $0=0$, all values in the original domain solve the equation. If it produces a contradiction such as $0=5,$ there is no solution.
+
+Linear equations are solved by collecting variable terms on one side and constants on the other. Fractions may be cleared by multiplying every term by the least common denominator. Any values excluded by an original variable denominator remain excluded. The same balancing principle applies to inequalities, except that multiplication or division by a negative number reverses the comparison.
+
+### Checking and classifying results
+
+Check a proposed solution by substituting it into both sides of the original statement. An identity such as $0=0$ means that every value in the original domain solves the equation. A contradiction such as $0=5$ means that no value solves it. For equations with variable denominators, state restrictions before clearing fractions because multiplication can conceal a forbidden input.
+
+For $2x-7=3x+2$, subtracting $2x$ and then 2 gives $x=-9$. Substitution confirms that both sides equal $-25$.
+
+::: {.worked-example}
+[**Worked Example: Solving and checking an equation**]{.worked-example-title}
+
+Solve $2x-7=3x+2$. Subtracting $2x$ and then 2 gives $x=-9$. The check is
+
+$$2(-9)-7=-25\quad\text{and}\quad3(-9)+2=-25.$$
+:::
+
+::: {.try-it}
+**Try It.** Solve and check $5x+3=2x+18$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3x=15$, so $x=5$. Both sides equal 28.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Finding a chemical-feed setting**]{.worked-example-title}
+
+A feed system delivers 18 L before a variable operating period and then adds 6 L for each hour $t$. If the required total is 54 L,
+
+$$18+6t=54,$$
+
+so $6t=36$ and $t=6$ h. Substitution gives $18+6(6)=54$ L.
+:::
+
+::: {.try-it}
+**Try It.** Solve $25+8t=73$ and interpret $t$ as hours.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$8t=48$, so $t=6$ h.</details>
+:::
+
+::: {.applied-problem}
+**Applied Problem: Scheduling tank filling.** A tank already contains 12,500 L. Water enters at 850 L/min while 150 L/min leaves through a drain. How many minutes are required for the tank to contain 30,000 L?
+
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The net inflow is $850-150=700$ L/min. Solve $12{,}500+700t=30{,}000$. Then $700t=17{,}500$, so $t=25$ min.</details>
+:::
+
+
+
+::: {.theorem-box}
+\textbf{REMEMBER:}  When dealing with an inequality, 
+
+*  if $a < b$ and $c > 0$, then $ac < bc$,
+*  if $a < b$ and $c > 0$, then $ac > bc$.
+:::
+
+For example, if we know that $x > 3$, and we multiply by $c>0$ on both sides, we get $xc > 3c$.  If $c = 2$, then we can see that $2x > 6$.  However, if $c < 0$, $xc < 3c$ as would be the case if $c = -2$.  In this instance, $-2x < -6$.  (If you want a more concrete example, use those same inequalities and select any $x$ that is larger than 3.  For example, try $x = 5$).
+
+
+
+
+::: {.worked-example}
+[**Worked Example: Reversing an inequality**]{.worked-example-title}
+
+Solve $-3x+6>15$. Subtract 6 to obtain $-3x>9$. Dividing by $-3$ reverses the symbol, so $x<-3$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $-4x+1\le13$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-4x\le12$, so $x\ge-3$.</details>
+:::
+
+::: {.worked-example}
+[**Worked Example: Clearing fractions in a detention-time equation**]{.worked-example-title}
+
+Solve $t/3+t/6=10$. Multiplying every term by 6 gives
+
+$$2t+t=60,$$
+
+so $3t=60$ and $t=20$ min. The original left side is $20/3+20/6=10$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $q/4+q/12=16$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Multiplying by 12 gives $3q+q=192$, so $q=48$.</details>
+:::
+
+### Practice Problems
+
+1. Solve $4x-7=13$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=5$.</details>
+2. Solve $3(x-2)=15$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=7$.</details>
+3. Determine whether $x=4$ solves $2x+1=9$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Yes.</details>
+4. Solve $2x+5<11$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x<3$.</details>
+5. Solve $-5x\ge20$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x\le-4$.</details>
+6. A tank contains 8,000 L and fills at 600 L/min. Solve $8000+600t=20{,}000$ for the filling time. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$600t=12{,}000$, so $t=20$ min.</details>
+7. A dosing system must deliver at least 90 L. It has delivered 30 L and continues at 12 L/min. Solve $30+12t\ge90$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$12t\ge60$, so $t\ge5$ min.</details>
+8. A process equation is $q/5+q/10=18$. Find $q$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Multiplying by 10 gives $2q+q=180$, so $q=60$.</details>
+
 
 
 
@@ -982,22 +1085,27 @@ $$3x^3-9x-2x^3+4x+1=x^3-5x+1.$$
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$9t^2+2t$.</details>
 :::
 
-When multiplying polynomials, every term in one factor multiplies every term in the other. FOIL is a memory aid for two binomials, but the distributive property is the general rule. Organizing products by descending degree helps reveal like terms and makes the result easier to check.
 
-For a channel with width $x+3$ metres and depth $x-1$ metres,
+::: {.theorem-box}
+\textbf{Distributive Law:}  For real numbers $a$, $b$, $c$ and $d$, we have
 
-$$A=(x+3)(x-1)=x^2+2x-3,$$
+$$(a + b)(c + d) = ac + ad + bc + bd$$ 
+:::
 
-with the physical restriction $x>1$.
+When multiplying polynomials, every term in one factor multiplies every term in the other. FOIL is a memory aid for two binomials, but the distributive property is the general rule. FOIL stands for FIRST, OUTSIDE, INSIDE, LAST.  Organizing products by descending degree helps reveal like terms and makes the result easier to check.
+
+For example, $(x+1) \times (x + 2) = \text{FIRST}   + \text{OUTSIDE} + \text{INSIDE} + \text{LAST} =  (x \times x) + (x \times 2) + (1 \times x) + (1 \times 2)$.  The FIRST terms in each bracket are the $x$'s.  The OUTSIDE terms in the bracket are the $x$ and 2.  The INSIDE terms are the 1 and the $x$.  The LAST terms are the 1 and 2.
+
+
 
 ::: {.worked-example}
 [**Worked Example: Expanding a channel-area expression**]{.worked-example-title}
 
-For width $x+3$ metres and depth $x-1$ metres,
+For width $x+3$ metres and depth $x-1$ metres, the area is $A = L \times W$.  In this case, the depth acts as the width, and so
 
-$$A=(x+3)(x-1)=x^2+2x-3.$$
+$$A= L \times W = (x+3)(x-1)=x^2+2x-3.$$
 
-The physical setting also requires $x>1$.
+The physical setting also requires $x>1$ since we cannot have a negative depth.
 :::
 
 ::: {.try-it}
@@ -1029,6 +1137,13 @@ $$ (A+B)(A-B)=A^2-B^2.$$
 
 
 ### Polynomials in two variables
+
+
+::: {.definition-box}
+**Polynomial Degree.** For a polynomial with only one variable (like $x$), the degree is the highest exponent of that variable found in any single term.
+
+For a polynomial with more than one variable (like $x$, $y$, and $z$), the degree of a single term is the sum of the exponents of all variables in that term. The overall degree of the polynomial is the highest total sum found among all the terms.
+:::
 
 The expression $5x^2y-3xy^3+7$ is a polynomial in $x$ and $y$. The term $5x^2y$ has degree 3, the term $-3xy^3$ has degree 4, and the constant has degree 0. The polynomial therefore has degree 4. Like terms must have the same variables raised to the same powers. Thus $3x^2y$ and $-8x^2y$ combine, but $x^2y$ and $xy^2$ do not.
 
@@ -1153,21 +1268,19 @@ $$
 
 The factorization is confirmed by expansion. This last step is short and detects most sign or coefficient errors.
 
-To factor $ax^2+bx+c$, find two numbers whose product is $ac$ and whose sum is $b$, split the middle term, and group. For example,
-
-$$6x^2+7x+2=(3x+2)(2x+1).$$
+To factor $ax^2+bx+c$, find two numbers whose product is $ac$ and whose sum is $b$, split the middle term as a sum, and group. 
 
 ::: {.worked-example}
 [**Worked Example: Factoring by grouping**]{.worked-example-title}
 
 For $6x^2+7x+2$, the product $ac$ is 12. The values 3 and 4 multiply to 12 and add to 7:
 
-$$6x^2+3x+4x+2=3x(2x+1)+2(2x+1)=(3x+2)(2x+1).$$
+$$6x^2+7x+2 = 6x^2+3x+4x+2=3x(2x+1)+2(2x+1)=(3x+2)(2x+1).$$
 :::
 
 ::: {.try-it}
-**Try It.** Factor $x^2+9x+20$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(x+4)(x+5)$.</details>
+**Try It.** Factor $4x^2+18x+20$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$(2x+4)(2x+5)$.</details>
 :::
 
 
@@ -1231,7 +1344,11 @@ To divide $6x^2-26x+12$ by $x-4$, divide leading terms, multiply, subtract, and 
 
 ![](images/polynomial-long-division.png)
 
-The result is
+The result from division is
+
+$$\frac{6x^2-26x+12}{x-4} = 6x - 2 + \frac{4}{x-4}.$$  
+
+If we multiply through by $x-4$, we get
 
 $$6x^2-26x+12=(x-4)(6x-2)+4.$$
 
@@ -1389,102 +1506,6 @@ and the rational zeros are $-2$, 1, and 3.
 
 
 
-## Equations and an initial look at inequalities {#equations-initial-inequalities}
-
-Quantitative problems often state that two expressions represent the same quantity and ask which input makes that statement true.
-
-::: {.definition-box}
-**Equation.** A statement that two expressions have equal values.
-:::
-
-An equation states that two expressions are equal. Solving means finding every value that makes the original equation true. Whatever operation is applied to one side must also be applied to the other. A solution is checked by substituting it into the original statement. If simplification produces an identity such as $0=0$, all values in the original domain solve the equation. If it produces a contradiction such as $0=5,$ there is no solution.
-
-Linear equations are solved by collecting variable terms on one side and constants on the other. Fractions may be cleared by multiplying every term by the least common denominator. Any values excluded by an original variable denominator remain excluded. The same balancing principle applies to inequalities, except that multiplication or division by a negative number reverses the comparison.
-
-### Checking and classifying results
-
-Check a proposed solution by substituting it into both sides of the original statement. An identity such as $0=0$ means that every value in the original domain solves the equation. A contradiction such as $0=5$ means that no value solves it. For equations with variable denominators, state restrictions before clearing fractions because multiplication can conceal a forbidden input.
-
-For $2x-7=3x+2$, subtracting $2x$ and then 2 gives $x=-9$. Substitution confirms that both sides equal $-25$.
-
-::: {.worked-example}
-[**Worked Example: Solving and checking an equation**]{.worked-example-title}
-
-Solve $2x-7=3x+2$. Subtracting $2x$ and then 2 gives $x=-9$. The check is
-
-$$2(-9)-7=-25\quad\text{and}\quad3(-9)+2=-25.$$
-:::
-
-::: {.try-it}
-**Try It.** Solve and check $5x+3=2x+18$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$3x=15$, so $x=5$. Both sides equal 28.</details>
-:::
-
-::: {.worked-example}
-[**Worked Example: Finding a chemical-feed setting**]{.worked-example-title}
-
-A feed system delivers 18 L before a variable operating period and then adds 6 L for each hour $t$. If the required total is 54 L,
-
-$$18+6t=54,$$
-
-so $6t=36$ and $t=6$ h. Substitution gives $18+6(6)=54$ L.
-:::
-
-::: {.try-it}
-**Try It.** Solve $25+8t=73$ and interpret $t$ as hours.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$8t=48$, so $t=6$ h.</details>
-:::
-
-::: {.applied-problem}
-**Applied Problem: Scheduling tank filling.** A tank already contains 12,500 L. Water enters at 850 L/min while 150 L/min leaves through a drain. How many minutes are required for the tank to contain 30,000 L?
-
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The net inflow is $850-150=700$ L/min. Solve $12{,}500+700t=30{,}000$. Then $700t=17{,}500$, so $t=25$ min.</details>
-:::
-
-
-
-
-
-
-
-
-::: {.worked-example}
-[**Worked Example: Reversing an inequality**]{.worked-example-title}
-
-Solve $-3x+6>15$. Subtract 6 to obtain $-3x>9$. Dividing by $-3$ reverses the symbol, so $x<-3$.
-:::
-
-::: {.try-it}
-**Try It.** Solve $-4x+1\le13$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$-4x\le12$, so $x\ge-3$.</details>
-:::
-
-::: {.worked-example}
-[**Worked Example: Clearing fractions in a detention-time equation**]{.worked-example-title}
-
-Solve $t/3+t/6=10$. Multiplying every term by 6 gives
-
-$$2t+t=60,$$
-
-so $3t=60$ and $t=20$ min. The original left side is $20/3+20/6=10$.
-:::
-
-::: {.try-it}
-**Try It.** Solve $q/4+q/12=16$.
-<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Multiplying by 12 gives $3q+q=192$, so $q=48$.</details>
-:::
-
-### Practice Problems
-
-1. Solve $4x-7=13$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=5$.</details>
-2. Solve $3(x-2)=15$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x=7$.</details>
-3. Determine whether $x=4$ solves $2x+1=9$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Yes.</details>
-4. Solve $2x+5<11$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x<3$.</details>
-5. Solve $-5x\ge20$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$x\le-4$.</details>
-6. A tank contains 8,000 L and fills at 600 L/min. Solve $8000+600t=20{,}000$ for the filling time. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$600t=12{,}000$, so $t=20$ min.</details>
-7. A dosing system must deliver at least 90 L. It has delivered 30 L and continues at 12 L/min. Solve $30+12t\ge90$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>$12t\ge60$, so $t\ge5$ min.</details>
-8. A process equation is $q/5+q/10=18$. Find $q$. <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>Multiplying by 10 gives $2q+q=180$, so $q=60$.</details>
-
 ## Lines and linear applications {#lines-linear-applications}
 
 When one quantity changes at a constant rate relative to another, a line provides the natural mathematical model.
@@ -1505,7 +1526,7 @@ Vertical lines have undefined slope, horizontal lines have slope zero, parallel 
 
 ### Intercepts and related lines
 
-The $y$-intercept is found by setting $x=0$, and the $x$-intercept is found by setting $y=0$. For $y=5x-7$, the intercepts are $(0,-7)$ and $(7/5,0)$. 
+The $y$-intercept is found by setting $x=0$, and the $x$-intercept is found by setting $y=0$. 
 
 
 ::: {.worked-example}
@@ -1620,9 +1641,9 @@ Many water-engineering rates and formulas compare one algebraic quantity with an
 **Rational expression.** A fractional expression whose numerator and denominator are polynomials.
 :::
 
-A fractional expression is a quotient of algebraic expressions. It is rational when its numerator and denominator are polynomials. Its domain excludes values that make an original denominator zero. State restrictions before cancelling factors:
+A fractional expression is a quotient of algebraic expressions. It is rational when its numerator and denominator are polynomials. Its domain excludes values that make an original denominator zero. State restrictions before cancelling factors.
 
-$$\frac{x^2-16}{x-4}=x+4,\qquad x\ne4.$$
+
 
 
 ::: {.worked-example}
@@ -1990,7 +2011,36 @@ Operating limits, tolerances, and safety constraints usually describe ranges of 
 
 Adding or subtracting the same quantity preserves an inequality. Multiplication or division by a positive value also preserves it. Multiplication or division by a negative value reverses it. In a three-part inequality, apply each operation to all three expressions.
 
-For polynomial and rational inequalities, move all terms to one side, combine fractions, factor, identify zeros and excluded values, divide the number line into intervals, determine the sign on each interval, and check endpoint inclusion. A polynomial can change sign only at a zero. A rational expression can also change sign at an excluded denominator zero. Include a numerator zero only when equality is allowed; never include an undefined value.
+
+::: {.theorem-box}
+**Properties of inequalities:**  
+
+1.  If $a < b$ and $b < c$, then $a < c$.
+
+2.  For $a < b$,
+
+*  if $c > 0$, then $ac < bc$,
+*  if $c > 0$, then $\frac{a}{c} < \frac{b}{c}$, 
+*  if $c < 0$, then $ac > bc$, and
+*  if $c < 0$, then $\frac{a}{c} > \frac{b}{c}$.
+
+If $a < b < c$,
+
+*  if $d > 0$, then $ad < bd < cd$, and $\frac{a}{d} < \frac{b}{d} < \frac{c}{d}$,
+*  if $d < 0$, then $ad > bd > cd$, and $\frac{a}{d} > \frac{b}{d} > \frac{c}{d}$.
+
+:::
+
+For polynomial and rational inequalities: 
+
+1.  move all terms to one side, 
+2.  combine fractions, factor, 
+3.  identify zeros and excluded values, 
+4.  divide the number line into intervals, 
+5.  determine the sign on each interval, and 
+6.  check endpoint inclusion. 
+
+A polynomial can change sign from one sign to another only at a zero. A rational expression can also change sign at an excluded denominator zero. Include a numerator zero only when equality is allowed; never include an undefined value.
 
 ::: {.worked-example}
 [**Worked Example: A quadratic inequality**]{.worked-example-title}
@@ -2028,20 +2078,150 @@ For $c>0$, $|x|<c$ means $-c<x<c$, while $|x|>c$ means $x<-c$ or $x>c$. The firs
 
 For $(x-2)(x+3)x(x+5)>0$, the values $-5,-3,0,2$ divide the number line into five intervals. Test one value in each interval and count negative factors. An even number of negative factors gives a positive product. Because the inequality is strict, none of the four zeros is included.
 
-For a rational inequality, numerator zeros and denominator zeros both divide the sign chart, but denominator zeros are always excluded. For $|2x-3|<4$, write $-4<2x-3<4$ and solve all three parts to obtain $-1/2<x<7/2$. A greater-than absolute-value inequality instead produces two outside intervals.
+For a rational inequality, numerator zeros and denominator zeros both divide the sign chart, but denominator zeros are always excluded. 
+
+For $|2x-3|<4$, write $-4<2x-3<4$ and solve all three parts to obtain $-1/2<x<7/2$. A greater-than absolute-value inequality instead produces two outside intervals.
 
 Use a square bracket only when an endpoint is defined and satisfies a non-strict inequality. Use a parenthesis for strict endpoints, undefined values, and infinity. In applications, intersect the algebraic solution with the physical domain. For example, $|q-20|\le3$ gives $[17,23]$, but an equipment requirement $q\ge18$ reduces the usable range to $[18,23]$.
 
 ::: {.worked-example}
 [**Worked Example: Solving a rational inequality**]{.worked-example-title}
 
-Solve $1/(x-3)>0$. The expression is undefined at 3. Its numerator is positive, so the fraction is positive exactly when $x-3>0$. Therefore, $x>3$, or $(3,\infty)$.
+Solve $1/(x-3)>0$. The expression is undefined at 3. 
+
+```{r, echo=FALSE, fig.align='center', out.width='80%', fig.width=8, fig.height=1.8}
+
+# Edit these values for the function you are analyzing.
+zeros <- c(3)  
+zero_labels <- c( "3")
+
+# One sign for each interval: before, between, and after the zeros.
+signs <- c("-", "+")
+
+# Optional labels for the factors or functions being tracked.
+function_label <- "f(x)"
+x_label <- "x"
+
+left_end <- min(zeros) - 1
+right_end <- max(zeros) + 1
+bounds <- c(left_end, zeros, right_end)
+midpoints <- (bounds[-1] + bounds[-length(bounds)]) / 2
+
+par(mar = c(1.2, 1.2, 0.4, 1.2))
+plot(
+  NA,
+  xlim = c(left_end, right_end),
+  ylim = c(-1, 1),
+  axes = FALSE,
+  xlab = "",
+  ylab = ""
+)
+
+# Number line and arrow.
+segments(left_end, 0, right_end, 0, lwd = 1.6, col = "#123c5a")
+arrows(right_end - 0.02, 0, right_end, 0,
+       length = 0.09, lwd = 1.6, col = "#123c5a")
+
+# Critical values.
+points(zeros, rep(0, length(zeros)), pch = 21, bg = "white",
+       col = "#123c5a", cex = 1.25, lwd = 1.5)
+
+text(zeros, rep(-0.35, length(zeros)), zero_labels, cex = 1.05)
+
+# Signs on the intervals.
+text(midpoints, rep(0.42, length(signs)), signs,
+     col = "#0b6b73", cex = 1.5, font = 2)
+
+# Labels.
+text(left_end, 0.42, function_label, pos = 3, cex = 1.05)
+text(right_end, -0.35, x_label, pos = 4, cex = 1.05)
+```
+
+
+Its numerator is positive, so the fraction is positive exactly when $x-3>0$. Therefore, $x>3$, or $(3,\infty)$.
 :::
 
 ::: {.try-it}
 **Try It.** Solve $1/(x+2)<0$.
 <details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The denominator must be negative, so $x<-2$, or $(-\infty,-2)$.</details>
 :::
+
+
+
+::: {.worked-example}
+[**Worked Example: Solving a polynomial inequality**]{.worked-example-title}
+
+Solve $(x+2)(x-1)(x-4)>0$. 
+
+Create a number line, then select any number between the zeros of the polynomial.  Since the zeros are $x = -2, 1, 4$, we can select test points $x = -5, 0, 2$.  Testing these points to determine the sign of the polynomial will tell you the polynomial sign for the entire interval.
+
+```{r, echo=FALSE, fig.align='center', out.width='75%',  fig.width=8, fig.height=1.8}
+
+# Edit these values for the function you are analyzing.
+zeros <- c(-2, 1, 4)  
+zero_labels <- c("-2", "1", "4")
+
+# One sign for each interval: before, between, and after the zeros.
+signs <- c("+", "-", "+", "-")
+
+# Optional labels for the factors or functions being tracked.
+function_label <- "f(x)"
+x_label <- "x"
+
+left_end <- min(zeros) - 1.5
+right_end <- max(zeros) + 1.5
+bounds <- c(left_end, zeros, right_end)
+midpoints <- (bounds[-1] + bounds[-length(bounds)]) / 2
+
+par(mar = c(1.2, 1.2, 0.4, 1.2))
+plot(
+  NA,
+  xlim = c(left_end, right_end),
+  ylim = c(-1, 1),
+  axes = FALSE,
+  xlab = "",
+  ylab = ""
+)
+
+# Number line and arrow.
+segments(left_end, 0, right_end, 0, lwd = 1.6, col = "#123c5a")
+arrows(right_end - 0.02, 0, right_end, 0,
+       length = 0.09, lwd = 1.6, col = "#123c5a")
+
+# Critical values.
+points(zeros, rep(0, length(zeros)), pch = 21, bg = "white",
+       col = "#123c5a", cex = 1.25, lwd = 1.5)
+
+text(zeros, rep(-0.35, length(zeros)), zero_labels, cex = 1.05)
+
+# Signs on the intervals.
+text(midpoints, rep(0.42, length(signs)), signs,
+     col = "#0b6b73", cex = 1.5, font = 2)
+
+# Labels.
+text(left_end, 0.42, function_label, pos = 3, cex = 1.05)
+text(right_end, -0.35, x_label, pos = 4, cex = 1.05)
+```
+
+
+The polynomial is positive exactly when $x<-2$ and $1 < x < 4$. Therefore, the polynomial is positive on $(-\infty, -2) \cup (1,4)$.
+:::
+
+::: {.try-it}
+**Try It.** Solve $x(x-1)(x-3)(x-5)<0$.
+<details class="answer-dropdown"><summary><strong>Check Your Work</strong></summary>The polynomial is negative on $(0,1) \cup (3,5)$.</details>
+:::
+
+
+
+
+
+
+
+
+
+
+
 
 ::: {.worked-example}
 [**Worked Example: Finding a required pump rate**]{.worked-example-title}
